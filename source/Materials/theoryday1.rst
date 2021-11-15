@@ -21,6 +21,10 @@ Theory Day 1
 .. |Za| replace:: Z\ :sub:`a`\
 .. |Ze| replace:: Z\ :sub:`e`\
 
+.. contents::
+  :depth: 2
+  :local:
+
 Introduction
 ###################################
 
@@ -283,15 +287,14 @@ The signal at the electrode is measured in volts (V) and is very small, in the m
 
 To know what is going on in our cells, we need as much as possible of the signal at the electrode tip (|Vec|) to make it through the electrode (|Vin|) and acquisition system and arrive at our output (|Vout|). If we lose signal magnitude, or lose certain frequencies because of the way our acquisition system is designed, we may miss important data or come to wrong conclusions about our cells. We therefore have to design our acquisition system to pass on signals as faithfully as possible, losing little signal to the environment.
 
-We do not want our measurement of cell activity to cause changes in the cells. Though it is often very difficult to measure something without changing it at all, our acquisition systems have to be designed to minimize this effect.
-
 An acquisition system must therefore:
-- *Detect* changes in electric potential difference
-- Faithfully *transfer* this signal to our acquisition system output
-- Distinguish interesting biological *signals* from other sources of electrical *noise*
+
+* **Detect changes in electric potential difference**
+* Faithfully *transfer* this signal to our acquisition system output
+* Distinguish interesting biological *signals* from other sources of electrical *noise*
 
 The electrode detects changes in electric potential
-*******************************************************
+##################################################
 
 Getting from neuronal activity (|Vec|) to the input to the recording system (|Vin|) relies first on the interface between the electrode and the extracellular space. Extracellular microelectrodes are usually made from metallic conductors. A thin insulated metal wire with an exposed tip is the most basic, and still widely used, device for in vivo extracellular recording from brains. Metals such as platinum, gold, tungsten, iridium, titanium nitride, stainless steel, iridium, iridium oxide, and alloys, nickel-chrome, platinum-iridium and platinum-tungsten have all been used in neural electrodes.
 
@@ -341,14 +344,6 @@ To give an example of a polarized electrode, a tungsten microelectrode like the 
 * |Ce| ~ 0.2 pF / um2 ~ 10 - 20 pF (unplated)
 * |Re| ~ 10 to 100 MOhm.
 * |Rm| ~ 10 to 100 Ohm (Rm= (resistivity x length)/ cross sectional area)
-
-
-Licensing
-###################################
-
-This work is licensed under CC BY-SA 4.0.
-
-To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
 
 
 References

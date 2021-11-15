@@ -21,11 +21,9 @@ Theory Day 4
 .. |Za| replace:: Z\ :sub:`a`\
 .. |Ze| replace:: Z\ :sub:`e`\
 
-An acquisition system must:
-- *Detect* changes in electric potential difference
-- Faithfully *transfer* this signal to our acquisition system output
-- *Not interfere* with our tissue/cells/sample
-- Distinguish interesting biological *signals* from other sources of electrical *noise*
+.. contents::
+  :depth: 2
+  :local:
 
 .. _refdigitization:
 
@@ -65,8 +63,3 @@ One of the most common pitfalls in Neuroscience is correctly synchronizing multi
 
 
 The code for the exercises Filipe shows is available `on google drive <https://drive.google.com/drive/folders/1m_DTRXc1NcFni12a_9AtApX5nMIPPDdk?usp=sharing>`_ if you want to try it out yourself.
-
-
-Acquiring and synchronizing data with Bonsai
-##############################################
-If you want to use Bonsai to work more on your EMG acquisition, you can find a helpful introduction `here <https://neurogears.org/wustl-2019/worksheets/acquisition/>`_. The most relevant of these exercises are available as a pdf here, :download:`ex_day_4 <../_static/images/EEA/day_4_bonsai.pdf>`, slightly adjusted for this course.

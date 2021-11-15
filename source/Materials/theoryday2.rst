@@ -21,38 +21,43 @@ Theory Day 2
 .. |Za| replace:: Z\ :sub:`a`\
 .. |Ze| replace:: Z\ :sub:`e`\
 
+.. contents::
+  :depth: 2
+  :local:
+
 
 Yesterday, we said that an acquisition system must:
-- *Detect* changes in electric potential difference
-- Faithfully *transfer* this signal to our acquisition system output
-- Distinguish interesting biological *signals* from other sources of electrical *noise*
 
+* *Detect* changes in electric potential difference
+* **Faithfully *transfer* this signal to our acquisition system output**
+* Distinguish interesting biological *signals* from other sources of electrical *noise*
 
 Impedance ratios determine signal transmission
 ####################################################
 Faithfully transferring the signal means not losing signal between |Vec|, |Vin|, and |Vout|. This is all based on the idea of voltage dividers; that the voltage between two impedances will be determined by determined by the ratio of their impedances.
 
-Why is impedance important?
-***********************************
 
 .. raw:: html
 
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/fVloDI4b1ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
   <br>
 
-Currents coming from our neurons travel through our acquisition system, to ground. They can do so either by passing through our acquisition system, or (in parallel) they can be lost to ground through shunt capacitance (|Csh|).
+
+Why is impedance important?
+***********************************
+The signal |Vec| is measured at the electrode tip. It must travel through the electrode, to |Vin|, the voltage before the acquisition system itself. From there, currents coming from our neurons travel to ground. They can do so either by passing through our acquisition system, or (in parallel) they can be lost to ground through shunt capacitance (|Csh|).
 
 .. image:: ../_static/images/EEA/eea_fig-9.png
   :align: center
 
-We can just replace these components with a representation of the impedance (Z) they provide.
-
-.. image:: ../_static/images/EEA/eea_fig-27.png
-  :align: center
-
-|Csh| and the acquisition system are parallel impedances. We can simplify our circuit by considering their combined impedance |Za|'.
+We can replace these components with a representation of the impedance (Z) they provide.
 
 .. image:: ../_static/images/EEA/eea_fig-77.png
+  :align: center
+
+|Csh| and the acquisition system are impedances in parallel. We can simplify our circuit by combining their impedances and calling it |Za|'.
+
+.. image:: ../_static/images/EEA/eea_fig-81.png
   :align: center
 
 This gives us a voltage divider, similar to the one we built before, where:
@@ -63,8 +68,9 @@ This gives us a voltage divider, similar to the one we built before, where:
 
 Therefore, the ratio of |Ze| and |Za|' determines how much of our electrode tip voltage |Vec| reaches |Vin|. To get more of our voltage |Vec| into our recording system, we want to keep electrode impedance |Ze| low, and |Za|' very high.
 
-To have no net current flowing, the shunt and amplifier impedance should be infinite. If |Za|’ is not substantially greater than |Ze|, |Vin| will be much lower than |Vec|. The best-case scenario is to have high |Za|’ and low |Ze|. To have low |Za|’, we need amplifiers with high input impedance and low shunt capacitance (high impedance).
+|
 
+To have no net current flowing, the shunt and amplifier impedance should be infinite. If |Za|’ is not substantially greater than |Ze|, |Vin| will be much lower than |Vec|. The best-case scenario is to have high |Za|’ and low |Ze|. To have low |Za|’, we need amplifiers with high input impedance and low shunt capacitance (high impedance).
 
 Electrode Impedance
 ***********************************
@@ -73,7 +79,7 @@ The impedance of an electrode is a measure of its ability to resist the flow of 
 .. image:: ../_static/images/EEA/eea_fig-8.png
   :align: center
 
-Since |Re| is large, in the order of several megaOhms, only very little current can take this route. Therefore, in practice, the electrode is primarily the double-layer capacitor |Ce| in series with |Rm| and |Rs| (Robinson, 1968).
+For tungsten electrodes, since |Re| is large, in the order of several megaOhms, only very little current can take this route. Therefore, in practice, the electrode is primarily the double-layer capacitor |Ce| in series with |Rm| and |Rs| (Robinson, 1968).
 
 So far, we know that the impedance magnitude of a capacitor decreases with increased capacitance, and that electrode impedance is dominated by double layer capacitor, |Ce|. Therefore, to decrease our electrode impedance, we need to increase the electrode capacitance |Ce|.
 How can we increase the value of |Ce|?
@@ -174,6 +180,3 @@ Our electrodes will be attached to a headstage, which contains an amplifier. Thi
 .. raw:: html
 
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/NP6nE5P82e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
-
-The path from our neuronal currents first crosses the electrode and then goes either through the amplifier to ground, or through shunting routes (|Csh| and |Rsh|) to ground. The amplifier has its own (very high) impedance |Za|.

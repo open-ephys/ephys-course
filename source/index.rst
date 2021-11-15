@@ -10,6 +10,8 @@ Extracellular Electrophysiology Acquisition, Dec 2021
   /Materials/eeadocsindex.rst
   /Materials/disclaimer_terms_conditions.rst
   /Materials/license.rst
+  /Materials/acknowledgements.rst
+
 
 These are the course materials for the Open Ephys course on Extracellular Electrophysiology Acquisition, December 2021 edition.
 

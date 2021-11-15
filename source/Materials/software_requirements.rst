@@ -8,7 +8,7 @@ Software Requirements
 
     - You have a 2204A.
     - Version 6.14.36 as of March 2021
-    - Do NOT download the automotive version, it'll make your oscilloscope look dead and freak your TA out.
+    - Do NOT download the automotive version, it will make your oscilloscope look dead and freak your TA out.
 
 2. Download & install the Arduino Software `here <https://www.arduino.cc/en/software>`_
 
