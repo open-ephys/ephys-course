@@ -21,7 +21,7 @@ Theory Day 4
 .. |Za| replace:: Z\ :sub:`a`\
 .. |Ze| replace:: Z\ :sub:`e`\
 
-.. contents::
+.. contents:: Table of Contents
   :depth: 2
   :local:
 

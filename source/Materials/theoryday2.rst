@@ -20,11 +20,14 @@ Theory Day 2
 .. |Ve| replace:: V\ :sub:`e`\
 .. |Za| replace:: Z\ :sub:`a`\
 .. |Ze| replace:: Z\ :sub:`e`\
+.. |Zsh| replace:: Z\ :sub:`sh`\
 
-.. contents::
+
+.. contents:: Table of Contents
   :depth: 2
   :local:
 
+|
 
 Yesterday, we said that an acquisition system must:
 
@@ -34,8 +37,9 @@ Yesterday, we said that an acquisition system must:
 
 Impedance ratios determine signal transmission
 ####################################################
-Faithfully transferring the signal means not losing signal between |Vec|, |Vin|, and |Vout|. This is all based on the idea of voltage dividers; that the voltage between two impedances will be determined by determined by the ratio of their impedances.
+Faithfully transferring the signal means not losing (much) signal between |Vec|, |Vin|, and |Vout|. This is all based on the idea of voltage dividers; that the voltage between two impedances in serial will be determined by determined by the ratio of their impedances.
 
+|
 
 .. raw:: html
 
@@ -55,7 +59,8 @@ We can replace these components with a representation of the impedance (Z) they 
 .. image:: ../_static/images/EEA/eea_fig-77.png
   :align: center
 
-|Csh| and the acquisition system are impedances in parallel. We can simplify our circuit by combining their impedances and calling it |Za|'.
+The impedance of the shunt capacitance, |Zsh| and the impedance of the acquisition system |Za| are impedances in parallel.
+We can simplify our circuit by combining their impedances and calling it |Za|'.
 
 .. image:: ../_static/images/EEA/eea_fig-81.png
   :align: center
@@ -66,11 +71,15 @@ This gives us a voltage divider, similar to the one we built before, where:
 
   Vin = \frac{Za'}{Za'+Ze} Vec
 
-Therefore, the ratio of |Ze| and |Za|' determines how much of our electrode tip voltage |Vec| reaches |Vin|. To get more of our voltage |Vec| into our recording system, we want to keep electrode impedance |Ze| low, and |Za|' very high.
+The ratio of |Ze| and |Za|' therefore determines how much of our electrode tip voltage |Vec| reaches |Vin|.
 
 |
 
-To have no net current flowing, the shunt and amplifier impedance should be infinite. If |Za|’ is not substantially greater than |Ze|, |Vin| will be much lower than |Vec|. The best-case scenario is to have high |Za|’ and low |Ze|. To have low |Za|’, we need amplifiers with high input impedance and low shunt capacitance (high impedance).
+**To get more of our voltage Vec into our recording system, we want to keep electrode impedance Ze low, and system input impedance Za' very high.**
+
+|
+
+If |Za|’ is not substantially greater than |Ze|, |Vin| will be much lower than |Vec|. To have high |Za|’, we need amplifiers with high input impedance and low shunt capacitance (high shunt impedance).
 
 Electrode Impedance
 ***********************************
@@ -79,7 +88,7 @@ The impedance of an electrode is a measure of its ability to resist the flow of 
 .. image:: ../_static/images/EEA/eea_fig-8.png
   :align: center
 
-For tungsten electrodes, since |Re| is large, in the order of several megaOhms, only very little current can take this route. Therefore, in practice, the electrode is primarily the double-layer capacitor |Ce| in series with |Rm| and |Rs| (Robinson, 1968).
+In polarized electrodes, the large |Re| prevents much current from taking this route. Therefore, in practice, the electrode is primarily the double-layer capacitor |Ce| in series with |Rm| and |Rs| (Robinson, 1968).
 
 So far, we know that the impedance magnitude of a capacitor decreases with increased capacitance, and that electrode impedance is dominated by double layer capacitor, |Ce|. Therefore, to decrease our electrode impedance, we need to increase the electrode capacitance |Ce|.
 How can we increase the value of |Ce|?
@@ -88,22 +97,43 @@ How can we increase the value of |Ce|?
 
   C = \frac{\epsilon A}{d}
 
-The capacitance of a capacitor, in Farads, is proportional to the area of the capacitor plates (A) divided by the distance (d) between them. ε is the electrostatic constant. To make C bigger, we can increase A by increasing the surface area of the electrode. This is done for instance by electroplating a thin layer of gold on to an electrode. We can also coat electrodes with materials complemented with pseudo-capacitance, such as conducting polymers or transition metal oxide films, such as IrOx (Green, Lovell, Wallace, & Poole-Warren, 2008; Musa, 2011). Electrode impedance magnitude is often measured at 1 kHz, before and after electrode coating, showing an impedance decrease up to 10-fold (Neto et al., 2018). By increasing the capacitance (|Ce|) of our electrode, the electrode impedance (|Ze|) will be smaller, preserving more of our signal amplitude at |Vin|.
+
+.. raw:: html
+
+  <center><i> The capacitance of a capacitor (C, in Farads), is proportional to the area of the capacitor plates (A) divided by the distance (d) between them. ε is the electrostatic constant.</i></center>
+
+To make C bigger, we can increase the surface area (A) of the electrode, for instance by electroplating a thin layer of gold on to an electrode. We can also coat electrodes with materials complemented with pseudo-capacitance, such as conducting polymers or transition metal oxide films, such as IrOx (Green, Lovell, Wallace, & Poole-Warren, 2008; Musa, 2011).
+
+|
+
+Electrode impedance magnitude is usually measured at 1 kHz, before and after electrode coating, allowing us to see an impedance decrease of up to 10-fold (Neto et al., 2018).
+
+|
+
+By increasing the capacitance (|Ce|) of our electrode, the electrode impedance (|Ze|) will be smaller, preserving more of our signal amplitude at |Vin|.
 
 Shunt Impedance
 ***********************************
-Shunt impedance is the total impedance of shunt capacitance |Csh| and shunt resistance |Rsh|. At the high frequencies (1kHz) we are interested in, the capacitive component will usually have the largest effect because of its low impedance, so |Rsh| is often ignored. Shunt capacitance arises mainly from the capacitance across the thin insulation isolating an electrode shaft and the surrounding electrolyte, as well as the cumulative capacitance along cables and connectors (Robinson, 1968). Remember that any two conducting surfaces, with a non-conducting layer in between, *is* a capacitor.
+Shunt impedance is the total impedance of shunt capacitance |Csh| and shunt resistance |Rsh|. These are both routes to ground outside of the intended acquisition system. At the high frequencies (1kHz) we are interested in, the capacitive component will have low impedance, and will therefore have more effect than the resistive component, so |Rsh| is often ignored.
+
+|
+
+Remember that any two conducting surfaces, with a non-conducting layer in between, *is* a capacitor. Shunt capacitance arises mainly from the capacitance across the thin insulation layer isolating an electrode and the surrounding electrolyte, as well as the cumulative capacitance along cables and connectors (Robinson, 1968).
 
 The shunt capacitance for a tungsten wire (~50 to 100 pF) is usually higher than for a silicon probe (5-20 pF/cm). (Why? Think of what makes a capacitor, and the relative shape and conductances of these electrodes).
 
-https://tinyurl.com/yepsdold
+.. admonition:: Try it yourself
+
+  Here is a model of the electrode with shunt capacitance, resistance, and amplifier in parallel to ground. You should see that either decreasing electrode impedance or increasing shunt impedance gives you a larger output voltage.
+
+  https://tinyurl.com/yepsdold
 
 We want a large shunt impedance, to prevent current from flowing down this route. Being capacitive, the impedance decreases with signal frequency (Nelson et al., 2008). Therefore, to create a large shunt impedance, the shunt capacitance should be small:
 
 .. math::
   Z = \frac{1}{2 \pi fC}
 
-However, some shunt capacitance is inevitable and often there is not much we can do about it. Because the shunt impedance is in parallel with the impedance of the acquisition system, we can focus on increasing the acquisition system impedance to give us a large |Za|' and therefore a high |Vin|.
+However, some shunt capacitance is inevitable and often there is not much we can do about it. Because the shunt impedance is in parallel with the impedance of the acquisition system, we can focus on increasing the acquisition system impedance to give us a large |Za|'.
 
 .. _refamplifierintro:
 
@@ -114,20 +144,32 @@ Amplifiers in the headstage prevent current being drawn
 ********************************************************************
 A perfect 5V voltage source would always provide exactly 5 Volts, no matter what the rest of the circuit looks like. If we put a lot of high impedance components in the rest of the circuit, less current will flow, and if we put low impedance components we will get a high current.
 
-A real voltage source has a bit of output impedance, which means it acts as a voltage source in series with an impedance. This is modelled here:
+|
 
-https://tinyurl.com/yfvzdxbz
+A real voltage source has a bit of output impedance, which means it acts as a voltage source in series with an impedance. This is modelled here (click to open the simulator):
 
-That invisible, small series resistance creates a voltage divider. Though the actual source voltage is the same 5V, the apparent voltage of the source varies depending on the ratio between the output impedance of the source, and the impedance of the rest of the circuit. The lower the impedance of the components used in the rest of the circuit, the higher the relative influence of the source output impedance, and the lower the apparent source voltage.
+.. image:: ../_static/images/EEA/eea_fig-83.png
+  :align: center
+  :target: https://tinyurl.com/yfvzdxbz
 
-In our acquisition system, the voltage source are the potential changes in the extracellular fluid (Vec). The resistive and capacitive properties of the electrode create an output resistance. The relative impedance of the circuit before and after Vin influence the magnitude of the signal at Vin. If we allow a lot of current to flow from our electrode to ground, we have a low impedance circuit, and will distort our signal. We therefore need something that will stop current being drawn from our cells, and provide the necessary current itself from a different source. This is done by amplifiers, in the headstage.
+That invisible, small series resistance creates a voltage divider. Though the actual source voltage is the same 5V, the apparent voltage of the source varies depending on the ratio between the output impedance of the source, and the impedance of the rest of the circuit. The lower the impedance of the components used in the rest of the circuit, the higher the relative influence of the source output impedance, and the lower the apparent source voltage (the voltage 'droops').
 
+|
 
-An 'operational amplifier' or 'op-amp' is a crucial building block of our acquisition system. The amplifier has two inputs (+ and -), one output, and two power rails (e.g. a 3 and -3V power rail).
+In our acquisition system, the voltage source is the potential changes in the extracellular fluid (|Vec|). The resistive and capacitive properties of the electrode create an output resistance. The relative impedance of the circuit before and after |Vin| influences the magnitude of the signal at |Vin|. If we allow a lot of current to flow from our electrode to ground, we have a low impedance circuit, which will distort our signal. We therefore need something with a very high impedance to stop current being drawn from our |Vec|. Amplifiers do exactly this: their high input impedance prevents current flow from the electrodes, and amplifiers provide the necessary current for the rest of the circuit from a separate source.
+
+The operational amplifier
+******************************************************************
+
+The 'operational amplifier' or 'op-amp' is a crucial building block of our acquisition system. The amplifier has two inputs (+ and -), one output, and two power rails (e.g. a 3 and -3V power rail).
+
+.. image:: ../_static/images/EEA/eea_fig-28.png
+  :align: center
+
 
 Amplifiers have high input impedance
 ******************************************************************
-The amplifier input impedance, Z\ :sub:`a`\  is its tendency to oppose the flow of current from the electrodes through the amplifier to ground. The input impedance of an amplifier is very high. This means that the circuit acts as though the current has to cross a very high resistor to actually enter the amplifier. By designing amplifiers with high input impedances, the current flow becomes low (Ferree et al., 2001), preventing us from drawing much current from the electrode to ground.
+The amplifier input impedance, Z\ :sub:`a`\ is very high. The circuit acts as though the current has to cross a very high resistor to actually enter the amplifier. The current flow therefore becomes very low (Ferree et al., 2001), preventing us from drawing much current from the electrode to ground.
 
 Here is the amplifier added into our circuit diagram:
 
@@ -136,7 +178,7 @@ Here is the amplifier added into our circuit diagram:
 
 Amplifiers have low output impedance
 ******************************************************************
-The output impedance of amplifiers is very low, which means that a lot of current can flow. This current enables the driving of the signal through all the subsequent circuits (e.g., interconnect lines, multiplexer, and ADC). By placing an amplifier in our circuit, we make sure that the rest of our recording circuit is driven by current provided by the amplifier, not by current provided by the neurons.
+The output impedance of amplifiers is very low, which means that a lot of current can flow *from* the amplifier. This current enables the driving of the signal through all the subsequent circuits (e.g., interconnect lines, multiplexer, and ADC). By placing an amplifier in our circuit, we make sure that the rest of our recording circuit is driven by current provided by the amplifier, not by current provided by the electrode tip.
 
 Amplifiers output a voltage
 *****************************************************************
@@ -145,12 +187,20 @@ The amplifier outputs the voltage difference between the voltages at its two inp
 .. image:: ../_static/images/EEA/eea_fig-28.png
   :align: center
 
-How does it do that? If the difference between its two inputs is positive, the amplifier connects its output to the positive ‘power rail’, giving a positive output voltage. If the positive power rail is 3V, the amplifier will output (pretty much) that. If the difference between the two inputs is negative, the amplifier will connect its output to the negative rail, outputting -3V. While doing that, the operational amplifier draws basically no current on its inputs.
+How does it do that?
 
-In this configuration, the amplifier does not distinguish between small or large differences in voltage across its inputs; it will only every output the most negative or most positive voltage it can. Another way to say the same thing would be that it amplifies the difference between its input with a huge factor, also called ‘gain’.
+If the difference between its two inputs is **positive**, the amplifier connects its output to the positive ‘power rail’, giving a positive output voltage. If the positive power rail is 3V, the amplifier will output (pretty much) that.
+
+If the difference between the two inputs is **negative**, the amplifier will connect its output to the negative rail, outputting -3V. While doing that, the operational amplifier draws basically no current on its inputs.
+
+In this configuration, the amplifier does not distinguish between small or large differences in voltage across its inputs; it will only every output the most negative or most positive voltage it can. Another way to say that, is that it amplifies the difference between its inputs with a huge factor, also called ‘gain’. This gain is so large that the amplifier always saturates, providing either the maximum or minimum voltage it can.
+
+Negative feedback prevents saturation
+***********************************************************
 
 .. image:: ../_static/images/EEA/eea_fig-29.png
   :align: center
+  :target: https://tinyurl.com/ygby3xqh
 
 If we connect the output of the operational amplifier to the ‘-’ input, then the following happens:
 
@@ -160,17 +210,12 @@ If we connect the output of the operational amplifier to the ‘-’ input, then
 
 -	Now, *the ‘-’ input is always actively driven to follow the voltage on the ‘+’ input*. This means that whatever voltage we connect to the ‘+’ input can be measured just by looking at the ‘-’ input (which is connected to / the same as the output). Increasing '+' will induce a difference between ‘+’ and ‘-’, but the corresponding change in the amount of output voltage will bring '-' back up.
 
-We can look at the voltage that is on ‘+’ by just measuring the output of the operational amplifier, BUT because the ‘+’ input draws almost no current at all (in other words, very high input impedance), we can now measure weak signals. The output of the operational amplifier on the other hand side has very low output impedance- in other words, we can draw a lot of current from it and it will keep its voltage. This is in contrast to our neurons, we don't want to draw a lot of current from them.
+We can measure the voltage that at ‘+’ by just measuring the output of the operational amplifier, BUT because the ‘+’ input draws almost no current at all (in other words, very high input impedance), we can now measure weak signals. The output of the operational amplifier on the other hand side has very low output impedance- in other words, we can draw a lot of current from it and it will keep its voltage.
 
-You can run this example in the simulator, and see if what we said above about the operational amplifier makes sense. You should see that the operational amplifier stops the cable from drawing current from the electrode, and that the operational amplifier instead manages to ‘drive’ the cable effortlessly, by providing a lot of current.
+You can run this example in the simulator (click the image above), and see if what we said about the operational amplifier makes sense.
 
-|
-
-.. image:: ../_static/images/EEA/eea_fig-30.png
-  :align: center
-  :target: https://tinyurl.com/y6pvxdx9
-
-
+An op-amp as a headstage
+**********************************************************
 Our electrodes will be attached to a headstage, which contains an amplifier. This amplification step performs several functions:
 
 -	Prevents us from drawing current and allows to drive current to ADC and computer
@@ -180,3 +225,12 @@ Our electrodes will be attached to a headstage, which contains an amplifier. Thi
 .. raw:: html
 
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/NP6nE5P82e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <br>
+
+Here is the simulator circuit used in the video above. You should see that the operational amplifier stops the cable from drawing current from the electrode, and that the operational amplifier instead manages to ‘drive’ the cable effortlessly, by providing a lot of current.
+
+|
+
+.. image:: ../_static/images/EEA/eea_fig-30.png
+  :align: center
+  :target: https://tinyurl.com/ygpje26o

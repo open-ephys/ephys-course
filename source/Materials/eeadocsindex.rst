@@ -1,9 +1,9 @@
 .. _refeeadocsindex:
 
-OE Cajal Course December 2021
+Course Materials
 *******************************
 .. toctree::
-   :maxdepth: 1 
+   :maxdepth: 1
 
    safety.rst
    software_requirements.rst
@@ -22,13 +22,29 @@ OE Cajal Course December 2021
 Materials for students
 ############################
 
-The 'theory' documents are meant for students to read before the online sessions, the 'exercises' documents contain exercises and more theory that will be covered together with the teachers.
+Read the 'theory' documents before each online session.
+The 'exercises' documents contain exercises and more theory that will be covered together with the teachers.
 
 Preparation
 ===================
-:ref:`Software to Download <refeeasoftware>`
 
-:ref:`Safety <refeeasafety>`
+Before starting the course:
+
+1) Check you have all the :ref:`Kit <refkitlist>` contents
+
+2) Make sure you have:
+
+- 4 x AA batteries
+- 2 x AAA batteries
+- Windows pc with free USB hubs
+- Webcam (ideally USB so that you can show circuits to your TA)
+
+2) Get the following :ref:`Software to Download <refeeasoftware>`
+
+3) Read :ref:`Safety <refeeasafety>`
+
+4) Join our Discord
+
 
 Day 1: Detecting Signals
 =====================================================

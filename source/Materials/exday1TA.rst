@@ -281,6 +281,11 @@ We’ll now build the circuit you just designed in real life, using a solderless
 
 Capacitors, direct current
 ***********************************
+.. admonition:: TA Note
+  :class: tanote
+
+  Skip this exercise if running out of time
+
 Capacitors are made of two conducting plates, separated by an insulating material that prevents the plates from touching. Charges cannot jump through the insulating layer. Instead, charges collect on one plate, forming an electric field that pushes away similar charges on the opposite plate. This movement of charge is what gives us current flow in the circuit, even though charges cannot flow directly through the capacitor.
 
 .. math::
@@ -438,3 +443,17 @@ In the theory handout, we discussed how we can represent an electrode as a circu
          :target: https://tinyurl.com/yzzjjvdk
 
        Circuit of electrode: https://tinyurl.com/yzzjjvdk
+
+Wrap Up
+#########################################################
+
+.. admonition:: TA Note
+  :class: tanote
+
+  If they don't make it through all the exercises that's ok, but concepts that they should understand are:
+
+  - What is an oscilloscope measuring?
+
+  - How does a voltage divider work?  (this keeps coming back during the course)
+
+  - What is the important difference between capacitors and resistors? (Frequency-dependent impedance changes of capacitors, also keeps coming back)
