@@ -29,11 +29,7 @@ These are the course materials for the Open Ephys course on Extracellular Electr
 
     :ref:`NeuroKit Equipment List <refkitlist>`
 
-|
-
 Equipment needed for the hands-on exercises
-
-|
 
 .. raw:: html
 
@@ -51,7 +47,34 @@ Equipment needed for the hands-on exercises
 
 Documents with theory and exercises per day
 
-|
+.. raw:: html
+
+              </div>
+          </div>
+        </div>
+    </div>
+
+.. raw:: html
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
+                <div class="card text-center intro-card shadow">
+
+.. figure:: _static/images/EEA/eea_fig-84.png
+  :target: Materials/schedule.html
+
+.. container:: custom-button
+
+    :ref:`Schedule <refschedule>`
+
+
+.. raw:: html
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
+                <div class="card text-center intro-card shadow">
 
 .. raw:: html
 

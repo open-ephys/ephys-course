@@ -18,6 +18,7 @@ Course Materials
    exday1TA.rst
    exday2TA.rst
    exday3TA.rst
+   exday4TA.rst
 
 Materials for students
 ############################
@@ -48,53 +49,25 @@ Before starting the course:
 
 Day 1: Detecting Signals
 =====================================================
-:ref:`Theory <refTDay1>`:
+:ref:`Theory <refTDay1>`
 
-.. raw:: html
-
-  <p><i><a class="reference internal" href="theoryday1.html#reftday1"><span class="std std-ref">Introduction</span></a>, <a class="reference internal" href="theoryday1.html#refwot"><span class="std std-ref">Neuronal signals</span></a>, <a class="reference internal" href="theoryday1.html#refepot"><span class="std std-ref">Electric Potential</span></a>, <a class="reference internal" href="theoryday1.html#refelectrodes"><span class="std std-ref">Electrodes</span></a></i></p>
-
-:ref:`Exercises <refEDay1>`:
-
-.. raw:: html
-
-  <p><i><a class="reference internal" href="exday1.html#refeday1"><span class="std std-ref">Electronics Refresher</span></a>, <a class="reference internal" href="exday1.html#refvoltagedivider"><span class="std std-ref">Voltage Dividers</span></a>, <a class="reference internal" href="exday1.html#refelectrodeeqcir"><span class="std std-ref">Electrode Equivalent Circuit</span></a></i></p>
+:ref:`Exercises <refEDay1>`
 
 Day 2: Protecting Signals
 =====================================================
-:ref:`Theory <refTDay2>`:
+:ref:`Theory <refTDay2>`
 
-.. raw:: html
-
-  <p><i><a class="reference internal" href="theoryday2.html#reftday2"><span class="std std-ref">Impedance</span></a>, <a class="reference internal" href="theoryday2.html#refamplifierintro"><span class="std std-ref">Amplifiers</span></a></i></p>
-
-:ref:`Exercises <refEDay2>`:
-
-.. raw:: html
-
-  <p><i><a class="reference internal" href="exday2.html#refeday2"><span class="std std-ref">Impedance</span></a>, <a class="reference internal" href="exday2.html#refopampex"><span class="std std-ref">Operational Amplifiers</span></a>, <a class="reference internal" href="exday2.html#refdiffampex"><span class="std std-ref">Differential Amplifiers</span></a></i></p>
+:ref:`Exercises <refEDay2>`
 
 Day 3: Referencing and Filtering
 =====================================================
-:ref:`Theory <refTDay3>`:
+:ref:`Theory <refTDay3>`
 
-.. raw:: html
-
-  <p><i><a class="reference internal" href="theoryday3.html#reftday3"><span class="std std-ref">Instrumentation Amplifiers</span></a>, <a class="reference internal" href="theoryday3.html#reffilter"><span class="std std-ref">Filtering</span></a>, <a class="reference internal" href="theoryday3.html#refgroundref"><span class="std std-ref">Ground vs Reference</span></a></i></p>
-
-:ref:`Exercises <refEDay3>`:
-
-.. raw:: html
-
-  <p><i><a class="reference internal" href="exday3.html#refeday3"><span class="std std-ref">Build an EMG circuit</span></a></i></p>
+:ref:`Exercises <refEDay3>`
 
 Day 4: Synchronization and Digitization
 =====================================================
-:ref:`Theory <refTDay4>`:
-
-.. raw:: html
-
-  <p><i><a class="reference internal" href="theoryday4.html#reftday4"><span class="std std-ref">Synchronization</span></a>, <a class="reference internal" href="theoryday4.html#refdigitization"><span class="std std-ref">Digitization</span></a></i></p>
+:ref:`Theory <refTDay4>`
 
 :ref:`Project <refproject>`
 
@@ -109,3 +82,5 @@ who are taking the course on their own.
 :ref:`Exercises day 2 TA <refEDay2TA>`
 
 :ref:`Exercises day 3 TA <refEDay3TA>`
+
+:ref:`Exercises day 4 TA <refEDay4TA>`
