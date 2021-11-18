@@ -1,5 +1,5 @@
 ****************************************************************
-Extracellular Electrophysiology Acquisition, Dec 2021
+Extracellular Electrophysiology Acquisition
 ****************************************************************
 .. _refeea:
 
@@ -12,6 +12,7 @@ Extracellular Electrophysiology Acquisition, Dec 2021
   /Materials/license.rst
   /Materials/acknowledgements.rst
 
+*December 2021*
 
 These are the course materials for the Open Ephys course on Extracellular Electrophysiology Acquisition, December 2021 edition.
 
@@ -22,12 +23,12 @@ These are the course materials for the Open Ephys course on Extracellular Electr
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
 
-.. figure:: _static/images/EEA/eea_fig-70.png
+.. figure:: _static/images/EEA/eea_fig-85.png
   :target: Materials/kitlist.html
 
 .. container:: custom-button
 
-    :ref:`NeuroKit Equipment List <refkitlist>`
+    :ref:`Kit Equipment List <refkitlist>`
 
 .. raw:: html
 
@@ -47,15 +48,10 @@ These are the course materials for the Open Ephys course on Extracellular Electr
 
               </div>
           </div>
-        </div>
-    </div>
-
-.. raw:: html
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card text-center intro-card shadow">
+          </div>
+          <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
+              <div class="card text-center intro-card shadow">
 
 .. figure:: _static/images/EEA/eea_fig-84.png
   :target: Materials/schedule.html
@@ -67,14 +63,22 @@ These are the course materials for the Open Ephys course on Extracellular Electr
 
 .. raw:: html
 
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card text-center intro-card shadow">
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
+    <div class="card text-center intro-card shadow">
+
+.. figure:: _static/images/EEA/eea_fig-70.png
+  :target: Materials/license.html
+
+.. container:: custom-button
+
+    :ref:`Licensing <reflicense>`
 
 .. raw:: html
 
-              </div>
+                </div>
+            </div>
           </div>
         </div>
-    </div>
+        </div>
