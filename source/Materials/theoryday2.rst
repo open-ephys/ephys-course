@@ -38,7 +38,12 @@ Yesterday, we said that an acquisition system must:
 
 Impedance ratios determine signal transmission
 ####################################################
-Faithfully transferring the signal means not losing (much) signal between |Vec|, |Vin|, and |Vout|. This is all based on the idea of voltage dividers; that the voltage between two impedances in series will be determined by the ratio of their impedances.
+
+
+.. image:: ../_static/images/EEA/eea_fig-6.png
+  :align: center
+
+The signal |Vec| (V electrode) is measured at the electrode tip. |Vin| is the voltage after the electrode, before the acquisition system. |Vout| is the signal output of the acquisition system. Faithfully transferring the signal means not losing (much) signal between |Vec|, |Vin|, and |Vout|. This is all based on the idea of voltage dividers; that the voltage between two impedances in series will be determined by the ratio of their impedances.
 
 |
 
@@ -47,10 +52,9 @@ Faithfully transferring the signal means not losing (much) signal between |Vec|,
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/fVloDI4b1ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
   <br>
 
-
 Why is impedance important?
 ***********************************
-The signal |Vec| is measured at the electrode tip. It must travel through the electrode, to |Vin|, the voltage before the acquisition system itself. From there, currents coming from our neurons travel to ground. They can do so either by passing through our acquisition system, or (in parallel) they can be lost to ground through shunt capacitance (|Cs|).
+The figure below includes the equivalent circuit of the electrode, as discussed yesterday. The signal |Vec| must travel through the electrode, to |Vin|, the voltage before the acquisition system itself. From there, currents coming from our neurons travel to ground. They can do so either by passing through our acquisition system, or (in parallel) they can be lost to ground through shunt capacitance (|Cs|). Shunt capacitances are created by cables or the sides of electrodes; they are 'accidental' but unavoidable capacitances in the system.
 
 .. image:: ../_static/images/EEA/eea_fig-9.png
   :align: center
@@ -115,7 +119,7 @@ By increasing the capacitance (|Ce|) of our electrode, the electrode impedance (
 
 Shunt Impedance
 ***********************************
-Shunt impedance is the total impedance of shunt capacitance |Cs| and shunt resistance |Rsh|. These are both routes to ground outside of the intended acquisition system. At the high frequencies (1kHz) we are interested in, the capacitive component will have low impedance, and will therefore have more effect than the resistive component, so |Rsh| is often ignored.
+Shunt impedance is the total impedance of shunt capacitance |Cs| and shunt resistance |Rsh|. These are both routes to ground outside of the intended acquisition system. At the high frequencies (1kHz) we are interested in, the capacitive component will have relatively low impedance. It will therefore have more effect than the resistive component, so |Rsh| is often ignored.
 
 |
 

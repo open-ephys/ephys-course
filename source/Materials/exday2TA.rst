@@ -22,7 +22,9 @@ Exercises Day 2 TA
 Yesterday, we made the equivalent circuit of a polarising electrode connected to ground.
 Here is that circuit, with shunt capacitance added of 100 pF:
 
-https://tinyurl.com/yfukn585
+.. image:: ../_static/images/EEA/day2circuit.png
+  :align: center
+  :target: https://tinyurl.com/y447ugwt
 
 .. container:: exercise
 
@@ -42,7 +44,7 @@ https://tinyurl.com/yfukn585
 
    1C: The capacitor of our electrode and the shunt capacitance are forming a voltage divider. Changing the impedance ratio changes the Vin.
 
-   1D: Gold plated electrode circuit: increases capacitance, decreases impedance.  https://tinyurl.com/yf5tlhf4
+   1D: Gold plated electrode circuit: increases capacitance, decreases impedance.  https://tinyurl.com/y5y8chql
    Students can get impedance and capacitance mixed up and forget they go in opposite directions.
 
 
@@ -50,7 +52,9 @@ Drawing Current
 ***********************************
 Let's do a recording! We'll take our electrode, and attach it through a long wire to a recording system (the recording system has an analog to digital converter, ADC, and a recording computer).
 
-https://tinyurl.com/yjw8aser
+.. image:: ../_static/images/EEA/day2withac.png
+  :align: center
+  :target: https://tinyurl.com/y6864vle
 
 .. container:: exercise
 
@@ -65,7 +69,7 @@ https://tinyurl.com/yjw8aser
 
     1F: We need to do something to prevent our amplifier from always hitting power-rail values. We can provide negative feedback to the amplifier by looping the output back and feeding it into one of the terminals. The amplifier is going to do the same thing as before; output the difference between + and - multiplied by its huge gain. The output will rise rapidly, however this time, as soon as it reaches the value of the + terminal, the + and – are the same value and there’s no difference left to amplify.
 
-    1G: https://tinyurl.com/yhehjxep Connect the amplifier output to the inverting input. Now we’re just seeing our input signal replicated at the output of the amplifier with a gain of 1.
+    1G: https://tinyurl.com/y454jqlb Connect the amplifier output to the inverting input. Now we’re just seeing our input signal replicated at the output of the amplifier with a gain of 1.
 
 2. Operational Amplifiers
 ###################################

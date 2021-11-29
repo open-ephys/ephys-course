@@ -2,6 +2,15 @@
 TA files
 ******************************************
 
+.. toctree::
+  :maxdepth:
+
+  exday1TA.rst
+  exday2TA.rst
+  exday3TA.rst
+  exday4TA.rst
+
+
 Exercises for teaching assistants
 ###########################################
 

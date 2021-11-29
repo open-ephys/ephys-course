@@ -34,6 +34,16 @@ types of acquisition systems and setups, but they are built upon the same princi
 By understanding these fundamental ideas, we hope you will be able to see past branding and tradition, and decide for yourself what
 you need your setup to be able to do.
 
+Talk: Introduction 
+###################################
+
+.. raw:: html
+
+  <br>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/eaAKn61R6MY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br>
+
+
 Types of extracellular electrophysiology
 ############################################
 Several biological processes in the body generate electrical signals that we can measure outside of cells, such as skeletal muscle contraction (electromyography, EMG), or the heartbeat (electrocardiogram, ECG). In Neuroscience, we often use intracranial electrodes to measure action potential firing (spikes) or local field potentials (LFP). Electrodes outside the skull allow us to detect the electroencephalogram (EEG) non-invasively.
