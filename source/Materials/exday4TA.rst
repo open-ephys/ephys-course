@@ -119,7 +119,7 @@ Exercise 5: Touch detector
 
 This workflow is detecting each sample.
 
-• Use the 'Buffer (Dsp)' and 'Average' nodes to run the detection over more than 1 sample. You will need to output only the first value from Average (it will be default return 4 values and then the other nodes won't work.) Do this by right-clicking on Average/Output/Val0.
+• Use the 'Buffer (Dsp)' and 'Average' nodes to run the detection over more than 1 sample. You will need to output only the first value from Average (it will by default return 4 values, and then the other nodes won't work as they can only receive 1 value.) Do this by right-clicking on Average/Output/Val0.
 
 • Run the workflow and tap the pin on the Teensy.
 
