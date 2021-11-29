@@ -13,7 +13,6 @@ Exercises Day 2 TA
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
 
-
 .. contents::
   :depth: 2
   :local:
@@ -21,7 +20,7 @@ Exercises Day 2 TA
 1. Impedance Ratios
 ##############################################
 Yesterday, we made the equivalent circuit of a polarising electrode connected to ground.
-Here is that circuit with shunt capacitance added of 100 pF:
+Here is that circuit, with shunt capacitance added of 100 pF:
 
 https://tinyurl.com/yfukn585
 
@@ -39,10 +38,13 @@ https://tinyurl.com/yfukn585
 .. admonition:: TA Note
    :class: tanote
 
-   The capacitor of our electrode and the shunt capacitance are forming a voltage divider. Changing the impedance ratio changes the Vin.
+   1B: Should be 50 uV left of our 5V signal.
 
-   Gold plated electrode circuit: increases capacitance, decreases impedance.  https://tinyurl.com/yf5tlhf4
+   1C: The capacitor of our electrode and the shunt capacitance are forming a voltage divider. Changing the impedance ratio changes the Vin.
+
+   1D: Gold plated electrode circuit: increases capacitance, decreases impedance.  https://tinyurl.com/yf5tlhf4
    Students can get impedance and capacitance mixed up and forget they go in opposite directions.
+
 
 Drawing Current
 ***********************************
@@ -159,7 +161,7 @@ We’re going to build the circuit below (note the square wave input, just like 
        -
        -
 
-    2E. How much signal is lost by this ‘recording system’?
+  2E. How much signal is lost by this ‘recording system’?
 
 Replace the 'long wire' with 'headstage'
 ***********************************************

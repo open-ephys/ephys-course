@@ -155,7 +155,7 @@ If you see something odd, check:
 
    NB: sometimes connecting the ground directly to the Teensy causes it to charge (you can see it with the scope) and it can end up disconnecting from the PC and making a mess. They don’t actually need the ground of the scope connected to see the large sine wave because of the scope’s high input impedance. That might be confusing now, but should be clearer after talking about impedance tomorrow.
 
-   !!! If a student's scope isn't responding to any input, before panicking check that they are not using the 'automotive' version of the Picoscope software as this will make the scope look dead.!!!
+   !!! If a student's scope isn't responding to any input, before panicking check that they are not using the 'automotive' version of the Picoscope software as this will make the scope look dead.
 
 
 We’ll now use the Teensy microcontroller to output a sine wave, instead of the blink example.
@@ -202,10 +202,10 @@ When looking at a whole circuit, we can use this to calculate how much current w
   :align: center
   :target: https://tinyurl.com/y4r8nsnj
 
-  .. container:: exercise
+.. container:: exercise
 
-  3A. Click on the image to go to the simulator.
-  Right-click on the top wire in the circuit, and then select Edit to display the current through that wire. Double-click on either of the resistors to decrease their value and see how the current in the circuit responds.
+3A. Click on the image to go to the simulator.
+Right-click on the top wire in the circuit, and then select Edit to display the current through that wire. Double-click on either of the resistors to decrease their value and see how the current in the circuit responds.
 
 4.	Resistors
 ###################################
@@ -215,11 +215,11 @@ Here’s another simulation demonstrating Ohm’s law. This time, the current mo
   :align: center
   :target: https://www.falstad.com/circuit/e-ohms.html
 
-  .. container:: exercise
+.. container:: exercise
 
-    4A.	Display the voltage and current over both resistors in the ‘scope’ (right click/show in new scope). What will happen to the voltage over the left resistor if you double its resistance? What will happen to the current?
+  4A.	Display the voltage and current over both resistors in the ‘scope’ (right click/show in new scope). What will happen to the voltage over the left resistor if you double its resistance? What will happen to the current?
 
-    4B.	What will happen to the voltage and current over the left-hand resistor? Double the value in the simulator and see if your predictions were correct.
+  4B.	What will happen to the voltage and current over the left-hand resistor? Double the value in the simulator and see if your predictions were correct.
 
 .. admonition:: TA Note
    :class: tanote
@@ -243,12 +243,12 @@ That means that, in a circuit with multiple resistors in series, the ratio of th
 
 .. math::
 
-  |Vout| = |Vin| \frac{R1}{R1+R2}
+  |Vout| = |Vin| \frac{R2}{R1+R2}
 
 
 .. container:: exercise
 
-5A.	Using the simulator (here’s an empty full-screen https://tinyurl.com/y477e9qd) build a voltage divider circuit in which you use a battery and two resistors to provide an 800 mV output voltage |Vout|.
+5A.	Using the simulator (here’s an empty full-screen https://tinyurl.com/y477e9qd) build a voltage divider circuit in which you use a 3V battery and two resistors to provide an 800 mV output voltage |Vout|.
 
 
 .. admonition:: TA Note
@@ -362,9 +362,9 @@ To describe restriction of direct current flow, we used resistance (R). To descr
 
     Here are two circuits, both provided by an alternating voltage source with a different frequency. In the scope below, the voltage trace of the source and the capacitor are plotted.
 
-    7B.	Change the simulator oscilloscope to display the current in the circuit (for instance the current flowing through the stretch of wire).
+    8A.	Change the simulator oscilloscope to display the current in the circuit (for instance the current flowing through the stretch of wire).
 
-    7C.	Add a third circuit, powered by an alternating voltage source of 120 Hz. What happens as the frequency increases?
+    8B.	Add a third circuit, powered by an alternating voltage source of 120 Hz. What happens as the frequency increases?
 
 
 The impedance magnitude of a capacitor, also called reactance (X\ :sub:`c`), depends on:
@@ -428,7 +428,7 @@ In the theory handout, we discussed how we can represent an electrode as a circu
 
     10B.	Edit the alternating voltage supply to provide 1V at 1Khz, mimicking the signal coming from your cell. 1V is larger than ephys signals, but makes the current flow easier to see. Change the sliders for simulation speed and current speed until you can see where the current is flowing.
 
-    10C. What happens if you delete |Rm|?
+    10C. What happens if you delete |Re|?
 
     10D. Can you change this circuit from a polarising, tungsten electrode, to a circuit representing a nonpolarizable electrode?
 

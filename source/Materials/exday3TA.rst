@@ -57,8 +57,8 @@ Check that your have a correct differential amplifier circuit before moving on.
   Simulate a case in which one of the resistors is 10% higher and another is 10% lower. What happens?
 
   |
-  
-  Return the resistors to balanced values. Now add edit the resistors directly after the input signals, to act as your electrode (for both the signal and reference). You can simplify the electrode to a 300kOhm resistor, or a 800 pF capacitor if you prefer.
+
+  Return the resistors to balanced values. Now add resistors directly after the input signals, to act as your electrode (for both the signal and reference). You can simplify the electrode to a 300kOhm resistor, or a 800 pF capacitor if you prefer.
 
 
   2F. What happens to the signal if there is a 5% difference between the impedance of your 2 electrodes?

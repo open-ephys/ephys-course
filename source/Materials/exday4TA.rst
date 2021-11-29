@@ -59,21 +59,26 @@ Exercise 2: Saving a WAV file
 • Insert an AudioWriter sink.
 • Configure the FileName property of the AudioWriter operator with a file name ending in .wav.
 • Make sure that the SamplingFrequency property of the AudioWriter matches the frequency of audio capture.
-• Run the workflow for some seconds. Playback the file in Windows Media Player to check that it is a valid audio file.
+• Run the workflow for some seconds to record a file.
 
-.. image:: ../_static/images/EEA/audioplayback.png
-   :align: center
+
 
 Exercise 3: Trigger an auditory stimulus
 --------------------------------------------
 
-.. image:: ../_static/images/EEA/audiokeydown.png
-   :align: center
+
+.. image:: ../_static/images/EEA/audioplayback.png
+  :align: center
 
 • Insert an AudioReader source.
 • Configure the FileName property to point to the audio file you recorded in Exercise 3.
 • Insert an AudioPlayback sink.
 • Run the workflow and check that the sound is played correctly.
+
+
+.. image:: ../_static/images/EEA/audiokeydown.png
+   :align: center
+
 • Insert a KeyDown source (Windows.input).
 • Set the BufferLength property of the AudioReader to zero, so that all audio data is read into a single buffer.
 • Combine the key press with the audio data using the WithLatestFrom combinator.

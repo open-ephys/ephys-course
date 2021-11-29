@@ -13,7 +13,7 @@ Theory Day 2
 .. |Re| replace:: R\ :sub:`e`\
 .. |Rsh| replace:: R\ :sub:`sh`\
 .. |Ce| replace:: C\ :sub:`e`\
-.. |Csh| replace:: C\ :sub:`sh`\
+.. |Cs| replace:: C\ :sub:`s`\
 .. |Vin| replace:: V\ :sub:`in`\
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
@@ -21,6 +21,7 @@ Theory Day 2
 .. |Za| replace:: Z\ :sub:`a`\
 .. |Ze| replace:: Z\ :sub:`e`\
 .. |Zsh| replace:: Z\ :sub:`sh`\
+.. |Zcs| replace:: Z\ :sub:`cs`\
 
 
 .. contents:: Table of Contents
@@ -37,7 +38,7 @@ Yesterday, we said that an acquisition system must:
 
 Impedance ratios determine signal transmission
 ####################################################
-Faithfully transferring the signal means not losing (much) signal between |Vec|, |Vin|, and |Vout|. This is all based on the idea of voltage dividers; that the voltage between two impedances in serial will be determined by determined by the ratio of their impedances.
+Faithfully transferring the signal means not losing (much) signal between |Vec|, |Vin|, and |Vout|. This is all based on the idea of voltage dividers; that the voltage between two impedances in series will be determined by the ratio of their impedances.
 
 |
 
@@ -49,7 +50,7 @@ Faithfully transferring the signal means not losing (much) signal between |Vec|,
 
 Why is impedance important?
 ***********************************
-The signal |Vec| is measured at the electrode tip. It must travel through the electrode, to |Vin|, the voltage before the acquisition system itself. From there, currents coming from our neurons travel to ground. They can do so either by passing through our acquisition system, or (in parallel) they can be lost to ground through shunt capacitance (|Csh|).
+The signal |Vec| is measured at the electrode tip. It must travel through the electrode, to |Vin|, the voltage before the acquisition system itself. From there, currents coming from our neurons travel to ground. They can do so either by passing through our acquisition system, or (in parallel) they can be lost to ground through shunt capacitance (|Cs|).
 
 .. image:: ../_static/images/EEA/eea_fig-9.png
   :align: center
@@ -59,7 +60,7 @@ We can replace these components with a representation of the impedance (Z) they 
 .. image:: ../_static/images/EEA/eea_fig-77.png
   :align: center
 
-The impedance of the shunt capacitance, |Zsh| and the impedance of the acquisition system |Za| are impedances in parallel.
+The impedance of the shunt capacitance, |Zcs| and the impedance of the acquisition system |Za| are impedances in parallel.
 We can simplify our circuit by combining their impedances and calling it |Za|'.
 
 .. image:: ../_static/images/EEA/eea_fig-81.png
@@ -114,7 +115,7 @@ By increasing the capacitance (|Ce|) of our electrode, the electrode impedance (
 
 Shunt Impedance
 ***********************************
-Shunt impedance is the total impedance of shunt capacitance |Csh| and shunt resistance |Rsh|. These are both routes to ground outside of the intended acquisition system. At the high frequencies (1kHz) we are interested in, the capacitive component will have low impedance, and will therefore have more effect than the resistive component, so |Rsh| is often ignored.
+Shunt impedance is the total impedance of shunt capacitance |Cs| and shunt resistance |Rsh|. These are both routes to ground outside of the intended acquisition system. At the high frequencies (1kHz) we are interested in, the capacitive component will have low impedance, and will therefore have more effect than the resistive component, so |Rsh| is often ignored.
 
 |
 
