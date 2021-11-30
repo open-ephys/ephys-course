@@ -43,7 +43,7 @@ Impedance ratios determine signal transmission
 .. image:: ../_static/images/EEA/eea_fig-6.png
   :align: center
 
-The signal |Vec| (V electrode) is measured at the electrode tip. |Vin| is the voltage after the electrode, before the acquisition system. |Vout| is the signal output of the acquisition system. Faithfully transferring the signal means not losing (much) signal between |Vec|, |Vin|, and |Vout|. This is all based on the idea of voltage dividers; that the voltage between two impedances in series will be determined by the ratio of their impedances.
+The signal |Vec| (V electrode) is measured at the electrode tip. |Vin| is the voltage that enters the acquisition system. |Vout| is the signal output of the acquisition system. Faithfully transferring the signal means not losing (much) signal between |Vec|, |Vin|, and |Vout|. This is all based on the idea of voltage dividers; that the voltage between two impedances in series will be determined by the ratio of their impedances.
 
 |
 
