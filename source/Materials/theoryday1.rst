@@ -34,7 +34,7 @@ types of acquisition systems and setups, but they are built upon the same princi
 By understanding these fundamental ideas, we hope you will be able to see past branding and tradition, and decide for yourself what
 you need your setup to be able to do.
 
-Talk: Introduction 
+Talk: Introduction
 ###################################
 
 .. raw:: html
@@ -270,7 +270,7 @@ The driving force in this scenario is the membrane potential, i.e. the **differe
 
 |
 
-Ions in neurons are influenced by electric forces and a second driving force, namely their concentration gradients. Ions will tend to diffuse away from areas where there is a high concentration of the ion, to areas with a lower concentration. The interaction of the concentration and electrical driving forces is the electrochemical gradient and this balance is described by the Nernst equation. Read `Wright 2004 <https://journals.physiology.org/doi/pdf/10.1152/advan.00029.200>`_ for a clear refresher on this, and to understand how the -70mV is maintained by the cell.
+Ions in neurons are influenced by electric forces and a second driving force, namely their concentration gradients. Ions will tend to diffuse away from areas where there is a high concentration of the ion, to areas with a lower concentration. The interaction of the concentration and electrical driving forces is the electrochemical gradient and this balance is described by the Nernst equation. Read `Wright 2004 <https://journals.physiology.org/doi/pdf/10.1152/advan.00029.2004>`_ for a clear refresher on this, and to understand how the -70mV is maintained by the cell.
 
 Neuronal output: Action Potentials
 *********************************************
