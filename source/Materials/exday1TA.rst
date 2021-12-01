@@ -82,11 +82,15 @@ The kit includes a Teensy pinout card. This diagram (‘pinout’) shows us what
 Your teensy already has header pins attached, so that you can click it into your breadboard.
 
 It’s important to distinguish between:
+
 * Ground pins (GND)
 * Analog pins, that can read varying voltages, such as a wave. There is also an analog ground.
 *	Digital pins, that can read or write HIGH or LOW values.
 
 We’re going to attach the Teensy to our solderless breadboard. Removing and replacing the teensy can sometimes bend the pins, so we’re going to leave it here for the whole course.
+
+.. warning::
+  If you have to remove the teensy from the board, never hold it by the USB port, as it can easily snap off!
 
 .. image:: ../_static/images/EEA/eea_fig-10.png
   :align: center
@@ -391,18 +395,19 @@ Because capacitors impede current flow, we can use them to build voltage divider
   9A.	Try changing the capacitance values C for the first capacitor. How does this change your output voltage?
 
 
-  In the circuit below, you will see a capacitor and a resistor in parallel. The voltage source alternates at 20Hz, going from -10 to +10 volts.
-  The current travels over the resistor or via the capacitor to ground.
+In the circuit below, you will see a capacitor and a resistor in parallel. The voltage source alternates at 20Hz, going from -10 to +10 volts. The current travels over the resistor or via the capacitor to ground.
 
-    .. image:: ../_static/images/EEA/eea_fig-74.png
-      :align: center
-      :target: https://tinyurl.com/yhu578fx
+.. image:: ../_static/images/EEA/eea_fig-74.png
+  :align: center
+  :target: https://tinyurl.com/yhu578fx
 
-  9B.  Increase the value of the resistor to 200KOhm. What happens to the current?
+.. container:: exercise
 
-  9C.  Put the resistor back to 1KOhm. Now, increase the capacitance of the capacitor to around 10mF. What happens to the current?
+  9B.  Increase the value of the resistor to 200kOhm. What happens to the current?
 
-  9D.  Return the values to 1KOhm and 10uF.
+  9C.  Put the resistor back to 1kOhm. Now, increase the capacitance of the capacitor to around 10mF. What happens to the current?
+
+  9D.  Return the values to 1kOhm and 10uF.
 
   Change the frequency of the alternating signal to:
   - 1000 Hz (action potentials!)
