@@ -20,7 +20,7 @@ Exercises Day 2 TA
 1. Impedance Ratios
 ##############################################
 Yesterday, we made the equivalent circuit of a polarising electrode connected to ground.
-Here is that circuit, with shunt capacitance added of 100 pF:
+Here is that circuit, with shunt impedance added of 100 pF:
 
 .. image:: ../_static/images/EEA/day2circuit.png
   :align: center
@@ -28,7 +28,7 @@ Here is that circuit, with shunt capacitance added of 100 pF:
 
 .. container:: exercise
 
-  1A. What is shunt capacitance?
+  1A. What is shunt impedance?
 
   1B. What % of our signal are we losing between Vec and Vin? Why?
 
@@ -42,7 +42,7 @@ Here is that circuit, with shunt capacitance added of 100 pF:
 
    1B: Should be 50 uV left of our 5V signal.
 
-   1C: The capacitor of our electrode and the shunt capacitance are forming a voltage divider. Changing the impedance ratio changes the Vin.
+   1C: The capacitor of our electrode and the shunt impedance are forming a voltage divider. Changing the impedance ratio changes the Vin.
 
    1D: Gold plated electrode circuit: increases capacitance, decreases impedance.  https://tinyurl.com/y5y8chql
    Students can get impedance and capacitance mixed up and forget they go in opposite directions.
@@ -50,7 +50,7 @@ Here is that circuit, with shunt capacitance added of 100 pF:
 
 Drawing Current
 ***********************************
-Let's do a recording! We'll take our electrode, and attach it through a long wire to a recording system (the recording system has an analog to digital converter, ADC, and a recording computer).
+Let's do a recording! We'll take our electrode, and attach it through a long wire to a recording system (the recording system has an analog to digital converter, ADC, and a recording computer). The leakage resistance here is because the recording system is also connected to ground.
 
 .. image:: ../_static/images/EEA/day2withac.png
   :align: center
@@ -73,24 +73,78 @@ Let's do a recording! We'll take our electrode, and attach it through a long wir
 
 2. Operational Amplifiers
 ###################################
-Let’s build this circuit in real life, on the breadboard. We’ll treat the ‘Blink’ example as our neuronal data and see what happens to this signal if we just have a wire, and then see the effect of replacing this wire with an op-amp.
+Let’s build a slightly simplified version of these circuits in real life, on the breadboard. We’ll treat the ‘Blink’ example as our neuronal data and see what happens to this signal if we just have a wire, and then see the effect of replacing this wire with an op-amp. We'll simplify our electrode circuit to a single resistor.
 
-* 'Neuron'  = Digital output from Teensy
-* 'Electrode' = 1 MOhm resistor
+.. image:: ../_static/images/EEA/eea_fig-41.png
+  :align: center
+  :target: https://tinyurl.com/y5b7nfuv
+
+
+* 'Neuron'  = Digital blink output from Teensy
+* 'Electrode' = 100 kOhm resistor
 * 'Shunt' = 22kOhm resistor
+* 'Leak' = 220Ohm resistor
+* 'Recording system' = the Picoscope
+
+Without an amplifier
+************************************
+
+.. container:: exercise
+
+  2A.	Upload the Blink example to your teensy (or just run it if still loaded).
+
+  Build the circuit below:
+
+  * Send the Teensy output through a 100 KOhm resistor. This makes it behave a bit like a biological signal coming from an electrode.
+
+  *	A 22kOhm resistor to ground simulates shunt impedance.
+
+  * A 220 Ohm resistor to ground simulates that your acquisition system is connected to ground (via some resistance).
+
+  *	The yellow wires are 'readout' wires to connect your oscilloscope to.
+
+  .. image:: ../_static/images/EEA/eea_fig-39.png
+    :align: center
+
+  .. image:: ../_static/images/EEA/eea_fig-38.png
+    :align: center
+
+  2B.	Now measure the output with the oscilloscope at the points marked by red arrows in the image below, and complete the first column of the table below:
+
+  .. list-table::
+     :width: 80%
+     :widths: 20 20 20
+     :header-rows: 1
+     :align: left
+
+     * - (+) Probe Location
+       - Long Wire
+       - Op-Amp
+     * - 1. Teensy Pin 13
+       -
+       -
+     * - 2. Readout Wire 1
+       -
+       -
+     * - 3. Readout Wire 2
+       -
+       -
+
+  2C. How much signal is lost?
+
 
 Build voltage rails
 ***********************************
 .. warning::
   Make sure that the pins from the batteries do not touch, and if they’re not in use, best to put some tape on them so they don’t touch things. ‘Short-circuiting’ the batteries (connecting them without any sort of resistance) causes a huge current to flow from the + to -, enough to... melt stuff.
 
-First, we need to make the ‘rails’ that will provide the voltage for our op-amp. Eventually, for our EMG circuit, we will need to have a positive and negative voltage ready, so that we can amplify a signal that lives around some reference level that we shall call 0 volt. If we only have 0 and +3V, then any negative signal will floor and stay at 0.
+Now, we need to make the ‘rails’ that will provide the voltage for our op-amp. Eventually, for our EMG circuit, we will need to have a positive and negative voltage ready, so that we can amplify a signal that lives around some reference level that we shall call 0 volt. If we only have 0 and +3V, then any negative signal will floor and stay at 0.
 
 To do this we use a common trick and turn two regular power supplies into a bipolar power supply. In our case we use batteries, because they’re cheap and pretty much fully noise-free. Check which way up your breadboard is (keep the blue line at the top). Following the figures precisely will make debugging much easier later on.
 
 .. container:: exercise
 
-  2A. Connect the battery holders as follows:
+  2D. Connect the battery holders as follows:
 
   - One pair of batteries provides 3V relative to ground, 0V.
 
@@ -105,67 +159,15 @@ To do this we use a common trick and turn two regular power supplies into a bipo
 
 Add bypass capacitors
 ***********************************
-Bypass capacitors are small capacitors that act like little secondary batteries. In our case we’ll add two 100nF (marked 104) caps, one to each rail, so GND to 3V and GND to -3V. The reason is that the batteries we use have what's called a high ESR - ‘equivalent series resistance’ and some capacitance, so they are not great at quickly providing current. This means that when our op-amp starts working, it can run out of current for a very short time, until the battery can drive the rails back to their original voltage. This is bad for the signal quality and causes all kinds of issues. So, we give the rails the ability to very quickly provide a small amount of current from these small capacitors. We’re exploiting the fact that these caps have very low ESR and can provide current pretty much instantaneously. If the battery briefly can’t provide current, the bypass capacitors will discharge, providing quick back-up current. The fact that they’re too small to power anything for more than a millisecond does not matter here, at that point the batteries have caught up.
+Bypass capacitors are small capacitors that act like little secondary batteries. In our case we’ll add two 100nF (marked 104) caps, one to each rail, so GND to 3V and GND to -3V. The reason is that the batteries we use have what's called a high ESR - ‘equivalent series resistance’ and some capacitance, so they are not great at quickly providing current. This means that when our op-amp starts working, it can run out of current for a very short time, until the battery can drive the rails back to their original voltage. This is bad for the signal quality.
+So, we give the rails the ability to very quickly provide a small amount of current from these small capacitors. We’re exploiting the fact that these caps have very low ESR and can provide current pretty much instantaneously. If the battery briefly can’t provide current, the bypass capacitors will discharge, providing quick back-up current. The fact that they’re too small to power anything for more than a millisecond does not matter here, at that point the batteries have caught up.
 
 .. container:: exercise
 
-  2B. Add two 100nF (marked 104) caps, one to each rail, so connecting GND to 3V and connecting GND to -3V (see image below).
+  2E. Add two 100nF (marked 104) caps, one to each rail, so connecting GND to 3V and connecting GND to -3V (see image below).
 
   .. image:: ../_static/images/EEA/eea_fig-36.png
     :align: center
-
-Build the 'long wire' equivalent circuit
-*************************************************
-We’re going to build the circuit below (note the square wave input, just like the blink example). We’re using resistors to model our electrode and shunt impedance voltage divider. For now, we don't need the voltage rails, they will be used to power our amplifier later.
-
-.. image:: ../_static/images/EEA/eea_fig-37.png
-  :align: center
-
-.. container:: exercise
-
-  2C.	Upload the Blink example to your teensy (or just run it if still loaded).
-
-  Build the circuit below:
-
-  * Send the Teensy output through a 1MOhm resistor. This makes it behave a bit like a biological signal coming from an electrode.
-
-  *	A 22kOhm resistor to ground simulates the signal lost to ground over a really long wire.
-
-  *	Add one ‘readout’ wire connected to ground (for your oscilloscope ground lead)
-
-  *	Connect a second readout wire so that you can measure the output voltage of your system.
-
-  .. image:: ../_static/images/EEA/eea_fig-39.png
-    :align: center
-
-  .. image:: ../_static/images/EEA/eea_fig-38.png
-    :align: center
-
-  2D.	Now measure the output with the oscilloscope at the points marked by red arrows in the image below, and complete the first column of the table below:
-
-  .. image:: ../_static/images/EEA/eea_fig-40.png
-    :align: center
-
-  .. list-table::
-     :width: 80%
-     :widths: 20 20 20
-     :header-rows: 1
-     :align: left
-
-     * - (+) Probe Location
-       - Long Wire
-       - Op-Amp
-     * - 1. Teensy Pin 13
-       -
-       -
-     * - 2. Leg of 1 mOhm Resistor
-       -
-       -
-     * - 3. Readout Wire
-       -
-       -
-
-  2E. How much signal is lost by this ‘recording system’?
 
 Replace the 'long wire' with 'headstage'
 ***********************************************
@@ -192,12 +194,11 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P),
   .. image:: ../_static/images/EEA/eea_fig-42.png
     :align: center
 
-  .. image:: ../_static/images/EEA/eea_fig-43.png
+  .. image:: ../_static/images/EEA/eea_fig-40.png
     :align: center
 
 
   2G. Now measure the same three points as before and complete this table:
-
 
   .. list-table::
      :width: 80%
@@ -211,12 +212,14 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P),
      * - 1. Teensy Pin 13
        -
        -
-     * - 2. Leg of 1 mOhm Resistor
+     * - 2. Readout Wire 1
        -
        -
-     * - 3. Readout Wire
+     * - 3. Readout Wire 2
        -
        -
+
+   2H. Optional: try changing the resistances you've used for electrode, shunt, and leakage. What happens to the signal?
 
 
 .. admonition:: TA Note

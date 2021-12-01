@@ -54,7 +54,7 @@ The signal |Vec| (V electrode) is measured at the electrode tip. |Vin| is the vo
 
 Why is impedance important?
 ***********************************
-The figure below includes the equivalent circuit of the electrode, as discussed yesterday. The signal |Vec| must travel through the electrode, to |Vin|, the voltage before the acquisition system itself. From there, currents coming from our neurons travel to ground. They can do so either by passing through our acquisition system, or (in parallel) they can be lost to ground through shunt capacitance (|Cs|). Shunt capacitances are created by cables or the sides of electrodes; they are 'accidental' but unavoidable capacitances in the system.
+The figure below includes the equivalent circuit of the electrode, as discussed yesterday. The signal |Vec| must travel through the electrode, to |Vin|, the voltage before the acquisition system itself. From there, currents coming from our neurons travel to ground. They can do so either by passing through our acquisition system, or (in parallel) they can be lost to ground through shunt impedance. Shunt impedance is primarily capacitive (see section below) and represented as (|Cs|). Shunt capacitances are created by cables or the sides of electrodes; they are 'accidental' but unavoidable capacitances in the system.
 
 .. image:: ../_static/images/EEA/eea_fig-9.png
   :align: center
@@ -84,7 +84,7 @@ The ratio of |Ze| and |Za|' therefore determines how much of our electrode tip v
 
 |
 
-If |Za|’ is not substantially greater than |Ze|, |Vin| will be much lower than |Vec|. To have high |Za|’, we need amplifiers with high input impedance and low shunt capacitance (high shunt impedance).
+If |Za|’ is not substantially greater than |Ze|, |Vin| will be much lower than |Vec|. To have high |Za|’, we need amplifiers with high input impedance and high shunt impedance.
 
 Electrode Impedance
 ***********************************
@@ -231,11 +231,3 @@ Our electrodes will be attached to a headstage, which contains an amplifier. Thi
 
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/NP6nE5P82e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
   <br>
-
-Here is the simulator circuit used in the video above. You should see that the operational amplifier stops the cable from drawing current from the electrode, and that the operational amplifier instead manages to ‘drive’ the cable effortlessly, by providing a lot of current.
-
-|
-
-.. image:: ../_static/images/EEA/eea_fig-30.png
-  :align: center
-  :target: https://tinyurl.com/ygpje26o
