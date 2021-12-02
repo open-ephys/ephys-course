@@ -75,16 +75,17 @@ Let's do a recording! We'll take our electrode, and attach it through a long wir
 ###################################
 Let’s build a slightly simplified version of these circuits in real life, on the breadboard. We’ll treat the ‘Blink’ example as our neuronal data and see what happens to this signal if we just have a wire, and then see the effect of replacing this wire with an op-amp. We'll simplify our electrode circuit to a single resistor.
 
-.. image:: ../_static/images/EEA/eea_fig-41.png
-  :align: center
-  :target: https://tinyurl.com/y5b7nfuv
-
 
 * 'Neuron'  = Digital blink output from Teensy
 * 'Electrode' = 100 kOhm resistor
 * 'Shunt' = 22kOhm resistor
 * 'Leak' = 220Ohm resistor
 * 'Recording system' = the Picoscope
+
+
+.. image:: ../_static/images/EEA/eea_fig-87.png
+  :align: center
+  :target: https://tinyurl.com/y3sq3lfq
 
 Without an amplifier
 ************************************
@@ -171,7 +172,6 @@ So, we give the rails the ability to very quickly provide a small amount of curr
 
 Replace the 'long wire' with 'headstage'
 ***********************************************
-
 We will replace our long wire with a 'headstage'. We will use only the most basic part of the headstage, an operational amplifier.
 
 This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P), not the instrumentation amp (AD622). The op-amp should say ‘LM358’ on it.
