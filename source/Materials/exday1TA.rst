@@ -366,10 +366,19 @@ To describe restriction of direct current flow, we used resistance (R). To descr
 
     Here are two circuits, both provided by an alternating voltage source with a different frequency. In the scope below, the voltage trace of the source and the capacitor are plotted.
 
-    8A.	Change the simulator oscilloscope to display the current in the circuit (for instance the current flowing through the stretch of wire).
+    8A.	Visualise the current in the circuit (for instance the current flowing through the stretch of wire). You could add a new scope to do this or double-click the wire and 'show current'. Which circuit has higher current?
 
-    8B.	Add a third circuit, powered by an alternating voltage source of 120 Hz. What happens as the frequency increases?
+    8B.	Add a third circuit, powered by an alternating voltage source of 120 Hz. What happens to the current as the frequency increases?
 
+    (Bonus question: what happens to the voltage drop across the capacitor as frequency increases?)
+
+
+.. admonition:: TA Note
+   :class: tanote
+
+   With increasing frequency, the impedance of the capacitor decreases. That means that:
+   - The overall current in the circuit increases (I = V/R with lower R)
+   - The ratio of impedance between the 200 Ohm resistor and the capacitor changes. It's another voltage divider: the 5 volt must still be 'spent' in the circuit, but more of it now goes to the 200 Ohm resistor. The voltage drop over the capacitor reduces as its impedance reduces. 
 
 The impedance magnitude of a capacitor, also called reactance (X\ :sub:`c`), depends on:
 
