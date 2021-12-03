@@ -38,7 +38,7 @@ Step-by-step, we are going to build our 'goal' circuit has the following propert
 
   2A. Connect the reference and spike signal directly to the op-amp in open-loop configuration to subtract the reference. Connect the output of the amplifier to the PC. Run the simulation. What (in V) is the amplifier giving as output?
 
-  2B. Try adding a negative feedback connection to stop the amplifier from saturating.
+  2B. Try adding a wire (with no resistors) as a negative feedback connection to stop the amplifier from saturating.
 
   Why does this not work?
 
@@ -79,7 +79,7 @@ To get this differential amplifier to work, each electrode and resistor would ha
 
    2A: https://tinyurl.com/yemp5rve
 
-   2B: They need at least 1 resistor for the simulator to not give an error, because otherwise, they are asking the output of the amplifier, the - input and the reference input to all be at the same voltage when they are not, and the simulator can't solve the circuit.
+   2B: It doesn't work if they only put a wire connection as feedback. They need at least 1 resistor for the simulator to not give an error, because otherwise, they are asking the output of the amplifier, the - input and the reference input to all be at the same voltage when they are not, and the simulator can't solve the circuit.
 
    2C: https://tinyurl.com/yzz5ht4f
 

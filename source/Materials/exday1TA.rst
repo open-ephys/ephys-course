@@ -223,7 +223,7 @@ Here’s another simulation demonstrating Ohm’s law. This time, the current mo
 
   4A.	Display the voltage and current over both resistors in the ‘scope’ (right click/show in new scope). What will happen to the voltage over the left resistor if you double its resistance? What will happen to the current?
 
-  4B.	What will happen to the voltage and current over the left-hand resistor? Double the value in the simulator and see if your predictions were correct.
+  4B.	What will happen to the voltage and current over the right-hand resistor? Double the value in the simulator and see if your predictions were correct.
 
 .. admonition:: TA Note
    :class: tanote
@@ -378,7 +378,7 @@ To describe restriction of direct current flow, we used resistance (R). To descr
 
    With increasing frequency, the impedance of the capacitor decreases. That means that:
    - The overall current in the circuit increases (I = V/R with lower R)
-   - The ratio of impedance between the 200 Ohm resistor and the capacitor changes. It's another voltage divider: the 5 volt must still be 'spent' in the circuit, but more of it now goes to the 200 Ohm resistor. The voltage drop over the capacitor reduces as its impedance reduces. 
+   - The ratio of impedance between the 200 Ohm resistor and the capacitor changes. It's another voltage divider: the 5 volt must still be 'spent' in the circuit, but more of it now goes to the 200 Ohm resistor. The voltage drop over the capacitor reduces as its impedance reduces.
 
 The impedance magnitude of a capacitor, also called reactance (X\ :sub:`c`), depends on:
 
