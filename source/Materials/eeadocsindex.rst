@@ -47,12 +47,22 @@ Read/watch:
 `Introduction to op-amps <https://www.youtube.com/watch?v=7FYHt5XviKc>`_
 (this isn't our material, we just think it's a solid introduction to the topic!)
 
+Exercises:
+*******************************
+:ref:`Exercises <refEDay2>`
+
+
 Day 3: Referencing and Filtering
 =====================================================
 
 Read:
 *******************************
 :ref:`Theory <refTDay3>`
+
+Exercises:
+*******************************
+:ref:`Exercises <refEDay3>`
+
 
 Day 4: Synchronization and Digitization
 =====================================================
