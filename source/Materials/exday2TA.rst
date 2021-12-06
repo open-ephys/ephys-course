@@ -24,7 +24,7 @@ Here is that circuit, with shunt impedance added of 100 pF:
 
 .. image:: ../_static/images/EEA/day2circuit.png
   :align: center
-  :target: https://tinyurl.com/y447ugwt
+  :target: https://tinyurl.com/y2jshzqc
 
 .. container:: exercise
 
@@ -40,11 +40,11 @@ Here is that circuit, with shunt impedance added of 100 pF:
 .. admonition:: TA Note
    :class: tanote
 
-   1B: Should be 50 uV left of our 5V signal.
+   1B: Should be 655 mV left of our 5V signal.
 
    1C: The capacitor of our electrode and the shunt impedance are forming a voltage divider. Changing the impedance ratio changes the Vin.
 
-   1D: Gold plated electrode circuit: increases capacitance, decreases impedance.  https://tinyurl.com/y5y8chql
+   1D: Gold plated electrode circuit: increases capacitance, decreases impedance.  https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWEAmA7NVbnIBwBYFkBmMIogThxFSqTyJAQFMBaMMAKAHcQ2A2SFF7tkQyN2FhRgtlJB4q4gMaTRC3kTWLw0Zi3K8YkVKjyoE5cqlLJ2lvFFiROPFpvlU30qBK9D3guIASrzIkNosyAh8YuDg8IyxMAi+IkKyoizq4gBOqrzqflnaYPBl4q7uxRre4gAevDiovCa8CM0spvIoDkFMHA36DuQQLHzDDg7IDgDC-YN44W0GbHgOLNHd0yAAonUALjkAhkpMADZnAK5nRzkAOgDODwCWAOYAdkdnjwAUAGpMJQASg4eUiSxkYAEsVKoJAAXAckC8Xqwis8lGUKoay2vQeA0YECIVBw2IgU16AFsOK9EaIwOR6XIwtplHShGkGd4wKxSsJoFDohYBIsiJByHwAk54C52YIwKgYoECVCGJEYgyOsRcSA-s93gS2MZhIsNOtSM0HHIdmdAYcAPYAEyYjwAKs8AA4ALg4ACMCmZhJA1VJ5bgfP7ZJjIJkyOBkAZxJGwkGiQgIDYfIMiF02LZhPhJNiersDsdThdrrdHgAxK7PR0qsDm-PYTLsYvbG12nJOl34wZSEPbSLCfNW0QAEXtl19tseABkjgBPJj3B4ASXe+zXADMTv17YlxhzsJREkY4BBBKIkEQOEewFQT2GE9joHxSSImuQ8MRzEq0oZig4BUPeQA
    Students can get impedance and capacitance mixed up and forget they go in opposite directions.
 
 
@@ -83,9 +83,9 @@ Let’s build a slightly simplified version of these circuits in real life, on t
 * 'Recording system' = the Picoscope
 
 
-.. image:: ../_static/images/EEA/eea_fig-87.png
+.. image:: ../_static/images/EEA/circuitday2.png
   :align: center
-  :target: https://tinyurl.com/y3sq3lfq
+  :target: https://tinyurl.com/yyeah3wd
 
 Without an amplifier
 ************************************
@@ -174,7 +174,7 @@ Replace the 'long wire' with 'headstage'
 ***********************************************
 We will replace our long wire with a 'headstage'. We will use only the most basic part of the headstage, an operational amplifier.
 
-This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P), not the instrumentation amp (AD622). The op-amp should say ‘LM358’ on it.
+This is the op-amp you have.  Make sure you’re looking at the op-amp (AS358P), not the instrumentation amp. 
 
 .. image:: ../_static/images/EEA/eea_fig-41.png
   :align: center

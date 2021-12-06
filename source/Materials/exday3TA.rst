@@ -115,13 +115,13 @@ We now have all the steps of the acquisition in place to simulate a lab experime
   A.	Do not use anything other than the recommended batteries to power your circuit. Do not connect your circuit to mains supply for power, ground, anything.
   B.	Only connect the EMG electrodes to one arm. Don’t attach them to both arms. This is to avoid any current travelling across your heart.
   C.	If you are using a laptop, disconnect your laptop charger & run from battery while the electrodes are attached to you. This is to prevent any surges from mains supply from backpropagating through your laptop, to you.
-  D.
+
 
 .. container:: exercise
 
   3A. Replicate the following circuit:
 
-  .. image:: ../_static/images/EEA/eea_fig-62.png
+  .. image:: ../_static/images/EEA/eea_fig-49.png
     :align: center
 
   * Bypass capacitors = '104'
