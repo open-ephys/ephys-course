@@ -82,7 +82,7 @@ We now have all the steps of the acquisition in place to simulate a lab experime
 - The electrodes clip onto the cable with three wires. We’ll be using an audio-to-breadboard jack to get the signal from the electrodes into the breadboard.
 - An instrumentation amplifier as our 'headstage'. `This <https://www.ti.com/lit/ds/symlink/ina129-ep.pdf?ts=1636717545454&ref_url=https%253A%252F%252Fwww.google.com%252F>`_ is the datasheet for the instrumentation amplifier in your kit.
 
-.. image:: ../_static/images/EEA/eea_fig-49.png
+.. image:: ../_static/images/EEA/eea_fig-49_1.png
   :align: center
 
 - We will first test the circuit using the Picoscope to read out the signal. Tomorrow, we will use the Teensy as our acquisition board to digitize the data.
