@@ -1,7 +1,7 @@
-.. _refEDay1TA:
+.. _refEDay1:
 
 ***********************************
-Exercises Day 1 TA
+Exercises Day 1
 ***********************************
 
 .. |Na+| replace:: Na\ :sup:`+`\
@@ -25,18 +25,6 @@ Exercises Day 1 TA
   :depth: 2
   :local:
 
-.. admonition:: TA Note
-   :class: tanote
-
-   For many students, day 1 is about getting to know the equipment & using the right names for everything. Unless students are already confident, it's best to take everyone through day 1 as a group:
-
-   - Show them the probes for the oscilloscope
-
-   - Check they understand the multimeter and oscilloscope and what they're measuring
-
-   - Make sure they can scale their picoscope software
-
-   Check that everyone has a nice signal each time before moving on and that basics are clear, like which parts of the breadboard are connected.
 
 1.	Using a multimeter
 ###################################
@@ -48,13 +36,6 @@ Exercises Day 1 TA
     1B.	Set the multimeter to ‘Ω’. Use your multimeter to measure the resistance of any 3 different resistors in the kit. Check whether the resistance values you read correspond to the bands on the resistors. How is your multimeter measuring this resistance?
 
     1C.	Now set your multimeter to measure the voltage across a battery. What does it mean if you record a negative voltage?
-
-
-
-.. admonition:: TA Note
-  :class: tanote
-
-  To measure resistance, the multimeter generates a voltage at both probes, and measures the current generated between them.
 
 
 Solderless Breadboard
@@ -110,18 +91,6 @@ We’re going to attach the Teensy to our solderless breadboard. Removing and re
   :align: center
 
 
-.. admonition:: TA Note
-   :class: tanote
-
-   1E: If they need to upload the programme again, they can open the Arduino software: examples/basics/blink. Any problems, check:
-
-   - Whether the board is set to Teensy under Tools/Board
-
-   - The selected port Tools/Port
-
-   1F:   Should be around 3.3V.
-
-
 2.	Using an oscilloscope
 ###################################
 
@@ -144,19 +113,6 @@ If you see something odd, check:
 *	y-axis scaling (Auto doesn’t always work)
 *	whether it is set to DC (direct current) or AC (alternating current).
 
-.. admonition:: TA Note
-   :class: tanote
-
-   2C: Should see a clear square wave of around 3.3 amplitude.
-
-   .. image:: ../_static/images/EEA/eea_fig-66.png
-     :align: center
-
-   NB: sometimes connecting the ground directly to the Teensy causes it to charge (you can see it with the scope) and it can end up disconnecting from the PC and making a mess. They don’t actually need the ground of the scope connected to see the large sine wave because of the scope’s high input impedance. That might be confusing now, but should be clearer after talking about impedance tomorrow.
-
-   !!! If a student's scope isn't responding to any input, before panicking check that they are not using the 'automotive' version of the Picoscope software as this will make the scope look dead.
-
-
 We’ll now use the Teensy microcontroller to output a sine wave, instead of the blink example.
 
 .. container:: exercise
@@ -175,15 +131,6 @@ We’ll now use the Teensy microcontroller to output a sine wave, instead of the
 
   .. image:: ../_static/images/EEA/eea_fig-15.png
     :align: center
-
-.. admonition:: TA Note
-   :class: tanote
-
-    2D: If they get an error ‘redefinition of void setup’ it’s because they dragged the sketch to the software,  then it gets added to the other sketch, needs to be uploaded separately.
-
-    2E: They should see a constant voltage of around 3.3 volts from A14 to GND, because their multimeter doesn’t resolve the signal fast enough to see the waveform. Pin A14 is a DAC, digital to analog converter, so it can take the digital representation and output an analog(ish) sinewave.
-
-    These exercises are just to check that they understand the value of having the oscilloscope over the multimeter- that knowing the shape of the signal is important. It helps to keep linking this back to their neural signals- what if you were undersampling them, you wouldn't see spikes. Make sure they are ok with the idea of alternating signals, and that digital and analog signals are clear as well.
 
 3. Ohm’s Law
 ###################################
@@ -220,10 +167,6 @@ Here’s another simulation demonstrating Ohm’s law. This time, the current mo
 
   4B.	What will happen to the voltage and current over the right-hand resistor? Double the value in the simulator and see if your predictions were correct.
 
-.. admonition:: TA Note
-   :class: tanote
-
-    Students can get confused about using Ohm's law over a whole closed circuit (to get current) and over individual components (voltage drops). It helps to remind them at which points in the circuit current must be equal and where voltage must be highest and lowest. Check that they understand why the current across these two resistors can be different, but not in the closed circuit above.
 
 5.	Voltage Divider
 ###################################
@@ -250,13 +193,6 @@ That means that, in a circuit with multiple resistors in series, the ratio of th
 5A.	Using the simulator (here’s an empty full-screen https://tinyurl.com/y477e9qd) build a voltage divider circuit in which you use a 3V battery and two resistors to provide an 800 mV output voltage |Vout|.
 
 
-.. admonition:: TA Note
-   :class: tanote
-
-   Voltage divider circuits:
-   https://tinyurl.com/yyh5amrz
-   https://tinyurl.com/y5odbxa5
-
 On breadboard
 ***********************************
 We’ll now build the circuit you just designed in real life, using a solderless breadboard.
@@ -280,10 +216,6 @@ We’ll now build the circuit you just designed in real life, using a solderless
 
 Capacitors, direct current
 ***********************************
-.. admonition:: TA Note
-  :class: tanote
-
-  Skip this exercise if running out of time
 
 Capacitors are made of two conducting plates, separated by an insulating material that prevents the plates from touching. Charges cannot jump through the insulating layer. Instead, charges collect on one plate, forming an electric field that pushes away similar charges on the opposite plate. This movement of charge is what gives us current flow in the circuit, even though charges cannot flow directly through the capacitor.
 
@@ -318,16 +250,6 @@ In this simulation, you can charge and discharge a capacitor and see the current
 
   6D.	Change the value of the resistor. What does this change in your trace? Can you explain why?
 
-
-.. admonition:: TA Note
-   :class: tanote
-
-    6A: https://tinyurl.com/y5p5y5p2
-
-    6D: Results should look like figure below. Top panel: 220 kOhm, lower panel:very low resistance. Why? Because the resistor is setting the current through the circuit, determining how fast the capacitor is allowed to charge.
-
-    .. image:: ../_static/images/EEA/eea_fig-67.png
-      :align: center
 
 7. Alternating signal (AC)
 ###################################
@@ -367,13 +289,6 @@ To describe restriction of direct current flow, we used resistance (R). To descr
 
     (Bonus question: what happens to the voltage drop across the capacitor as frequency increases?)
 
-
-.. admonition:: TA Note
-   :class: tanote
-
-   With increasing frequency, the impedance of the capacitor decreases. That means that:
-   - The overall current in the circuit increases (I = V/R with lower R)
-   - The ratio of impedance between the 200 Ohm resistor and the capacitor changes. It's another voltage divider: the 5 volt must still be 'spent' in the circuit, but more of it now goes to the 200 Ohm resistor. The voltage drop over the capacitor reduces as its impedance reduces.
 
 The impedance magnitude of a capacitor, also called reactance (X\ :sub:`c`), depends on:
 
@@ -440,29 +355,3 @@ In the theory handout, we discussed how we can represent an electrode as a circu
     10C. What happens if you delete |Re|?
 
     10D. Can you change this circuit from a polarising, tungsten electrode, to a circuit representing a nonpolarizable electrode?
-
-
-    .. admonition:: TA Note
-       :class: tanote
-
-       10C: Should see little difference if electrode is only represented by capacitor
-
-       .. image:: ../_static/images/EEA/eea_fig-80.png
-         :align: center
-         :target: https://tinyurl.com/yzzjjvdk
-
-       Circuit of electrode: https://tinyurl.com/yzzjjvdk
-
-Wrap Up
-#########################################################
-
-.. admonition:: TA Note
-  :class: tanote
-
-  If they don't make it through all the exercises that's ok, but concepts that they should understand are:
-
-  - What is an oscilloscope measuring?
-
-  - How does a voltage divider work?  (this keeps coming back during the course)
-
-  - What is the important difference between capacitors and resistors? (Frequency-dependent impedance changes of capacitors, also keeps coming back)

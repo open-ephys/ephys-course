@@ -32,6 +32,11 @@ Read:
 - :ref:`Theory <refTDay1>`
 - `How to use a breadboard <https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all>`_
 
+Exercises:
+*******************************
+:ref:`Exercises <refEDay1>`
+
+
 Day 2: Protecting Signals
 =====================================================
 
