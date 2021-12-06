@@ -190,7 +190,7 @@ That means that, in a circuit with multiple resistors in series, the ratio of th
 
 .. container:: exercise
 
-5A.	Using the simulator (here’s an empty full-screen https://tinyurl.com/y477e9qd) build a voltage divider circuit in which you use a 3V battery and two resistors to provide an 800 mV output voltage |Vout|.
+  5A.	Using the simulator (here’s an empty full-screen https://tinyurl.com/y477e9qd) build a voltage divider circuit in which you use a 3V battery and two resistors to provide an 800 mV output voltage |Vout|.
 
 
 On breadboard
