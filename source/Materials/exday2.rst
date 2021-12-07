@@ -91,7 +91,7 @@ Without an amplifier
   .. image:: ../_static/images/EEA/eea_fig-38.png
     :align: center
 
-  2B.	Now measure the output with the oscilloscope at the points marked by red arrows in the image below, and complete the first column of the table below:
+  2B.	Now measure the output with the oscilloscope and complete the first column of the table below:
 
   .. list-table::
      :width: 80%
