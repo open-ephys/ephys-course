@@ -16,7 +16,7 @@ Course Materials
    exday2.rst
    exday3.rst
    exday4.rst
-   project.rst
+   projects.rst
 
 Materials for students
 ############################
@@ -70,3 +70,7 @@ Day 4: Synchronization and Digitization
 Read:
 *******************************
 :ref:`Theory <refTDay4>`
+
+Exercises:
+*******************************
+:ref:`Exercises <refEDay4>`
