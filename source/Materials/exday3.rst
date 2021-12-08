@@ -99,7 +99,7 @@ We now have all the steps of the acquisition in place to simulate a lab experime
 
   3A. Replicate the following circuit:
 
-  .. image:: ../_static/images/EEA/eea_fig-49.png
+  .. image:: ../_static/images/EEA/eea_fig-62.png
     :align: center
 
   * Bypass capacitors = '104'
