@@ -173,11 +173,8 @@ We’re going to start streaming data to the pc, by using our Teensy microcontro
 
   A. Connect the output from your amplifier to an analog input node on the Teensy as shown below. This is a 220 Ohm resistor across the instrumentation amplifier, and a voltage divider made of two equal resistors (anything above 1KOhm, see the text on ‘shifting the bipolar signal up’ below).
 
-  B. Upload ‘Firmata.ino’ to the Teensy (code here: :ref:`Firmata` )
+  B. Upload Firmata to the Teensy (code is in Arduino: Examples/Firmata/StandardFirmata )
 
   C. Open Bonsai and create an Analog Input node. Double-click to visualise your signal.
 
   D. Connect this to a 'Csv Writer' node to save your signals.
-
-  .. note::
-    It should work with just ‘AnalogInput’. It’s nicer to use the ‘CreateArduino’ node and specify the Teensy, this also allows you to set the sampling interval, so you can increase it if the computer is struggling.
