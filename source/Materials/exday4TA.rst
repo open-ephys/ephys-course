@@ -152,12 +152,24 @@ The EMG signal is from -3 to +3V, but we can only digitize positive voltages. Wi
     .. image:: ../_static/images/EEA/eea_fig-64.png
       :align: center
 
+    .. image:: ../_static/images/EEA/eea_fig-86.png
+      :align: center
 
     .. image:: ../_static/images/EEA/eea_fig-65.png
       :align: center
 
 
 This voltage divider is not going to mess with our signal, because the signal is protected by the amplifier. You could in theory use almost any reasonable values for R, over 1kΩ, because the output impedance of the instrumentation amplifier is low and the input impedance (of the teensy analog input) is decently high. If you make R too small, this will still work on paper, but you’re now asking the op-amp to keep shovelling current into ground (or in this case, the 3V rail) through a small R, and eventually even an op-amp will get unhappy.
+
+.. admonition:: TAnote
+
+    With two equal resistances, it is splitting the difference between the instrumental amplifier output and +3V in two.
+    For low amplitude values of our amplified signal, say -2.6V, the difference is 5.6V and thus it adds 2.8V to -2.6V giving a voltage divider output of +0.2V.
+    For large amplitude values of our amplified signal, say +2.6V, the difference is 0.4V and thus it adds 0.2V to +2.6V, giving a voltage divider output of 2.8V.
+    Our signal is then transformed to the 0.2-2.6V range, ready for the digitizing pin of the Teensy.
+
+    Simulator to show this in action: https://tinyurl.com/yyv98thr
+
 
 Streaming data from the microcontroller
 ****************************************

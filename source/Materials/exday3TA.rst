@@ -15,8 +15,9 @@ Exercises Day 3 TA
 
   1A.	Measure across your fingers with the oscilloscope 1x probe. How big is the amplitude of this signal? Compare this to the size of a spike, around 100 µV.  Could you see a spike on top of that noise?
 
-Reference electrode
-***********************************
+2. Reference electrode
+###################################
+
 
 So far, we have only considered the signal coming into our recording electrode, relative to ground. We will now add a reference electrode in the simulator.
 
@@ -81,6 +82,10 @@ To get this differential amplifier to work, each electrode and resistor would ha
 
    2B: It doesn't work if they only put a wire connection as feedback. They need at least 1 resistor for the simulator to not give an error, because otherwise, they are asking the output of the amplifier, the - input and the reference input to all be at the same voltage when they are not, and the simulator can't solve the circuit.
 
+   Why does putting just one resistor cause saturation? In that case, the (-) input would be receiving 60Hz 5V signal and trying to output the 120Hz 10mV difference that it is seeing on the (+) input to try and match both inputs. The amplifier does everything it can to make the - input equal to the + input. It outputs a voltage trying to increase the voltage at - every time there is a spike. But, because the - input is directly connected (via only a wire) to the voltage supply, it *must * have the same voltage as the voltage supply. Otherwise we'd have two different voltages in the same wire. The amplifier keeps reading that it has not succeeded to bring the - to the + level so it keeps its connection to the + rail, outputting the max voltage it can, i.e. saturating. All the voltage it outputs is actually lost over the resistor.
+   Here's a simplified circuit with a direct voltage source instead of alternating just to  keep it simple. https://tinyurl.com/yyrs7o6t
+   If you change the voltage on the variable voltage source on the right hand side, you can see that increasing the provided voltage only causes the voltage drop over the resistor to increase
+
    2C: https://tinyurl.com/yzz5ht4f
 
    2D: https://tinyurl.com/yg63xmm5  put '+' in middle of voltage divider to ground. yay this is a diff amplifier!
@@ -96,7 +101,7 @@ To get this differential amplifier to work, each electrode and resistor would ha
      :align: center
      :target: https://tinyurl.com/yz8d8e67
 
-2. EMG circuit
+3. EMG circuit
 ###################################
 We now have all the steps of the acquisition in place to simulate a lab experiment. We are going to build an EMG circuit on the breadboard, using:
 
@@ -121,7 +126,7 @@ We now have all the steps of the acquisition in place to simulate a lab experime
 
   3A. Replicate the following circuit:
 
-  .. image:: ../_static/images/EEA/eea_fig-49.png
+  .. image:: ../_static/images/EEA/eea_fig-62.png
     :align: center
 
   * Bypass capacitors = '104'
@@ -167,3 +172,6 @@ Make sure your Picoscope responds to tapping your electrodes before continuing! 
 
       •	Disconnecting from 60/50Hz contaminated ground by using laptop battery
       •	Twisting or braiding the cables
+
+      3E: The lower the value for Rg the more gain we should get. I tried going from 220Ohm to 100Ohm and it worked but I didn’t get a picture. I did not manage to get it to saturate.
+      With a larger resistor for Rg we do get less gain. Formula for instrumental amplifier gain = (R3/R2){(2R1+Rgain)/Rgain}
