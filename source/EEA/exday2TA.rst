@@ -87,7 +87,7 @@ In the theory handout, we discussed how we can represent an electrode as a circu
 3.  Shunt Impedance
 ##########################
 
-Here is the circuit, with a shunt impedance added of 100 pF:
+Here is the circuit of the electrode with a shunt impedance added of 100 pF:
 
 .. image:: ../_static/images/EEA/day2circuit.png
   :align: center
@@ -95,7 +95,7 @@ Here is the circuit, with a shunt impedance added of 100 pF:
 
 .. container:: exercise
 
-  3A. What is shunt impedance?
+  3A. What is shunt impedance here?
 
   3B. What % of our signal are we losing between Vec and Vin? Why?
 
@@ -106,7 +106,7 @@ Here is the circuit, with a shunt impedance added of 100 pF:
 
 .. container:: tabox
 
-   3A: Shunt impedance = Shunt capacitance Csh +  shunt resistance Rsh. These are both routes to ground outside of the intended acquisition system. At the high frequencies (1kHz) we are interested in, the capacitive component will have low impedance, and will therefore have more effect than the resistive component, so Rsh is often ignored.
+   3A: Shunt impedance = Shunt capacitance Csh +  shunt resistance Rsh. These are both routes to ground outside of the intended acquisition system. At the high frequencies (1kHz) we are interested in, the capacitive component will have low impedance, and will therefore have more effect than the resistive component, so Rsh is often ignored. Technically this is just the equivalent circuit of the electrode, so shunt impedance here would be the capacitance along the side of the electrode.
 
    Remember that any two conducting surfaces, with a non-conducting layer in between, is a capacitor. Shunt capacitance arises mainly from the capacitance across the thin insulation layer isolating an electrode and the surrounding electrolyte, as well as the cumulative capacitance along cables and connectors (Robinson, 1968).
 
@@ -122,9 +122,9 @@ Here is the circuit, with a shunt impedance added of 100 pF:
    3D: Gold plated electrode circuit: the increased capacitance decreases impedance.  Circuit here: https://tinyurl.com/y6p3trme. Students can get impedance and capacitance mixed up and forget they go in opposite directions.
 
 
-Drawing Current
+Recording Circuit
 ***********************************
-Let's do a recording! We'll take our electrode, and attach it through a long wire to a recording system. The recording system has an analog to digital converter (ADC), and a recording computer.  The leakage resistance here is where the recording system is connected to ground.
+To actually perform a recording, we will have to attach the electrode to the rest of an acquisition system. The recording system has an analog to digital converter (ADC), and a recording computer.  The leakage resistance here is where the recording system is connected to ground.
 
 .. image:: ../_static/images/EEA/day2withac.png
   :align: center
@@ -134,7 +134,7 @@ Let's do a recording! We'll take our electrode, and attach it through a long wir
 
   3E. How much of the voltage at the electrode, Vec, are we recording at Vout?
 
-  3F. Place an ideal operational amplifier between the electrode and the long wire. What happens to Vout? Why?
+  3F. Add a headstage to this circuit, by placing an ideal operational amplifier between the electrode and the long wire. What happens to Vout? Why?
 
   3G. Change the circuit to stop the amplifier from saturating. What is the amplifier gain now?
 
@@ -153,19 +153,26 @@ Let's do a recording! We'll take our electrode, and attach it through a long wir
     Place op amp through:
 
     Menu/Active construction blocks/OpAmp.
-
-    Result:
+    Result: https://tinyurl.com/y68o5n4o
+    Some students will already put the negative feedback in here, just make sure they understand why and what happens without it. Without negative feedback:
 
     Vout hits +- 15V, it is saturating to the value of the power rails, because it has very very high gain. It is calculating the difference between + and - multiplying it by its huge gain.
 
-    3G: https://tinyurl.com/y454jqlb
+    3G:
+
+    .. image:: ../_static/images/EEA/sim_headstage_added.png
+        :align: center
+        :target: https://tinyurl.com/y454jqlb
+
     We need to do something to prevent our amplifier from always hitting power-rail values. We can provide negative feedback to the amplifier by looping the output back and feeding it into one of the terminals. Connect the amplifier output to the inverting input. The amplifier is going to do the same thing as before; output the difference between + and - multiplied by its huge gain. The output will rise rapidly, however this time, as soon as it reaches the value of the + terminal, the + and – are the same value and there’s no difference left to amplify.
 
     Now we’re just seeing our input signal replicated at the output of the amplifier with a gain of 1.
 
 4. Operational Amplifiers
 ###################################
-In the theory handout, we discussed the importance of headstages. We'll test that now, by building a recording circuit without and with an amplifier acting as a headstage. We will use the 'Blink' example as our neuronal data, and try to get as much of this signal as possible to reach our oscilloscope recording system.
+We will now build the same circuit on the breadboard. The Teensy 'Blink' signal will act as our neuronal data, that will travel across electrode and shunt impedances before reaching the oscilloscope to be recorded. Our goal is to get as much of the Blink signal as possible to reach our oscilloscope recording system.
+
+In the theory handout, we discussed the importance of headstages. We'll test that now, by building the recording circuit without and with an amplifier acting as a headstage.
 
 * 'Neuron'  = Digital blink output from Teensy
 * 'Electrode' = 100 kOhm resistor
@@ -178,8 +185,8 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
   :align: center
   :target: https://tinyurl.com/yyeah3wd
 
-Without an amplifier
-************************************
+4A. Recording circuit without an amplifier
+*******************************************
 
 .. container:: exercise
 
@@ -201,7 +208,7 @@ Without an amplifier
   .. image:: ../_static/images/EEA/wire_only_blink.png
     :align: center
 
-  4B.	Now measure the output with the oscilloscope at the points marked by red arrows in the image below, and complete the first column of the table below:
+  4B.	Use the oscilloscope to measure the peak to peak voltage amplitude recorded at three points:
 
   .. list-table::
      :width: 80%
@@ -226,48 +233,70 @@ Without an amplifier
 
   .. container:: tabox
 
-     See full table below.
-     It might be tricky to understand that one has the same value in rows 2 and 3 of the op-amp headstage configuration, since we are adding an amplifier and one would expect the signal to have been amplified. But our amplifier has unity gain here, so that is why there is no amplification, and it highlights its important function of protecting our signal by not drawing current from the source thanks to its huge input impedance.
+  .. list-table::
+     :width: 80%
+     :widths: 20 20 20 20 20
+     :header-rows: 1
+     :align: left
 
+     * - (+) Probe
+       - Wire-only (breadboard)
+       - Op-Amp (breadboard)
+     * - 1. Teensy Pin 13
+       - 3.3 V
+       - 3.3 V
+     * - 2. Readout Wire 1
+       - 8.4mV
+       - 600mV
+     * - 3. Readout Wire 2
+       - 8.4mV
+       - 600mV
+
+
+4B. Recording circuit with amplifier
+*************************************
 
 Build voltage rails
-***********************************
+______________________________________
 .. warning::
   Make sure that the pins from the batteries do not touch, and if they’re not in use, best to put some tape on them so they don’t touch things. ‘Short-circuiting’ the batteries (connecting them without any sort of resistance) causes a huge current to flow from the + to -, enough to... melt stuff.
 
-Now, we need to make the ‘rails’ that will provide the voltage for our op-amp. Eventually, for our EMG circuit, we will need to have a positive and negative voltage ready, so that we can amplify a signal that lives around some reference level that we shall call 0 volt. If we only have 0 and +3V, then any negative signal will floor and stay at 0.
-
-To do this we use a common trick and turn two regular power supplies into a bipolar power supply. In our case we use batteries, because they’re cheap and pretty much fully noise-free. Check which way up your breadboard is (keep the blue line at the top). Following the figures precisely will make debugging much easier later on.
+We need to provide our op-amp with power. We will use batteries to make voltage ‘rails’. We are going to make a -3V and +3V rail. To do this we use a common trick and turn two regular power supplies into a bipolar power supply. In our case we use batteries, because they’re cheap and pretty much fully noise-free. Check which way up your breadboard is (keep the blue line at the top). Following the figures precisely will make debugging much easier later on.
 
 .. container:: exercise
 
   4D. Connect the battery holders as follows:
 
-  - One pair of batteries provides 3V relative to ground, 0V.
+  - The first pair of batteries provides +3V from the red wire (goes to red rail on breadboard), and 0 from the black wire (goes to blue rail on breadboard).
 
-  - Both ground rails are connected through a wire.
+  - The two blue rails of the breadboard are connected through a wire, setting them both to 0V.
 
-  - The second pair of batteries is reversed to provide -3V relative to ground, so that we get a + and a – voltage.
+  - The second pair of batteries is reversed (red wire goes to blue rail, black wire to red rail). This provides -3V relative to ground.
 
   - Remember or label which side is +3 and which is -3
 
   .. image:: ../_static/images/EEA/bipolar_power_supply.png
     :align: center
 
+  .. image:: ../_static/images/EEA/fritz_bipolar_power_supply.png
+    :align: center
+
 Add bypass capacitors
 ***********************************
-Bypass capacitors are small capacitors that act like little secondary batteries. In our case we’ll add two 100nF (marked 104) caps, one to each rail, so GND to 3V and GND to -3V. The reason is that the batteries we use have what's called a high ESR - ‘equivalent series resistance’ and some capacitance, so they are not great at quickly providing current. This means that when our op-amp starts working, it can run out of current for a very short time, until the battery can drive the rails back to their original voltage. This is bad for the signal quality.
-So, we give the rails the ability to very quickly provide a small amount of current from these small capacitors. We’re exploiting the fact that these caps have very low ESR and can provide current pretty much instantaneously. If the battery briefly can’t provide current, the bypass capacitors will discharge, providing quick back-up current. The fact that they’re too small to power anything for more than a millisecond does not matter here, at that point the batteries have caught up.
+Bypass capacitors are small capacitors that act like little secondary batteries. The batteries we use have a high ESR - ‘equivalent series resistance’, and some capacitance. This means that are not great at quickly providing current. Because of this, when our op-amp starts working, it can run out of current for a very short time until the battery can drive the rails back to their original voltage. This is bad for the signal quality.
+
+So, we allow these small capacitors to charge. If the battery briefly can’t provide current, the bypass capacitors will discharge, providing quick back-up current. We’re exploiting the fact that these caps have very low ESR and can provide current pretty much instantaneously. The fact that they’re too small to power anything for more than a millisecond does not matter here, at that point the batteries have caught up.
 
 .. container:: exercise
 
-  4E. Add two 100nF (marked 104) caps, one to each rail, so connecting GND to 3V and connecting GND to -3V (see image below).
+  4E. Add two 100nF (marked 104) caps, one to each rail, so connecting GND to 3V and connecting GND to -3V.
 
   .. image:: ../_static/images/EEA/fritz_bipolar_power_supply.png
     :align: center
 
-Replace the 'long wire' with 'headstage'
+Add a 'headstage'
 ***********************************************
+
 We will replace our long wire with a 'headstage'. We will use only the most basic part of the headstage, an operational amplifier.
 
 This is the op-amp you have.  Make sure you’re looking at the op-amp (AS358P), not the instrumentation amp.
@@ -287,22 +316,25 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (AS358P),
 
   * Feed the output of the op-amp, back into the – input.
 
+  4G. Now measure the same three points as before and complete the table in question 4B.         -
+
+  4H. Optional: try changing the resistances you've used for electrode, shunt, and leakage. What happens to the signal?
+
+  4G. Optional: Measure the same points in the simulator as you did on the breadboard. How do they compare?
+
   .. image:: ../_static/images/EEA/fritz_headstage_blink.png
     :align: center
 
   .. image:: ../_static/images/EEA/amp_headstage_blink.png
     :align: center
 
-  4G. Now measure the same three points as before and complete the table in question 4B.         -
-
-  4H. Optional: try changing the resistances you've used for electrode, shunt, and leakage. What happens to the signal?
-
-
 .. container:: tabox
 
   The wire now cannot destroy our signal, because even though we did not amplify it at all (we only have unity gain) we ‘buffered’ it. Now the op-amp can push as much current into the wire as is needed and your signal makes it through.
 
-  Optional exercise: Make a version of this circuit that's more similar to ephys signals by using a sinewave.
+  It might be tricky to understand that one has the same value in rows 2 and 3 of the op-amp headstage configuration, since we are adding an amplifier and one would expect the signal to have been amplified. But our amplifier has unity gain here, so that is why there is no amplification, and it highlights its important function of protecting our signal by not drawing current from the source thanks to its huge input impedance.
+
+  Optional exercise 4H: Make a version of this circuit that's more similar to ephys signals by using a sinewave.
 
   - Send sinewave (code in day 1) to pin A14 (no header soldered there but can use a wire, connection is a bit unstable)
 
@@ -311,6 +343,8 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (AS358P),
   - Use capacitors instead of Resistors, e.g. 104 for electrode, 22 for shunt
 
   - Connect Agnd to ground
+
+  Optional exercise 4G:
 
   .. list-table::
      :width: 80%

@@ -35,15 +35,15 @@
 
 /* overhead navigation bar*/
 .navbar {
-  background: #ade0dc !important; /* overhead navigation bar color */
+  background: #e0c453 !important; /* overhead navigation bar color */
   font-size: 1rem;
 }
 
 /* navigation bar: text*/
 .navbar a {
   color: white !important;
-  font-family: "Miso";
-  font-size: 1.2rem;
+  font-family: "Source Sans", sans-serif;
+  font-size: 1rem;
   transition-duration: 0.4s;
   margin-right: 10px;
 }

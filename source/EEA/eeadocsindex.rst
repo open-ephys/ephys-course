@@ -16,7 +16,7 @@ EEA Course Documents
    exday2.rst
    exday3.rst
    exday4.rst
-   project.rst
+   projects.rst
    exday1TA.rst
    exday2TA.rst
    exday3TA.rst
@@ -25,7 +25,7 @@ EEA Course Documents
 Materials for students
 ############################
 
-Read the 'theory' documents and other assigned reading materials carefully before the start of each session. The 'exercises' documents contain exercises and more theory that will be covered together with the teachers. They do contain a lot of text, so reading through the exercises in advance may help you feel more prepared for the session. 
+Read the 'theory' documents and other assigned reading materials carefully before the start of each session. The 'exercises' documents contain exercises and more theory that will be covered together with the teachers. They do contain a lot of text, so reading through the exercises in advance may help you feel more prepared for the session.
 
 Day 1: Detecting Signals
 =====================================================

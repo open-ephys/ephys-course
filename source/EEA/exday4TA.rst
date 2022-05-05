@@ -149,13 +149,13 @@ The EMG signal is from -3 to +3V, but we can only digitize positive voltages. Wi
 
   A. Add a voltage divider to your EMG circuit
 
-    .. image:: ../_static/images/EEA/eea_fig-64.png
+    .. image:: ../_static/images/EEA/board_emg_teensy.png
       :align: center
 
-    .. image:: ../_static/images/EEA/eea_fig-86.png
+    .. image:: ../_static/images/EEA/fritz_emg_teensy.png
       :align: center
 
-    .. image:: ../_static/images/EEA/eea_fig-65.png
+    .. image:: ../_static/images/EEA/voltage_divider_teensy.png
       :align: center
 
 

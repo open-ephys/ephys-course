@@ -197,7 +197,7 @@ html_favicon = "_static/images/logos/favicon.png"
 
 html_context = {
     "github_user": "ahleighton",
-    "github_repo": "eea_may2022",
+    "github_repo": "eeamay2022",
     "github_version": "main",
     "doc_path": "source",
     "css_files": ["_static/theme_overrides.css",],
