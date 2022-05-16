@@ -39,7 +39,7 @@ These are the course materials for the Open Ephys course on Extracellular Electr
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
 
-.. figure:: _static/images/EEA/eea_fig-85.png
+.. figure:: _static/images/EEA/box_logo.png
   :target: EEA/kitlist.html
 
 .. container:: custom-button
@@ -53,7 +53,7 @@ These are the course materials for the Open Ephys course on Extracellular Electr
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
 
-.. figure:: _static/images/EEA/eea_fig-69.png
+.. figure:: _static/images/EEA/book_logo.png
   :target: EEA/eeadocsindex.html
 
 .. container:: custom-button

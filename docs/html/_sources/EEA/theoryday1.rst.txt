@@ -132,10 +132,7 @@ Currents are moving charges
 *********************************************
 Moving charges create a current (I) measured in Ampere. The current tells us how much charge is moving per second.
 
-.. math::
-
-  I = \frac{Q}{t}
-
+.. math::  I = \frac{Q}{t}
 
 .. raw:: html
 
@@ -213,7 +210,8 @@ This is described by Ohm's law:
   <center><i> Equation 3: Current (I) is equal to voltage (V) over resistance (R).</i></center>
   <br>
 
-.. _refcapacitancetheory: 
+.. _refcapacitancetheory:
+
 Capacitance
 *********************************************
 Capacitors for use in electronics are made of two conducting plates, separated by a thin layer of insulating material that prevents the plates from touching. When a capacitor is connected to a voltage source, such as a battery, charges collect on one of the plates. The charges cannot move through the insulating layer, but they can exert a force through it. This electric force pushes away similar charges on the opposite plate. This movement of charge is what gives us current flow in the circuit, even though charges cannot flow directly through the capacitor.
@@ -345,7 +343,10 @@ The signal at the electrode is measured in volts (V) and is very small, in the m
   :align: center
   :alt: An extracellular voltage beside a neuron is detected by an electrode. The signal coming out of the electrode is Vin. This goes into a recording system, and the output of that system is called Vout.
 
-  Figure 6: The voltage at the electrode tip (Vec), the voltage after the electrode (Vin) and the voltage we read out (Vout). We can only read Vout, and must design our acquisition system so that it is as similar to Vec as possible.
+.. raw:: html
+
+  <center><h5 class="card-title" >Figure 6: The voltage at the electrode tip (Vec), the voltage after the electrode (Vin) and the voltage we read out (Vout).
+  <p style="font-size:12px; font-weight:200">We can only read Vout, and must design our acquisition system so that it is as similar to Vec as possible.</p></h5></center>
 
 To know what is going on in our cells, we need as much as possible of the signal at the electrode tip (|Vec|) to make it through the electrode (|Vin|) and acquisition system and arrive at our output (|Vout|). If we lose signal magnitude, or lose certain frequencies because of the way our acquisition system is designed, we may miss important data or come to wrong conclusions about our cells. We therefore have to design our acquisition system to pass on signals as faithfully as possible, losing little signal to the environment.
 

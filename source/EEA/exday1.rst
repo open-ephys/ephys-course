@@ -1,7 +1,7 @@
-.. _refEDay1TA:
+.. _refEDay1:
 
 ***********************************
-Exercises Day 1 TA
+Exercises Day 1
 ***********************************
 
 .. |Na+| replace:: Na\ :sup:`+`\
@@ -25,21 +25,6 @@ Exercises Day 1 TA
   :depth: 2
   :local:
 
-.. container:: tabox
-
-   Day 1!
-   For many students, day 1 is about getting to know the equipment & using the right names for everything. Unless students are already very confident, it's best to take everyone through day 1 as a group. Particularly at this point, it's better to over-explain and repeat than risk people getting lost.
-
-   - Show them the probes for the oscilloscope. Explain how to use the little hook, and show them the ground probe.
-
-   - Check they understand the multimeter and oscilloscope and what they're measuring.
-
-   - Make sure they can scale their picoscope software.
-
-   - Explain which parts of the breadboard are connected, and which are not.
-
-   - Check that everyone has a nice signal each time before moving on.
-
 1.	Using a multimeter
 ###################################
 
@@ -54,15 +39,6 @@ Exercises Day 1 TA
     1A.	Set the multimeter dial to ‘Ω’. Use your multimeter to measure the resistance of any 3 different resistors in the kit. Check whether the resistance values you read correspond to the coloured bands on the resistors. How is your multimeter measuring this resistance?
 
     1B.	Now set your multimeter to measure the voltage across a AA battery. What voltage do you measure? What does it mean if you record a negative voltage?
-
-
-.. container:: tabox
-
-  Setup: Students have to remove the orange cover of the multimeter to insert the batteries, and need a screwdriver.
-
-  1A: To measure resistance, the multimeter generates a voltage at both probes, and measures the current generated between them.
-
-  1B: Should be around 1.2-1.5 V, unless it's used. If you record a negative voltage you just have to switch the lead around, it’s convention: the positive side of the battery should be the red. Students can use this later in the course (and in life) during troubleshooting, to make sure depleted batteries are not the issue.
 
 
 Solderless Breadboard
@@ -121,18 +97,6 @@ Some pins can perform multiple functions. For instance, the pin marked '20' on t
   :align: center
 
 
-.. container:: tabox
-
-   Setup:
-
-   If they need to upload the programme again, they can open the Arduino software: examples/basics/blink. Any problems, check:
-
-   - Whether the board is set to Teensy LC under Tools/Board
-   - The selected port Tools/Port
-
-   1C:   Should be around 3.3V when high- they will see intermediate values too due to the low time resolution of the multimeter.
-
-
 2.	Using an oscilloscope
 ###################################
 
@@ -157,51 +121,20 @@ Oscilloscopes let us measure time-varying voltages with much higher time resolut
     *	y-axis scaling (Auto doesn’t always work)
     *	whether it is set to DC (direct current) or AC (alternating current).
 
-.. container:: tabox
+    Setup part 2:
 
-   2A: Should see a clear square wave of around 3.3 amplitude.
+    We’ll now upload a program that outputs a sine wave, instead of a blink.
 
-   .. image:: ../_static/images/EEA/blink_readout_picoscope.png
-     :align: center
+    - Open the Arduino Software Upload the following code to your teensy: :ref:`sinewave`
 
+    - Make sure that under ‘Tools/ Board’ your Teensy 3.2 has been found, and check which USB (COM) port it’s in (‘Tools/Port:).
 
-   NB: sometimes connecting the ground directly to the Teensy causes it to charge (you can see it with the scope) and it can end up disconnecting from the PC and making a mess. They don’t actually need the ground of the scope connected to see the large sine wave because of the scope’s high input impedance. That might be confusing now, but should be clearer after talking about impedance tomorrow.
+    - If you see ‘Done Uploading’, the Teensy will start giving a sine wave as output from one of the analog output pins.
 
+    2B.	Connect your oscilloscope probe to A14 and visualise the signal in your PicoScope software.
 
-   !!! If a student's scope isn't responding to any input, before panicking check that they are not using the 'automotive' version of the Picoscope software as this will make the scope look dead.
-
-
-.. container:: exercise
-
-  We’ll now upload a program that outputs a sine wave, instead of a blink.
-
-  Setup:
-
-  - Open the Arduino Software Upload the following code to your teensy:
-
-  :ref:`sinewave`
-
-  - Make sure that under ‘Tools/ Board’ your Teensy 3.2 has been found, and check which USB (COM) port it’s in (‘Tools/Port:).
-
-  - If you see ‘Done Uploading’, the Teensy will start giving a sine wave as output from one of the analog output pins.
-
-  2B.	Connect your oscilloscope probe to A14 and visualise the signal in your PicoScope software.
-
-  .. image:: ../_static/images/EEA/sinewave_teensy_pico.png
-    :align: center
-
-.. container:: tabox
-
-    Setup:
-
-    - If they get an error ‘redefinition of void setup’ it’s because they dragged the sketch to the software,  then it gets added to the other sketch, needs to be uploaded separately.
-
-    2B: Pin A14 is a DAC, digital to analog converter, so it can take the digital representation and output an analog(ish) sinewave. Make sure they don't get mixed up with digital pin 14 (analog pin 0).
-    These exercises are just to check that they understand the value of having the oscilloscope over the multimeter- that knowing the shape of the signal is important. It helps to keep linking this back to their neural signals- what if you were undersampling them, you wouldn't see spikes. Make sure they are ok with the idea of alternating signals, and that digital and analog signals are clear as well.
-
-    .. image:: ../_static/images/EEA/sinewave_output.png
-      :align: center
-
+    .. image:: ../_static/images/EEA/sinewave_teensy_pico.png
+        :align: center
 
 3. Ohm’s Law
 ###################################
@@ -225,10 +158,6 @@ When looking at a whole circuit, we can use this to calculate how much current w
     3A. Click on the image to go to the simulator.
     Right-click on the top wire in the circuit, and then select Edit to display the current through that wire. Double-click on either of the resistors to decrease their value. What happens to the current in the circuit?
 
-.. container:: tabox
-
-  3A: The current should increase with decreased circuit resistance. The current change affects the entire circuit; current is the same everywhere.
-
 4.	Resistors
 ###################################
 Here’s another simulation demonstrating Ohm’s law. This time, the current moves from a 5 Volt voltage source (bright green) into ground (grey, earth), across one of two resistors. The resistors are 'in parallel' as current can flow cross over one *or* the other resistor.
@@ -250,21 +179,6 @@ Here’s another simulation demonstrating Ohm’s law. This time, the current mo
   4B.	What will happen to the voltage and current over the right-hand resistor when the other doubles in resistance?
 
   Now double the value of the left-hand resistor in the simulator and see if your predictions were correct.
-
-.. container:: tabox
-
-    Students can get confused about using Ohm's law over a whole closed circuit (to get current) and over individual components (voltage drops). It helps to remind them at which points in the circuit current must be equal and where voltage must be highest and lowest. Check that they understand why the current across these two resistors can be different, but not in the closed circuit above.
-    Decreasing the resistance of any of the two resistors increases the current since they are in series and V = I * (R1+R2). Changes the ratio of the resistors changes the voltage drop over each resistor.
-
-    4A: The voltage will not change; voltage over both resistors is the same as they are connected in parallel to a 5V source. The current will vary in proportion to resistance, so it will halve if the resistance doubles.
-
-    4B: Nothing will change for this branch of the circuit.
-
-    Circuit analysis refresher:
-    - In series: same current flowing through components.
-    - In parallel: same voltage across components.
-
-    Methods for solving a circuit: Equivalent https://www.khanacademy.org/science/in-in-class10th-physics/in-in-electricity/in-in-solving-a-circuit-with-series-and-parallel-resistors/v/solved-example-finding-current-voltage-in-a-circuit and more advanced methods https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-dc-circuit-analysis/a/ee-circuit-analysis-overview
 
 5.	Voltage Divider
 ###################################
@@ -296,17 +210,6 @@ Therefore, in a circuit with multiple resistors in series, the ratio of their re
 
   To provide an 2.1V output voltage |Vout| at the readout wire.
 
-
-.. container:: tabox
-
-   5A: Example answer:
-   http://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsAoIA
-   Though it can be done with different resistors!
-
-   Sparkfun overview:
-   https://learn.sparkfun.com/tutorials/voltage-dividers/all#extra-credit-proof
-
-
 On breadboard
 ***********************************
 We’ll now build the circuit you just designed in real life, using a solderless breadboard.
@@ -322,12 +225,6 @@ We’ll now build the circuit you just designed in real life, using a solderless
     :align: center
 
   Bonus exercise: Replace one of the resistors to make your output voltage as small as you can get it. What’s the smallest reading you can still pick up with your multimeter? How does this compare to the amplitude of a spike measured in the extracellular space?
-
-.. container:: tabox
-
-   5B: This should work with a 1k and 2.2k resistor as shown.
-   Bonus: The amplitude of a spike in extracellular space is around 100 uV. This should help them to realise how little that is.
-
 
 6. Capacitors
 ###################################
@@ -360,15 +257,6 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
   6C. Can you mimic an action potential by changing the intracellular voltage?
 
-.. container:: tabox
-
-   6A. Direction: Current flows into the cell, towards the power supply, as it is more negative than 0. Current flows until the capacitor is fully charged. Because charges can't actually move through the capacitor, but have to interact with each other over the insulating material, once the plates are fully charged no more current can flow.
-
-   6B. Current will start to leave the cell. When we increase the voltage difference over the capacitor, we are providing more charges on 1 side of the capacitor, which can then influence the charges on the other side. Equally, when we decrease the voltage difference, charges are released which result in current flow.
-
-   6C. Move from -70mV up to +20mV, back to -90mV and return to -70mV :)
-
-
 .. container:: exercise
 
   Setup:
@@ -387,14 +275,6 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
   When you move it, you should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
 
   6E.	Increase the value of the resistor. What does this change in your trace? Can you explain why?
-
-
-.. container:: tabox
-
-    6D & E: Results should look like figure below. Top panel: 220 kOhm, lower panel:very low resistance. Why? Because the resistor is setting the current through the circuit, determining how fast the capacitor is allowed to charge.
-
-    .. image:: ../_static/images/EEA/cap_charging_picoscope.png
-      :align: center
 
 7. Alternating signal (AC)
 ###################################
@@ -450,18 +330,6 @@ When you see a capacitor in a circuit, you know you need to think about the freq
 
     (Bonus question: what happens to the voltage drop across the capacitor as frequency increases?)
 
-
-.. container:: tabox
-
-   8A. The 40Hz circuit below has a max current of 20mA, the above circuit has a max of only 12mA.
-
-   8B. This new circuit will have a max current of 24.4 mA.
-
-   With increasing frequency, the impedance of the capacitor decreases. That means that:
-   - The overall current in the circuit increases (I = V/R with lower R)
-   - The ratio of impedance between the 200 Ohm resistor and the capacitor changes. It's another voltage divider: the 5 volt must still be 'spent' in the circuit, but more of it now goes to the 200 Ohm resistor. The voltage drop over the capacitor reduces as its impedance reduces.
-
-
 9. Capacitive voltage divider
 ###################################
 Because capacitors impede current flow, we can use them to build voltage dividers, just like the resistor divider shown above.
@@ -473,20 +341,3 @@ Because capacitors impede current flow, we can use them to build voltage divider
     :target: https://tinyurl.com/yxdwvulv
 
   9A.	Changing the capacitance values C for the first capacitor to test whether the formula for the resistor voltage divider applies for capacitors.
-
-
-.. container:: tabox
-
-   9A. At a fixed frequency we can use the ratio of capacitor impedance to create a voltage divider just as for resistors.
-
-.. container:: tabox
-
-    Wrap Up
-
-    If they don't make it through all the exercises that's ok, but concepts that they should understand are:
-
-    - What is an oscilloscope measuring?
-
-    - How does a voltage divider work?  (this keeps coming back during the course)
-
-    - What is the important difference between capacitors and resistors? (Frequency-dependent impedance changes of capacitors, also keeps coming back)

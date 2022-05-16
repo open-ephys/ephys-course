@@ -32,8 +32,6 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Exercises Day 4 TA" href="exday4TA.html" />
-    <link rel="prev" title="Exercises Day 2 TA" href="exday2TA.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -76,7 +74,7 @@
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="eeadocsindex.html">
   EEA Course Documents
  </a>
@@ -146,76 +144,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="safety.html">
-   Safety &amp; Good Practices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="software_requirements.html">
-   Software Requirements
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="theoryday1.html">
-   Theory Day 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="theoryday2.html">
-   Theory Day 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="theoryday3.html">
-   Theory Day 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="theoryday4.html">
-   Theory Day 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="projects.html">
-   Project
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exday1TA.html">
-   Exercises Day 1 TA
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exday2TA.html">
-   Exercises Day 2 TA
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Exercises Day 3 TA
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="exday4TA.html">
-   Exercises Day 4 TA
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Firmata.html">
-     Firmata
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
+    
   </div>
 </nav>
               </div>
@@ -284,13 +213,13 @@
 <span id="refeday3ta"></span><h1>Exercises Day 3 TA<a class="headerlink" href="#exercises-day-3-ta" title="Permalink to this headline">#</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#differential-signals" id="id5">1. Differential Signals</a></p></li>
-<li><p><a class="reference internal" href="#reference-electrode" id="id6">2. Reference electrode</a></p></li>
-<li><p><a class="reference internal" href="#emg-circuit" id="id7">3. EMG circuit</a></p></li>
+<li><p><a class="reference internal" href="#differential-signals" id="id3">1. Differential Signals</a></p></li>
+<li><p><a class="reference internal" href="#reference-electrode" id="id4">2. Reference electrode</a></p></li>
+<li><p><a class="reference internal" href="#emg-circuit" id="id5">3. EMG circuit</a></p></li>
 </ul>
 </div>
 <section id="differential-signals">
-<h2><a class="toc-backref" href="#id5">1. Differential Signals</a><a class="headerlink" href="#differential-signals" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id3">1. Differential Signals</a><a class="headerlink" href="#differential-signals" title="Permalink to this headline">#</a></h2>
 <div class="exercise docutils container">
 <p>1A.   Use the oscilloscope 1x probe to measure the electrical noise in your environment, for instance by touching the probe tip. How big is the amplitude of this signal? Compare this to the size of a spike, around 100 µV. Could you see a spike on top of that noise?</p>
 </div>
@@ -299,7 +228,7 @@
 </div>
 </section>
 <section id="reference-electrode">
-<h2><a class="toc-backref" href="#id6">2. Reference electrode</a><a class="headerlink" href="#reference-electrode" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id4">2. Reference electrode</a><a class="headerlink" href="#reference-electrode" title="Permalink to this headline">#</a></h2>
 <p>So far, we have only considered the signal coming into our recording electrode, relative to ground. We will now add a reference electrode in the simulator.</p>
 <p>You can think of the small square waves as spikes you are trying to detect, and the sine wave (that both reference and your measurement electrode share) as the background. This background could be slow EEG signals or 50Hz noise, which is likely to be present at both electrodes.</p>
 <p>Step-by-step, we are going to build our ‘goal’ circuit has the following properties:</p>
@@ -333,12 +262,12 @@ If you change the voltage on the variable voltage source on the right hand side,
 <a class="reference external image-reference" href="https://tinyurl.com/y5h9uuv4"><img alt="../_images/neg_feedback_voltage_div.png" class="align-center" src="../_images/neg_feedback_voltage_div.png" /></a>
 <p>2D:</p>
 <p>The above does not work because the 60Hz reference signal ‘-’ is being split in 2 by the resistor voltage divider, whereas the measurement signal ‘+’ is not. The amplifier is outputting the voltage required to make the voltage at ‘-’ match the voltage at ‘+’. Right now, it will  We need to apply the same division to the incoming signal from the measurement electrode.</p>
-<p>put ‘+’ in middle of voltage divider to ground. yay this is a diff amplifier!</p>
+<p>We therefore put ‘+’ in the middle of a voltage divider to ground. yay this is a diff amplifier! <a class="reference external" href="https://tinyurl.com/y2qvrk9b">https://tinyurl.com/y2qvrk9b</a></p>
 <a class="reference external image-reference" href="https://tinyurl.com/y2qvrk9b"><img alt="../_images/diff_amp.png" class="align-center" src="../_images/diff_amp.png" /></a>
 </div>
 <div class="exercise docutils container">
 <p>2E. In the simulator we are working with ‘perfect’ components. In real life, these parts have to be physically produced and have certain degrees of precision, called ‘tolerances’. A resistance with 10% tolerance can be 10% higher or lower than the stated value.
-Simulate a case in which one of the resistors is 10% higher and another is 10% lower. What happens?</p>
+Simulate a case in which one of the resistors in the differential amplifier is 10% higher and another is 10% lower. What happens?</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -346,29 +275,37 @@ Simulate a case in which one of the resistors is 10% higher and another is 10% l
 <p>2F. What happens to the signal if there is a 5% difference between the impedance of your 2 electrodes?
 Can we use this shiny new differential amplifier to record neural signals?</p>
 </div>
-<p>We worked so hard to avoid drawing current from our frail electrode signal, and now we’re telling you to put big voltage dividers right at the inputs of our op-amp? That seems bad.</p>
-<p>Also, as we’ve just simulated, often op-amps do not have equal input impedances across + and -! This is similar to the example form earlier where we modelled a long wire, except that now you have two wires of different lengths in front of your inputs. If you’ve ever measured electrode impedance, how much variation was there between electrodes?</p>
-<p>To get this differential amplifier to work, each electrode and resistor would have to be identical, which is, in practice, impossible.</p>
+<div class="tabox docutils container">
+<p>2E. The voltage divider will no longer be perfect, and more of the shared sinusoidal ‘noise’ signal from the inputs will be visible in the output.</p>
+<p>2F. The same as above. The idea of this is that students may already know that they can never gold-plate their electrodes to the exact same impedance, and this shows them how that would affect the circuit were we to use a differential amplifier like this.</p>
+<a class="reference external image-reference" href="https://tinyurl.com/y5uu48hw"><img alt="../_images/diff_amp_unbalanced_resistors.png" class="align-center" src="../_images/diff_amp_unbalanced_resistors.png" /></a>
+</div>
+<p>We worked hard to avoid drawing current from our frail electrode signal, and now we’re telling you to put big voltage dividers right at the inputs of our op-amp? That seems bad.</p>
+<p>Also, as we’ve just simulated, often op-amps do not have equal input impedances across their inputs, in fact in practise it is often impossible to exactly match impedances. If you’ve ever measured electrode impedance, you will have noticed that there is always some slight variation in impedance. To get this differential amplifier to work, each electrode and resistor would have to be identical, which is, in practice, impossible.</p>
 <div class="exercise docutils container">
-<p>2G. How can we preserve the nice differential properties of the amplifier we just built, but still have our signals go straight into like a ‘+’ terminal on an op-amp to avoid impedance imbalances, and to avoid drawing current through voltage dividers? Build that circuit.</p>
+<p>2G. How do we fix this issue? We want to:
+- Preserve the differential properties of the amplifier we just built
+- Not have voltage dividers sending part of our precious signal to ground
+- Not be sensitive to small differences in resistor impedance
+Discuss this with your group or TA if necessary, and try to build that circuit.</p>
 </div>
 <div class="tabox docutils container">
-<p>2A: <a class="reference external" href="https://tinyurl.com/yemp5rve">https://tinyurl.com/yemp5rve</a></p>
-<p>2B: It doesn’t work if they only put a wire connection as feedback. They need at least 1 resistor for the simulator to not give an error, because otherwise, they are asking the output of the amplifier, the - input and the reference input to all be at the same voltage when they are not, and the simulator can’t solve the circuit.</p>
-<p>Why does putting just one resistor cause saturation? In that case, the (-) input would be receiving 60Hz 5V signal and trying to output the 120Hz 10mV difference that it is seeing on the (+) input to try and match both inputs. The amplifier does everything it can to make the - input equal to the + input. It outputs a voltage trying to increase the voltage at - every time there is a spike. But, because the - input is directly connected (via only a wire) to the voltage supply, it <a href="#id3"><span class="problematic" id="id4">*</span></a>must * have the same voltage as the voltage supply. Otherwise we’d have two different voltages in the same wire. The amplifier keeps reading that it has not succeeded to bring the - to the + level so it keeps its connection to the + rail, outputting the max voltage it can, i.e. saturating. All the voltage it outputs is actually lost over the resistor.
-Here’s a simplified circuit with a direct voltage source instead of alternating just to  keep it simple. <a class="reference external" href="https://tinyurl.com/yyrs7o6t">https://tinyurl.com/yyrs7o6t</a>
-If you change the voltage on the variable voltage source on the right hand side, you can see that increasing the provided voltage only causes the voltage drop over the resistor to increase</p>
-<p>2C: <a class="reference external" href="https://tinyurl.com/yzz5ht4f">https://tinyurl.com/yzz5ht4f</a></p>
-<p>2D: <a class="reference external" href="https://tinyurl.com/yg63xmm5">https://tinyurl.com/yg63xmm5</a>  put ‘+’ in middle of voltage divider to ground. yay this is a diff amplifier!</p>
-<p>Differential amplifier: <a class="reference external" href="https://tinyurl.com/ygmn8kf2">https://tinyurl.com/ygmn8kf2</a></p>
-<p>2E - F: this diff amp relies on a careful balance of impedances that isn’t realistically achievable.</p>
-<p>2G: Solution: use 3 op-amps. 2 act as buffers for the reference and measurement electrode, the third amplifies the difference between them. Then the differences in input impedances don’t matter!
+<p>2G: Solution: use 3 op-amps. The first two act as buffers for the reference and measurement electrode, the third amplifies the difference between them. Then the differences in input impedances don’t matter.
 <a class="reference external" href="https://tinyurl.com/yz8d8e67">https://tinyurl.com/yz8d8e67</a></p>
 <a class="reference external image-reference" href="https://tinyurl.com/yz8d8e67"><img alt="../_images/instrumentation_amp_simulator.png" class="align-center" src="../_images/instrumentation_amp_simulator.png" /></a>
 </div>
 </section>
 <section id="emg-circuit">
-<h2><a class="toc-backref" href="#id7">3. EMG circuit</a><a class="headerlink" href="#emg-circuit" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id5">3. EMG circuit</a><a class="headerlink" href="#emg-circuit" title="Permalink to this headline">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Your kit contains surface electrodes that we will use for EMG. These measurements involve attaching yourself to a circuit, so follow these rules to be safe:</p>
+<ol class="upperalpha simple">
+<li><p>Do not use anything other than the recommended batteries to power your circuit. Do not connect your circuit to mains supply for power, ground, anything.</p></li>
+<li><p>Only connect the EMG electrodes to one arm. Don’t attach them to both arms. This is to avoid any current travelling across your heart.</p></li>
+<li><p>If you are using a laptop, disconnect your laptop charger &amp; run from battery while the electrodes are attached to you. This is to prevent any surges from mains supply from backpropagating through your laptop, to you.</p></li>
+</ol>
+</div>
 <p>We now have all the steps of the acquisition in place to simulate a lab experiment. We are going to build an EMG circuit on the breadboard, using:</p>
 <ul class="simple">
 <li><p>The electrodes in your kit. The disposable electrodes in the kit are single-use, so do not attach them until you are sure your circuit is working and that you have the correct position (see below).</p></li>
@@ -379,21 +316,12 @@ If you change the voltage on the variable voltage source on the right hand side,
 <ul class="simple">
 <li><p>We will first test the circuit using the Picoscope to read out the signal. Tomorrow, we will use the Teensy as our acquisition board to digitize the data.</p></li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Your kit contains surface electrodes that we will use for EMG. These measurements involve attaching yourself to a circuit, so follow these rules to be safe:</p>
-<ol class="upperalpha simple">
-<li><p>Do not use anything other than the recommended batteries to power your circuit. Do not connect your circuit to mains supply for power, ground, anything.</p></li>
-<li><p>Only connect the EMG electrodes to one arm. Don’t attach them to both arms. This is to avoid any current travelling across your heart.</p></li>
-<li><p>If you are using a laptop, disconnect your laptop charger &amp; run from battery while the electrodes are attached to you. This is to prevent any surges from mains supply from backpropagating through your laptop, to you.</p></li>
-</ol>
-</div>
 <div class="exercise docutils container">
 <p>3A. Replicate the following circuit:</p>
 <img alt="../_images/fritz_emg_picoscope.png" class="align-center" src="../_images/fritz_emg_picoscope.png" />
 <ul class="simple">
 <li><p>Bypass capacitors = ‘104’</p></li>
-<li><p>Resistor: 220 Ohm</p></li>
+<li><p>Gain resistor: 220 Ohm</p></li>
 </ul>
 <p>3B. Now attach the surface electrodes onto the ends of the electrode cable, and click the jack into the breadboard adaptor.</p>
 <p>Each electrode corresponds to a different pin on the breadboard adaptor:</p>
@@ -404,28 +332,34 @@ If you change the voltage on the variable voltage source on the right hand side,
 </ul>
 <p>3C. Attach your oscilloscope as shown:</p>
 <img alt="../_images/board_emg_picoscope.png" class="align-center" src="../_images/board_emg_picoscope.png" />
-<p>If you tap the electrodes, you should see the trace of your PicoScope respond. If not, troubleshoot your circuit until you do.</p>
-</div>
-<p>Make sure your Picoscope responds to tapping your electrodes before continuing! Ask a TA for help if you get stuck.</p>
-<div class="exercise docutils container">
-<p>3D.  Place the measurement and reference electrode very close together, on the part of the forearm where you can feel a muscle when tensed. Place the ground on the elbow, where you can feel bone.  You should see a clear signal in the oscilloscope when you tense your muscles. Moving your arm will cause large motion artefacts (why?) so try to find a setup that gives you a consistent and clear signal.</p>
-<p>3E.   The resistor across the instrumentation amplifier sets the gain of the amplifier. Change the gain of the amplifier by changing Rg. What happens when the value for Rg is very low?</p>
+<p>If you tap the electrodes, you should see the trace of your PicoScope respond. Troubleshoot your circuit until you do. Make sure your Picoscope responds to tapping your electrodes before continuing, and ask a TA for help if you get stuck.</p>
 </div>
 <div class="tabox docutils container">
-<p>Problems here are often:</p>
+<blockquote>
+<div><p>Problems here are often:</p>
 <ul class="simple">
-<li><p>Forgetting to connect both grounds</p></li>
+<li><p>Forgetting to connect both grounds rails with a wire</p></li>
+<li><p>Using the wrong amplifier (the op amp)</p></li>
 <li><p>Being offset by 1 position in breadboard. Get the group to help each other spotting small errors like that.</p></li>
 </ul>
+</div></blockquote>
+<p>If they have a lot of noise on their recording, try:</p>
 <blockquote>
-<div><p>If they have a lot of noise on their recording, try:</p>
-<ul class="simple">
+<div><ul class="simple">
 <li><p>Disconnecting from 60/50Hz contaminated ground by using laptop battery</p></li>
 <li><p>Twisting or braiding the cables</p></li>
 </ul>
-<p>3E: The lower the value for Rg the more gain we should get. I tried going from 220Ohm to 100Ohm and it worked but I didn’t get a picture. I did not manage to get it to saturate.
-With a larger resistor for Rg we do get less gain. Formula for instrumental amplifier gain = (R3/R2){(2R1+Rgain)/Rgain}</p>
 </div></blockquote>
+</div>
+<div class="exercise docutils container">
+<p>Setup: Place the measurement and reference electrode very close together, on the part of the forearm where you can feel a muscle when tensed. Place the ground on the elbow, where you can feel bone.  You should see a clear signal in the oscilloscope when you tense your muscles. Moving your arm will cause large motion artefacts so try to find a setup that gives you a consistent and clear signal.</p>
+<img alt="../_images/arm.png" class="align-center" src="../_images/arm.png" />
+<p>3D.   The resistor across the instrumentation amplifier sets the gain of the amplifier. Change the gain of the amplifier by changing Rg. What happens when the value for Rg is very low?</p>
+</div>
+<div class="tabox docutils container">
+<p>3D:
+With a larger resistor for Rg we get less gain. Formula for instrumental amplifier gain = (R3/R2){(2R1+Rgain)/Rgain}.</p>
+<p>Therefore, the lower the value for Rg the more gain we should get, for instance try going from 220 Ohm to 100 Ohm. I did not manage to get it to saturate, but in theory this could happen at really high gain.</p>
 </div>
 </section>
 </section>
@@ -436,20 +370,6 @@ With a larger resistor for Rg we do get less gain. Formula for instrumental ampl
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="exday2TA.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Exercises Day 2 TA</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="exday4TA.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercises Day 4 TA</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
               
           </main>

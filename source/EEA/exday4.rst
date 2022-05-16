@@ -1,7 +1,7 @@
-.. _refEDay4TA:
+.. _refEDay4:
 
 ***********************************
-Exercises Day 4 TA
+Exercises Day 4
 ***********************************
 
 .. |Ve| replace:: V\ :sub:`e`\
@@ -190,25 +190,3 @@ We’re going to start streaming data to the PC, by using our Teensy microcontro
     C. Open Bonsai and create an Analog Input node. Double-click this node to visualise your signal.
 
     D. Connect this to a 'Csv Writer' node to save your signals.
-
-
-
-.. container:: tabox
-
-    A. With two equal resistances, this voltage divider is splitting the difference between the   instrumental amplifier output and +3V in two.
-
-      For low amplitude values of our amplified signal, say -2.6V, the difference is 5.6V and thus it adds 2.8V to -2.6V giving a voltage divider output of +0.2V.
-
-      For large amplitude values of our amplified signal, say +2.6V, the difference is 0.4V and thus it adds 0.2V to +2.6V, giving a voltage divider output of 2.8V.
-
-      Our signal is thus transformed to the 0.2-2.6V range, ready for the digitizing pin of the Teensy.
-
-      Simulator to show this in action: https://tinyurl.com/yyv98thr
-
-    B. They can also use the firmata in Arduino, under 'File/Examples/Firmata'. The frequency they acquire at will be important for filtering later on in Bonsai.
-
-    C-D. Example Bonsai workflows are here:
-
-    https://github.com/ahleighton/eeamay2022/tree/main/source/_static/ex_code
-
-    Including one that will detect EMG crossing a threshold (parameters will need adjusting) and activate an LED. see: emg_led_standardfirmata

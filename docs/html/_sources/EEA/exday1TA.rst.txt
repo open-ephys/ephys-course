@@ -25,8 +25,7 @@ Exercises Day 1 TA
   :depth: 2
   :local:
 
-.. admonition:: TA Note
-   :class: tanote
+.. container:: tabox
 
    Day 1!
    For many students, day 1 is about getting to know the equipment & using the right names for everything. Unless students are already very confident, it's best to take everyone through day 1 as a group. Particularly at this point, it's better to over-explain and repeat than risk people getting lost.
@@ -57,8 +56,7 @@ Exercises Day 1 TA
     1B.	Now set your multimeter to measure the voltage across a AA battery. What voltage do you measure? What does it mean if you record a negative voltage?
 
 
-.. admonition:: TA Note
-  :class: tanote
+.. container:: tabox
 
   Setup: Students have to remove the orange cover of the multimeter to insert the batteries, and need a screwdriver.
 
@@ -123,8 +121,7 @@ Some pins can perform multiple functions. For instance, the pin marked '20' on t
   :align: center
 
 
-.. admonition:: TA Note
-   :class: tanote
+.. container:: tabox
 
    Setup:
 
@@ -160,8 +157,7 @@ Oscilloscopes let us measure time-varying voltages with much higher time resolut
     *	y-axis scaling (Auto doesn’t always work)
     *	whether it is set to DC (direct current) or AC (alternating current).
 
-.. admonition:: TA Note
-   :class: tanote
+.. container:: tabox
 
    2A: Should see a clear square wave of around 3.3 amplitude.
 
@@ -175,9 +171,9 @@ Oscilloscopes let us measure time-varying voltages with much higher time resolut
    !!! If a student's scope isn't responding to any input, before panicking check that they are not using the 'automotive' version of the Picoscope software as this will make the scope look dead.
 
 
-We’ll now upload a program that outputs a sine wave, instead of a blink.
-
 .. container:: exercise
+
+  We’ll now upload a program that outputs a sine wave, instead of a blink.
 
   Setup:
 
@@ -194,8 +190,7 @@ We’ll now upload a program that outputs a sine wave, instead of a blink.
   .. image:: ../_static/images/EEA/sinewave_teensy_pico.png
     :align: center
 
-.. admonition:: TA Note
-   :class: tanote
+.. container:: tabox
 
     Setup:
 
@@ -230,8 +225,7 @@ When looking at a whole circuit, we can use this to calculate how much current w
     3A. Click on the image to go to the simulator.
     Right-click on the top wire in the circuit, and then select Edit to display the current through that wire. Double-click on either of the resistors to decrease their value. What happens to the current in the circuit?
 
-.. admonition:: TA Note
-  :class: tanote
+.. container:: tabox
 
   3A: The current should increase with decreased circuit resistance. The current change affects the entire circuit; current is the same everywhere.
 
@@ -257,8 +251,7 @@ Here’s another simulation demonstrating Ohm’s law. This time, the current mo
 
   Now double the value of the left-hand resistor in the simulator and see if your predictions were correct.
 
-.. admonition:: TA Note
-   :class: tanote
+.. container:: tabox
 
     Students can get confused about using Ohm's law over a whole closed circuit (to get current) and over individual components (voltage drops). It helps to remind them at which points in the circuit current must be equal and where voltage must be highest and lowest. Check that they understand why the current across these two resistors can be different, but not in the closed circuit above.
     Decreasing the resistance of any of the two resistors increases the current since they are in series and V = I * (R1+R2). Changes the ratio of the resistors changes the voltage drop over each resistor.
@@ -304,8 +297,7 @@ Therefore, in a circuit with multiple resistors in series, the ratio of their re
   To provide an 2.1V output voltage |Vout| at the readout wire.
 
 
-.. admonition:: TA Note
-   :class: tanote
+.. container:: tabox
 
    5A: Example answer:
    http://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsAoIA
@@ -331,8 +323,7 @@ We’ll now build the circuit you just designed in real life, using a solderless
 
   Bonus exercise: Replace one of the resistors to make your output voltage as small as you can get it. What’s the smallest reading you can still pick up with your multimeter? How does this compare to the amplitude of a spike measured in the extracellular space?
 
-.. admonition:: TA Note
-   :class: tanote
+.. container:: tabox
 
    5B: This should work with a 1k and 2.2k resistor as shown.
    Bonus: The amplitude of a spike in extracellular space is around 100 uV. This should help them to realise how little that is.
@@ -369,18 +360,13 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
   6C. Can you mimic an action potential by changing the intracellular voltage?
 
-
-
-.. admonition:: TA Note
-   :class: tanote
-
+.. container:: tabox
 
    6A. Direction: Current flows into the cell, towards the power supply, as it is more negative than 0. Current flows until the capacitor is fully charged. Because charges can't actually move through the capacitor, but have to interact with each other over the insulating material, once the plates are fully charged no more current can flow.
 
    6B. Current will start to leave the cell. When we increase the voltage difference over the capacitor, we are providing more charges on 1 side of the capacitor, which can then influence the charges on the other side. Equally, when we decrease the voltage difference, charges are released which result in current flow.
 
    6C. Move from -70mV up to +20mV, back to -90mV and return to -70mV :)
-
 
 
 .. container:: exercise
@@ -403,8 +389,7 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
   6E.	Increase the value of the resistor. What does this change in your trace? Can you explain why?
 
 
-.. admonition:: TA Note
-   :class: tanote
+.. container:: tabox
 
     6D & E: Results should look like figure below. Top panel: 220 kOhm, lower panel:very low resistance. Why? Because the resistor is setting the current through the circuit, determining how fast the capacitor is allowed to charge.
 
@@ -466,8 +451,7 @@ When you see a capacitor in a circuit, you know you need to think about the freq
     (Bonus question: what happens to the voltage drop across the capacitor as frequency increases?)
 
 
-.. admonition:: TA Note
-   :class: tanote
+.. container:: tabox
 
    8A. The 40Hz circuit below has a max current of 20mA, the above circuit has a max of only 12mA.
 
@@ -491,22 +475,18 @@ Because capacitors impede current flow, we can use them to build voltage divider
   9A.	Changing the capacitance values C for the first capacitor to test whether the formula for the resistor voltage divider applies for capacitors.
 
 
-.. admonition:: TA Note
-   :class: tanote
+.. container:: tabox
 
    9A. At a fixed frequency we can use the ratio of capacitor impedance to create a voltage divider just as for resistors.
 
+.. container:: tabox
 
-Wrap Up
-#########################################################
+    Wrap Up
 
-.. admonition:: TA Note
-  :class: tanote
+    If they don't make it through all the exercises that's ok, but concepts that they should understand are:
 
-  If they don't make it through all the exercises that's ok, but concepts that they should understand are:
+    - What is an oscilloscope measuring?
 
-  - What is an oscilloscope measuring?
+    - How does a voltage divider work?  (this keeps coming back during the course)
 
-  - How does a voltage divider work?  (this keeps coming back during the course)
-
-  - What is the important difference between capacitors and resistors? (Frequency-dependent impedance changes of capacitors, also keeps coming back)
+    - What is the important difference between capacitors and resistors? (Frequency-dependent impedance changes of capacitors, also keeps coming back)

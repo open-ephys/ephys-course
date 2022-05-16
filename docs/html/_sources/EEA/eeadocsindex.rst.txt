@@ -17,10 +17,6 @@ EEA Course Documents
    exday3.rst
    exday4.rst
    projects.rst
-   exday1TA.rst
-   exday2TA.rst
-   exday3TA.rst
-   exday4TA.rst
 
 Materials for students
 ############################
@@ -93,17 +89,3 @@ Day 4: Synchronization and Digitization
   <p><i> <a class="reference internal" href="exday4.html"><span class="std std-ref">Bonsai </span></a><a class="reference internal" href="exday4.html#id7"><span class="std std-ref">EMG Digitization</span></a></i></p>
 
 :ref:`Project <refproject>`
-
-
-Versions for teaching/teaching assistants
-###########################################
-These versions include some teaching notes, and may also be useful for students
-who are taking the course on their own.
-
-:ref:`Exercises day 1 TA <refEDay1TA>`
-
-:ref:`Exercises day 2 TA <refEDay2TA>`
-
-:ref:`Exercises day 3 TA <refEDay3TA>`
-
-:ref:`Exercises day 4 TA <refEDay4TA>`

@@ -35,13 +35,13 @@
 
 /* overhead navigation bar*/
 .navbar {
-  background: #e0c453 !important; /* overhead navigation bar color */
+  background: #FEDB81 !important; /* overhead navigation bar color */
   font-size: 1rem;
 }
 
 /* navigation bar: text*/
 .navbar a {
-  color: white !important;
+  color: black !important;
   font-family: "Source Sans", sans-serif;
   font-size: 1rem;
   transition-duration: 0.4s;
