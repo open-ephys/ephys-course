@@ -61,4 +61,4 @@ One of the most common pitfalls in Neuroscience is correctly synchronizing multi
   <br>
 
 
-The code for the exercises Filipe shows is available `on google drive <https://drive.google.com/drive/folders/1m_DTRXc1NcFni12a_9AtApX5nMIPPDdk?usp=sharing>`_ if you want to try it out yourself.
+The code for the exercises Filipe shows is available `on google drive <https://drive.google.com/drive/folders/1Gw1QuXJKFy_i0V61b9DCHU8d6C0iIxHG?usp=sharing>`_ if you want to try it out yourself.
