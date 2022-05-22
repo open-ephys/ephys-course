@@ -17,6 +17,8 @@ EEA Course Documents
    exday3.rst
    exday4.rst
    projects.rst
+   exday1_nokit.rst
+   exday2_nokit.rst
 
 Materials for students
 ############################
@@ -89,3 +91,11 @@ Day 4: Synchronization and Digitization
   <p><i> <a class="reference internal" href="exday4.html"><span class="std std-ref">Bonsai </span></a><a class="reference internal" href="exday4.html#id7"><span class="std std-ref">EMG Digitization</span></a></i></p>
 
 :ref:`Project <refproject>`
+
+
+
+No Hardware kit? Use these links!
+*********************************************
+
+exday1_nokit.rst
+exday2_nokit.rst

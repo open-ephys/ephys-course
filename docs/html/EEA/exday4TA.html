@@ -113,7 +113,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/open-ephys/onix-docs" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github"></i></span>
+          <a class="nav-link" href="https://github.com/ahleighton/eeamay2022" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
@@ -121,7 +121,7 @@
             <label class="sr-only">Twitter</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://discord.gg/WXAx2URNQU" rel="noopener" target="_blank" title="Discord"><span><i class="fab fa-discord"></i></span>
+          <a class="nav-link" href="https://discord.gg/4HbHYhWPer" rel="noopener" target="_blank" title="Discord"><span><i class="fab fa-discord"></i></span>
             <label class="sr-only">Discord</label></a>
         </li>
       </ul>
@@ -351,7 +351,7 @@
 <h3><a class="toc-backref" href="#id6">Analog Inputs</a><a class="headerlink" href="#analog-inputs" title="Permalink to this headline">#</a></h3>
 <div class="exercise docutils container">
 <ul class="simple">
-<li><p>Upload this <a class="reference internal" href="Firmata.html#firmata"><span class="std std-ref">Firmata</span></a> to your Teensy</p></li>
+<li><p>Make sure StandardFirmata is still running on your Teensy</p></li>
 <li><p>In Bonsai, insert an AnalogInput node and configure it to Analog Pin 9.</p></li>
 <li><p>Run the workflow and tap the pin on the Teensy.</p></li>
 <li><p>Use the GreaterThan node to create a ‘touch detector’ that gives a 1 each time you tap the teensy.</p></li>
@@ -377,8 +377,6 @@
 </section>
 <section id="streaming-data-from-the-microcontroller">
 <h3><a class="toc-backref" href="#id9">Streaming data from the microcontroller</a><a class="headerlink" href="#streaming-data-from-the-microcontroller" title="Permalink to this headline">#</a></h3>
-<div class="toctree-wrapper compound">
-</div>
 <p>We’re going to start streaming data to the PC, by using our Teensy microcontroller to digitize the analog signals we collect.</p>
 <div class="exercise docutils container">
 <ol class="upperalpha simple">
@@ -388,8 +386,7 @@
 <blockquote>
 <div><img alt="../_images/board_emg_teensy.png" class="align-center" src="../_images/board_emg_teensy.png" />
 <img alt="../_images/fritz_emg_teensy.png" class="align-center" src="../_images/fritz_emg_teensy.png" />
-<ol class="upperalpha simple" start="2">
-<li><p>Upload ‘Firmata.ino’ to the Teensy (code here: <a class="reference internal" href="Firmata.html#firmata"><span class="std std-ref">Firmata</span></a> ). This script tells the Teensy to read the analog input and can set the frequency of readout.</p></li>
+<ol class="upperalpha simple" start="3">
 <li><p>Open Bonsai and create an Analog Input node. Double-click this node to visualise your signal.</p></li>
 <li><p>Connect this to a ‘Csv Writer’ node to save your signals.</p></li>
 </ol>
@@ -402,11 +399,11 @@
 <blockquote>
 <div><p>For low amplitude values of our amplified signal, say -2.6V, the difference is 5.6V and thus it adds 2.8V to -2.6V giving a voltage divider output of +0.2V.</p>
 <p>For large amplitude values of our amplified signal, say +2.6V, the difference is 0.4V and thus it adds 0.2V to +2.6V, giving a voltage divider output of 2.8V.</p>
-<p>Our signal is thus transformed to the 0.2-2.6V range, ready for the digitizing pin of the Teensy.</p>
-<p>Simulator to show this in action: <a class="reference external" href="https://tinyurl.com/yyv98thr">https://tinyurl.com/yyv98thr</a></p>
+<p>Our signal is thus transformed to the 0.2-2.6V range, ready for the digitizing pin of the Teensy.
+Simulator to show this in action: <a class="reference external" href="https://tinyurl.com/yyv98thr">https://tinyurl.com/yyv98thr</a></p>
 </div></blockquote>
 <ol class="upperalpha simple" start="2">
-<li><p>They can also use the firmata in Arduino, under ‘File/Examples/Firmata’. The frequency they acquire at will be important for filtering later on in Bonsai.</p></li>
+<li><p>There are lots of different Firmata scripts they can use, as long as they know the acquisition frequency as this will be important for filtering later on in Bonsai.</p></li>
 </ol>
 <p>C-D. Example Bonsai workflows are here:</p>
 <p><a class="reference external" href="https://github.com/ahleighton/eeamay2022/tree/main/source/_static/ex_code">https://github.com/ahleighton/eeamay2022/tree/main/source/_static/ex_code</a></p>

@@ -1,7 +1,7 @@
-.. _refEDay2:
+.. _refEDay2_nokit:
 
 ***********************************
-Exercises Day 2
+Exercises Day 2: No Hardware
 ***********************************
 
 .. |Ve| replace:: V\ :sub:`e`\
@@ -63,6 +63,7 @@ In the theory handout, we discussed how we can represent an electrode as a circu
 
     2C. Bonus exercise: Can you change this circuit from a polarising, tungsten electrode, to a circuit representing a nonpolarizable electrode?
 
+
 3.  Shunt Impedance
 ##########################
 
@@ -100,95 +101,28 @@ To actually perform a recording, we will have to attach the electrode to the res
 
 4. Operational Amplifiers
 ###################################
-We will now build the same circuit on the breadboard. The Teensy 'Blink' signal will act as our neuronal data, that will travel across electrode and shunt impedances before reaching the oscilloscope to be recorded. Our goal is to get as much of the Blink signal as possible to reach our oscilloscope recording system.
 
-In the theory handout, we discussed the importance of headstages. We'll test that now, by building the recording circuit without and with an amplifier acting as a headstage.
-
-* 'Neuron'  = Digital blink output from Teensy
-* 'Electrode' = 100 kOhm resistor
-* 'Shunt' = 22kOhm resistor
-* 'Leak' = 220Ohm resistor
-* 'Recording system' = the Picoscope
-
-.. image:: ../_static/images/EEA/circuitday2.png
-  :align: center
-  :target: https://tinyurl.com/yyeah3wd
-
-4A. Recording circuit without an amplifier
-*******************************************
-
-.. container:: exercise
-
-  4A.	Upload the Blink example to your teensy (or just run it if still loaded).
-
-  Build the circuit below:
-
-  * Send the Teensy output through a 100 KOhm resistor. This makes it behave a bit like a biological signal coming from an electrode.
-
-  *	A 22kOhm resistor to ground simulates shunt impedance.
-
-  * A 220 Ohm resistor to ground simulates that your acquisition system is connected to ground (via some resistance).
-
-  *	The yellow wires are 'readout' wires to connect your oscilloscope to.
-
-  .. image:: ../_static/images/EEA/fritz_wire_only_blink.png
-    :align: center
-
-  .. image:: ../_static/images/EEA/wire_only_blink.png
-    :align: center
-
-  4B.	Use the oscilloscope to measure the peak to peak voltage amplitude recorded at three points:
-
-  .. list-table::
-     :width: 80%
-     :widths: 20 20 20
-     :header-rows: 1
-     :align: left
-
-     * - (+) Probe Location
-       - Long Wire
-       - Op-Amp
-     * - 1. Teensy Pin 13
-       -
-       -
-     * - 2. Readout Wire 1
-       -
-       -
-     * - 3. Readout Wire 2
-       -
-       -
-
-  4C. How much signal is lost?
-
-4B. Recording circuit with amplifier
-*************************************
-
-Build voltage rails
+Voltage rails
 ______________________________________
-.. warning::
-  Make sure that the pins from the batteries do not touch, and if they’re not in use, best to put some tape on them so they don’t touch things. ‘Short-circuiting’ the batteries (connecting them without any sort of resistance) causes a huge current to flow from the + to -, enough to... melt stuff.
 
-We need to provide our op-amp with power. We will use batteries to make voltage ‘rails’. We are going to make a -3V and +3V rail. To do this we use a common trick and turn two regular power supplies into a bipolar power supply. In our case we use batteries, because they’re cheap and pretty much fully noise-free. Check which way up your breadboard is (keep the blue line at the top). Following the figures precisely will make debugging much easier later on.
+In the simulator, 'ideal' operational amplifiers are shown without their power supplies. However in real life, we need to provide our op-amp with power. We will use batteries to make voltage ‘rails’. We are going to make a -3V and +3V rail using simulated AA batteries that provide 1.5V each.
+
+To do this we use a common trick and turn two regular power supplies into a bipolar power supply.
+
+.. image:: ../_static/images/EEA/bipolar_power_supply.png
+  :align: center
 
 .. container:: exercise
 
-  4D. Connect the battery holders as follows:
+  4D. Using 4x 1.5 DC voltage supplies simulated batteries, connect them together so that you have a +3, 0, and -3 power supply.
 
-  - The first pair of batteries provides +3V from the red wire (goes to red rail on breadboard), and 0 from the black wire (goes to blue rail on breadboard).
-
-  - The two blue rails of the breadboard are connected through a wire, setting them both to 0V.
-
-  - The second pair of batteries is reversed (red wire goes to blue rail, black wire to red rail). This provides -3V relative to ground.
-
-  - Remember or label which side is +3 and which is -3
-
-  .. image:: ../_static/images/EEA/bipolar_power_supply.png
+  .. image:: ../_static/images/EEA/aa_batteries_sim.png
     :align: center
+    :target: https://tinyurl.com/yyo6n35w
 
-  .. image:: ../_static/images/EEA/fritz_bipolar_power_supply.png
-    :align: center
+  4E. Replace the 'ideal' op-amp with a 'real' op amp in the simulator. Use a bipolar power supply to power it. What amplitude values do you get as output now? How is it different to the ideal op amp?
 
-Add bypass capacitors
+Bypass capacitors
 ***********************************
 Bypass capacitors are small capacitors that act like little secondary batteries. The batteries we use have a high ESR - ‘equivalent series resistance’, and some capacitance. This means that are not great at quickly providing current. Because of this, when our op-amp starts working, it can run out of current for a very short time until the battery can drive the rails back to their original voltage. This is bad for the signal quality.
 
@@ -196,41 +130,9 @@ So, we allow these small capacitors to charge. If the battery briefly can’t pr
 
 .. container:: exercise
 
-  4E. Add two 100nF (marked 104) caps, one to each rail, so connecting GND to 3V and connecting GND to -3V.
+
+ 4F. Add bypass capacitors to the simulation based on where they are in the bipolar power supply pictured here:
 
   .. image:: ../_static/images/EEA/fritz_bipolar_power_supply.png
     :align: center
-
-Add a 'headstage'
-***********************************************
-
-We will replace our long wire with a 'headstage'. We will use only the most basic part of the headstage, an operational amplifier.
-
-This is the op-amp you have.  Make sure you’re looking at the op-amp (AS358P), not the instrumentation amp.
-
-.. image:: ../_static/images/EEA/op_amp_pinout.png
-  :align: center
-
-.. container:: exercise
-
-  4F. Add the op-amp to the circuit.
-
-  * Place the op-amp on your breadboard, with the semicircle cutout on the left.
-
-  * Connect the +3 voltage rail to ‘Vcc+’ and the -3 voltage rail to ‘Vcc-‘
-
-  * Put the electrode output wire into the + input of your op-amp, and the output of the op-amp into the ‘wire’ simulation circuit.
-
-  * Feed the output of the op-amp, back into the – input.
-
-  4G. Now measure the same three points as before and complete the table in question 4B.         -
-
-  4H. Optional: try changing the resistances you've used for electrode, shunt, and leakage. What happens to the signal?
-
-  4I. Optional: Measure the same points in the simulator as you did on the breadboard. How do they compare?
-
-  .. image:: ../_static/images/EEA/fritz_headstage_blink.png
-    :align: center
-
-  .. image:: ../_static/images/EEA/amp_headstage_blink.png
-    :align: center
+    :target: https://tinyurl.com/y25z3vzh
