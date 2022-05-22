@@ -182,13 +182,13 @@ html_theme_options = {
     'show_toc_level': 1,
     'icon_links': [
         dict(name='GitHub',
-             url='https://github.com/open-ephys/onix-docs',
+             url='https://github.com/ahleighton/eeamay2022',
              icon='fab fa-github'),
         dict(name='Twitter',
              url='https://twitter.com/openephys',
              icon='fab fa-twitter'),
         dict(name='Discord',
-             url='https://discord.gg/WXAx2URNQU',
+             url='https://discord.gg/4HbHYhWPer',
              icon='fab fa-discord')
     ],
     'footer_items': ['copyright', 'sphinx-version'],

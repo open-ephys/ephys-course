@@ -30,183 +30,101 @@ Exercises Day 1 TA
    Day 1!
    For many students, day 1 is about getting to know the equipment & using the right names for everything. Unless students are already very confident, it's best to take everyone through day 1 as a group. Particularly at this point, it's better to over-explain and repeat than risk people getting lost.
 
-   - Show them the probes for the oscilloscope. Explain how to use the little hook, and show them the ground probe.
-
-   - Check they understand the multimeter and oscilloscope and what they're measuring.
-
-   - Make sure they can scale their picoscope software.
-
-   - Explain which parts of the breadboard are connected, and which are not.
-
-   - Check that everyone has a nice signal each time before moving on.
+   For those without the kit, the exercises will have to focus on getting to know the simulator.
 
 1.	Using a multimeter
 ###################################
 
+We will be using a circuit simulator to model the different settings on a multimeter. A multimeter can be used to measure voltage, resistance, and current.
+
+
 .. container:: exercise
+
+    First we will measure resistance of a resistor.
+
+    .. image:: ../_static/images/EEA/ohmmeter_sim.png
+      :align: center
+      :target: https://tinyurl.com/y65o842d
 
     Setup:
 
-    - Make sure the multimeter has 2x AAA batteries installed.
-    - Put the red probe in the port marked ‘VmAuA’ to indicate you want to measure Voltage (V), milliAmps (mA), and Resistance (Ohms). We won't use it in this course, but the 10Amax port can be used to measure high currents.
-    - Insert the black probe in the port marked COM (= Common, which will be your ground).
+    - Add an Ohmmeter to the circuit (Draw/Outputs and Labels/Add Ohmmeter).
+    - Connect it to the resistor and Run the simulator.
+    - Right-click on the Ohmmeter, select 'View in New Scope'.
+    - Set the scope to display resistance values instead of voltage. Right-click on the scope and select 'Properties'. Select 'Show Resistance' instead of 'Show Voltage'.
 
-    1A.	Set the multimeter dial to ‘Ω’. Use your multimeter to measure the resistance of any 3 different resistors in the kit. Check whether the resistance values you read correspond to the coloured bands on the resistors. How is your multimeter measuring this resistance?
+    1A. Read the value of the resistor in Ohms from the scope.
 
-    1B.	Now set your multimeter to measure the voltage across a AA battery. What voltage do you measure? What does it mean if you record a negative voltage?
+    Now we will measure the voltage across two batteries.
 
+    .. image:: ../_static/images/EEA/voltmeter_sim.png
+      :align: center
+      :target: https://tinyurl.com/y35xq4tr
+
+    Setup:
+
+    - Add a Voltmeter to the circuit, connect it across the batteries, and run the simulator.
+    - What voltage do you measure?
+    - How can you get the Voltmeter to give a negative voltage measurement?
 
 .. container:: tabox
 
   Setup: Students have to remove the orange cover of the multimeter to insert the batteries, and need a screwdriver.
 
-  1A: To measure resistance, the multimeter generates a voltage at both probes, and measures the current generated between them.
+    1A: 220 Ohm.
 
-  1B: Should be around 1.2-1.5 V, unless it's used. If you record a negative voltage you just have to switch the lead around, it’s convention: the positive side of the battery should be the red. Students can use this later in the course (and in life) during troubleshooting, to make sure depleted batteries are not the issue.
-
-
-Solderless Breadboard
-***********************************
-We are going to build many circuits during this course using components such as resistors, capacitors, and amplifiers. We are going to use a solderless breadboard to form an electrically conductive connection between these components.
-
-Below is an example breadboard with the backing peeled off, to show what happens inside. Each hole in the breadboard provides access to a metal bar. Inserting a component into the hole connects it electrically to any other component that touches the same bar. Batteries or a different type of power supply are connected to the long 'rails' that run along the side of the board, to power the circuit.
-
-.. image:: ../_static/images/EEA/exposed_breadboard.png
-  :align: center
-
-.. image:: ../_static/images/EEA/breadboard_connectivity.png
-  :align: center
-
-The most important thing is to remember which holes are connected. Your long breadboard is actually made up of two separate breadboards; as you can see above, the power rails run through rows 0-30 and 31-60. If you want to use the entire length of the breadboard, you will have to connect these rails together with wires.
-
-If you need to, refer back to the `reading material <https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all#anatomy-of-a-breadboard>`_ for the overview on how to use a breadboard, it also includes some basic troubleshooting which may prove useful if you run into problems.
-
-Teensy Microcontroller
-**********************************
-In your kit you will find a Teensy LC. This is a microcontroller, like an Arduino (just a different brand). It is basically a small computer, that can only run 1 program at a time. Using the USB cable provided, you can upload a new programme to the Teensy. Whenever the Teensy is provided with a power source it will try to run that programme.
-
-The Teensy can perform many different functions, such as generating output voltages or collecting input signals. To do so, it has specialised connectors around the edges of the board. These are called 'vias' or 'pins'. The 'pinout' below tells you what each pin of the Teensy can do. For instance, the pin marked '20' on the board is Digital Pin 20 (grey) and Analog pin 6.
-
-.. image:: ../_static/images/EEA/teensy_LC.png
-  :align: center
-
-
-It’s important to distinguish between:
-
-* Ground pins (GND)
-* Analog pins, that can read varying voltages, such as a wave.
-*	Digital pins, that can read or write HIGH or LOW values.
-
-Some pins can perform multiple functions. For instance, the pin marked '20' on the board is Digital Pin 20 (grey) and Analog pin 6.
-
-.. warning::
-  We’re going to attach the Teensy to our solderless breadboard. Removing and replacing the teensy can sometimes bend the pins, so we’re going to leave it here for the whole course. If you do have to remove the teensy from the board, never hold it by the USB port, as it can easily snap off and can't be fixed!
-
-.. image:: ../_static/images/EEA/teensy_on_board.png
-  :align: center
-
-.. container:: exercise
-
-	Setup:
-  - Attach the teensy to the left of your breadboard as shown above. If you make sure the breadboard is in the same orientation as this schematic, it will make the following exercises easier to follow.
-  - Use the USB to micro-USB cable in your kit to connect the Teensy to your computer.
-  - The Teensy comes with a default programme already loaded onto the board, so you should see the LED on the board start to blink slowly as soon as it is powered on.
-
-  1C.	We can see that digital pin 13 has (LED) written beside it. Attach readout wires to the breadboard, and use your multimeter to find the voltage across the LED.
-
-.. image:: ../_static/images/EEA/readout_teensy_voltage_schematic.png
-  :align: center
-
-.. image:: ../_static/images/EEA/readout_teensy_voltage_photo.png
-  :align: center
-
-
-.. container:: tabox
-
-   Setup:
-
-   If they need to upload the programme again, they can open the Arduino software: examples/basics/blink. Any problems, check:
-
-   - Whether the board is set to Teensy LC under Tools/Board
-   - The selected port Tools/Port
-
-   1C:   Should be around 3.3V when high- they will see intermediate values too due to the low time resolution of the multimeter.
-
-
-2.	Using an oscilloscope
-###################################
-
-Oscilloscopes let us measure time-varying voltages with much higher time resolution than the multimeter.
-
-.. container:: exercise
-
-    Setup:
-
-    - Your Picoscope comes with two probes, you only need one. Connect it to the ‘A’ port on your oscilloscope.
-    - Set the slider on the probe itself to ‘1x’.
-    - Connect your PicoScope to your computer and open up the Picoscope software.
-
-    2A. Use the PicoScope to measure the blink signal at the readout wires, as you did with your multimeter. Make sure you play around to find nice X and Y scaling. What shape & amplitude does the signal have?
-
-    .. image:: ../_static/images/EEA/readout_teensy_voltage_picoscope.png
+    .. image:: ../_static/images/EEA/ohmmeter_sim_solution.png
       :align: center
-
-    If you see something odd, check:
-
-    *	x-axis scaling (ms/div)
-    *	y-axis scaling (Auto doesn’t always work)
-    *	whether it is set to DC (direct current) or AC (alternating current).
-
-.. container:: tabox
-
-   2A: Should see a clear square wave of around 3.3 amplitude.
-
-   .. image:: ../_static/images/EEA/blink_readout_picoscope.png
-     :align: center
+      :target: https://tinyurl.com/y3fx29an
 
 
-   NB: sometimes connecting the ground directly to the Teensy causes it to charge (you can see it with the scope) and it can end up disconnecting from the PC and making a mess. They don’t actually need the ground of the scope connected to see the large sine wave because of the scope’s high input impedance. That might be confusing now, but should be clearer after talking about impedance tomorrow.
+    1B: -3V, each real AA will be around 1.2-1.5 V. They can get a negative voltage -3 by reversing the direction of the voltmeter. It means nothing about the value of the batteries, just whether the positive or negative terminal of the batteries is considered 0 by the voltmeter.
+
+    .. image:: ../_static/images/EEA/voltmeter_sim_solution.png
+      :align: center
+      :target: https://tinyurl.com/yyp74gjm
 
 
-   !!! If a student's scope isn't responding to any input, before panicking check that they are not using the 'automotive' version of the Picoscope software as this will make the scope look dead.
-
+Measuring voltages
+******************************************************
+Microcontrollers like an Arduino or a Teensy can be used to generate output voltages with specific properties.
 
 .. container:: exercise
 
-  We’ll now upload a program that outputs a sine wave, instead of a blink.
+    Take a look at this simulation. A voltage output signal is being generated on the left, which turns an LED on and off at a specific frequency. Our goal is to measure the properties of this voltage output.
 
-  Setup:
+    .. image:: ../_static/images/EEA/squarewave_sim.png
+      :align: center
+      :target: https://tinyurl.com/y3fugler
 
-  - Open the Arduino Software Upload the following code to your teensy:
+    2A. Connect a voltmeter across the LED. This is similar to using a multimeter in the lab. What is the amplitude of the signal in Volts? With what frequency does the signal change amplitude?
 
-  :ref:`sinewave`
+    2B. Visualise the voltage across the LED in a new Scope. This is similar to using an oscilloscope in the lab. Is the voltage measured different now? With what frequency does the signal change amplitude, how would you describe the shape of this signal?
 
-  - Make sure that under ‘Tools/ Board’ your Teensy 3.2 has been found, and check which USB (COM) port it’s in (‘Tools/Port:).
+    2C. What are the advantages of an oscilloscope over a multimeter?
 
-  - If you see ‘Done Uploading’, the Teensy will start giving a sine wave as output from one of the analog output pins.
-
-  2B.	Connect your oscilloscope probe to A14 and visualise the signal in your PicoScope software.
-
-  .. image:: ../_static/images/EEA/sinewave_teensy_pico.png
-    :align: center
+    2D. Change the voltage signal so that it outputs a 50Hz sinewave.
 
 .. container:: tabox
 
-    Setup:
-
-    - If they get an error ‘redefinition of void setup’ it’s because they dragged the sketch to the software,  then it gets added to the other sketch, needs to be uploaded separately.
-
-    2B: Pin A14 is a DAC, digital to analog converter, so it can take the digital representation and output an analog(ish) sinewave. Make sure they don't get mixed up with digital pin 14 (analog pin 0).
-    These exercises are just to check that they understand the value of having the oscilloscope over the multimeter- that knowing the shape of the signal is important. It helps to keep linking this back to their neural signals- what if you were undersampling them, you wouldn't see spikes. Make sure they are ok with the idea of alternating signals, and that digital and analog signals are clear as well.
-
-    .. image:: ../_static/images/EEA/sinewave_output.png
+    .. image:: ../_static/images/EEA/squarewave_sim_solution.png
       :align: center
+      :target: https://tinyurl.com/y29gfq4m
 
+    2A. 3V. It should be hard to measure the frequency this way (the answer is 2Hz but the point is to show that measuring frequency or shape is hard with a multimeter).
+
+    2B. Still 3V, 2Hz, square wave.
+
+    2C. Oscilloscopes have a faster time resolution and display the history of signals over time, so that we can extract information about frequency and shape.
+
+    2D.
+
+    .. image:: ../_static/images/EEA/sinwave_sim_solution.png
+      :align: center
+      :target: https://tinyurl.com/y5wmlcgz
 
 3. Ohm’s Law
 ###################################
-During this course, we’ll be using a circuit simulator to build circuits online. This allows us to quickly test our ideas and understanding, and make predictions about what will happen when we build the circuit in real life.
-
 
 Ohm’s law describes how potential (V), current (I) and resistance (R) are related:
 
@@ -268,8 +186,7 @@ Here’s another simulation demonstrating Ohm’s law. This time, the current mo
 
 5.	Voltage Divider
 ###################################
-In simulator
-***********************************
+
 Voltage is always measured relative to a point that we consider 0V. For a battery, the negative terminal is 0V.
 
 Voltage (potential energy) ‘drops’ over each resistor, as potential energy is converted to another form of energy such as heat or light. In a circuit powered by a 9V battery, all 9V of potential energy from our battery source *must* drop over circuit components, to return to 0V at the negative terminal of the battery.
@@ -296,6 +213,7 @@ Therefore, in a circuit with multiple resistors in series, the ratio of their re
 
   To provide an 2.1V output voltage |Vout| at the readout wire.
 
+  5B. Change the ratios of the resistors until the readout voltage is the size of an action potential measured in the extracellular fluid.
 
 .. container:: tabox
 
@@ -305,38 +223,22 @@ Therefore, in a circuit with multiple resistors in series, the ratio of their re
      :align: center
      :target: https://tinyurl.com/y3fshb8c
 
+   Though it can be done with different resistors!
+
    Sparkfun overview:
    https://learn.sparkfun.com/tutorials/voltage-dividers/all#extra-credit-proof
 
+   5B:
 
-On breadboard
-***********************************
-We’ll now build the circuit you just designed in real life, using a solderless breadboard.
-
-.. container:: exercise
-
-  5B.	Use the battery holder and two AA batteries to create a 3V source. Use any two resistors from your kit to build a voltage divider, as shown below. If your multimeter doesn’t fit in the breadboard holes, you can place a short piece of 'readout' wire at each point you want to measure.
-
-  .. image:: ../_static/images/EEA/voltage_div_breadboard_photo.png
-    :align: center
-
-  .. image:: ../_static/images/EEA/voltage_div_breadboard_schematic.png
-    :align: center
-
-  Bonus exercise: Replace one of the resistors to make your output voltage as small as you can get it. What’s the smallest reading you can still pick up with your multimeter? How does this compare to the amplitude of a spike measured in the extracellular space?
-
-.. container:: tabox
-
-   5B: This should work with a 1k and 2.2k resistor as shown.
-   Bonus: The amplitude of a spike in extracellular space is around 100 uV. This should help them to realise how little that is.
+   .. image:: ../_static/images/EEA/voltage_divider_spike_solution.png
+     :align: center
+     :target: https://tinyurl.com/y6m7w8vk
 
 
 6. Capacitors
 ###################################
 
-.. warning:: Always check whether your capacitors are polarised or non-polarised.
-
-Polarised capacitors must be used in a specific orientation. Usually, ceramic (the yellow ones in your kit) capacitors are not polarised and you can use them in either direction, whereas tube-shaped electrolytic capacitors (the black and blue ones in your kit) **are** polarised. The negative pin is indicated by a ‘-’ marking, and the positive leg is often longer.
+There are two types of capacitor. Polarised capacitors must be used in a specific orientation. Usually, ceramic capacitors are not polarised and you can use them in either direction, whereas tube-shaped electrolytic capacitors  **are** polarised. The negative pin is indicated by a ‘-’ marking, and the positive leg is often longer.
 
 :ref:`As discussed in the Theory handout <refcapacitancetheory>`, capacitors occur wherever charge can be separated along two conducting surfaces, separated by an insulating material that prevents the plates from touching. Cell membranes are capacitors, as are electrodes.
 
@@ -356,7 +258,7 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
   The simulator shows a simplified 'cell membrane' represented as a capacitor and a resistor. Changing the intracellular voltage supply changes the voltage across the cell membrane. The extracellular fluid is always 0 V.
 
-  6A. The initial voltage over the capacitor is -72mV. Click 'Reset' to see current move through the circuit until the capacitor is charged to 72mV. Which direction is the current flow? Why does current stop moving?
+  6A. The initial voltage over the capacitor should be -72mV. If not, set the Voltage slider to around -70mV. Click 'Reset' to see current move through the circuit until the capacitor is charged to 72mV. Which direction is the current flow? Why does current stop moving?
 
   6B. Using the 'Voltage' slider, set the voltage supply to 0 mVolts, and then to 20mV. What happens to the current flow in the circuit?
 
@@ -373,30 +275,30 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
 .. container:: exercise
 
-  Setup:
+    In this simulation, you can charge and discharge a capacitor and see the current flow through the circuit.
 
-  Using the breadboard, build a circuit to charge and discharge one of the large capacitors in your kit.
+    .. image:: ../_static/images/EEA/charging_cap_sim.png
+      :align: center
+      :target: https://tinyurl.com/y6ov8bnn
 
-  .. image:: ../_static/images/EEA/charging_cap_schematic.png
-    :align: center
-    :width: 48%
+    6D.	Modify the simulation to power an LED (Draw/Outputs and Labels/Add LED) by the capacitor as it discharges. The simulator will turn the LED red when it is on.
 
-  .. image:: ../_static/images/EEA/charging_cap_photo.png
-    :align: center
-    :width: 48%
+    6E. Visualise the charging and discharging of voltage over the capacitor. How can you make the charging and discharging slower?
 
-  6D.	You will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to +3V, in the photo it is connected to GND.
-  When you move it, you should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
-
-  6E.	Increase the value of the resistor. What does this change in your trace? Can you explain why?
+    6F. Increase the capacitance value of the capacitor. How long does it take the capacitor to discharge?
 
 
 .. container:: tabox
 
-    6D & E: Results should look like figure below. Top panel: 220 kOhm, lower panel:very low resistance. Why? Because the resistor is setting the current through the circuit, determining how fast the capacitor is allowed to charge.
-
-    .. image:: ../_static/images/EEA/cap_charging_picoscope.png
+   6D.
+    .. image:: ../_static/images/EEA/charging_cap_sim_solution.png
       :align: center
+      :target: https://tinyurl.com/y4uapgsd
+
+   6E. Increase the value of the resistor. This slows down the current and means that it takes longer to separate the same amount of charge.
+
+   6F. Larger capacitors will take longer to discharge. That's what allows LED lights to stay on in for instance laptop chargers for a few seconds after they're unplugged.
+
 
 7. Alternating signal (AC)
 ###################################

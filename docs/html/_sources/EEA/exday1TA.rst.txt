@@ -1,4 +1,4 @@
-.. _refEDay1TA:
+.. _refEDay1TA_nokit:
 
 ***********************************
 Exercises Day 1 TA
@@ -300,8 +300,10 @@ Therefore, in a circuit with multiple resistors in series, the ratio of their re
 .. container:: tabox
 
    5A: Example answer:
-   http://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsAoIA
-   Though it can be done with different resistors!
+
+   .. image:: ../_static/images/EEA/voltage_divider_sim_solution.png
+     :align: center
+     :target: https://tinyurl.com/y3fshb8c
 
    Sparkfun overview:
    https://learn.sparkfun.com/tutorials/voltage-dividers/all#extra-credit-proof
@@ -346,7 +348,7 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
 .. image:: ../_static/images/EEA/capacitor_membrane.png
   :align: center
-  :target: https://tinyurl.com/y3nmkryu
+  :target: https://tinyurl.com/y5nglnv7
 
 .. container:: exercise
 

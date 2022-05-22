@@ -243,7 +243,7 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
 .. image:: ../_static/images/EEA/capacitor_membrane.png
   :align: center
-  :target: https://tinyurl.com/y3nmkryu
+  :target: https://tinyurl.com/y5nglnv7
 
 .. container:: exercise
 
@@ -251,7 +251,7 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
   The simulator shows a simplified 'cell membrane' represented as a capacitor and a resistor. Changing the intracellular voltage supply changes the voltage across the cell membrane. The extracellular fluid is always 0 V.
 
-  6A. The initial voltage over the capacitor is -72mV. Click 'Reset' to see current move through the circuit until the capacitor is charged to 72mV. Which direction is the current flow? Why does current stop moving?
+  6A. The initial voltage over the capacitor should be -72mV. If not, set the Voltage slider to around -70mV. Click 'Reset' to see current move through the circuit until the capacitor is charged to 72mV. Which direction is the current flow? Why does current stop moving?
 
   6B. Using the 'Voltage' slider, set the voltage supply to 0 mVolts, and then to 20mV. What happens to the current flow in the circuit?
 
