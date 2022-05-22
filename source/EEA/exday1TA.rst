@@ -185,7 +185,7 @@ Oscilloscopes let us measure time-varying voltages with much higher time resolut
 
   - If you see ‘Done Uploading’, the Teensy will start giving a sine wave as output from one of the analog output pins.
 
-  2B.	Connect your oscilloscope probe to A14 and visualise the signal in your PicoScope software.
+  2B.	Connect your oscilloscope probe to A12 and visualise the signal in your PicoScope software.
 
   .. image:: ../_static/images/EEA/sinewave_teensy_pico.png
     :align: center
@@ -385,8 +385,7 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
     :align: center
     :width: 48%
 
-  6D.	You will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to +3V, in the photo it is connected to GND.
-  When you move it, you should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
+    6D.	You will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to +3V. The photo shows it connected to +3V (left) and connected to GND (right). When you move it, you should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
 
   6E.	Increase the value of the resistor. What does this change in your trace? Can you explain why?
 
