@@ -8,44 +8,58 @@
     <Nodes>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="ard:AnalogInput">
-          <ard:PortName>COM8</ard:PortName>
+          <ard:PortName>COM4</ard:PortName>
           <ard:Pin>0</ard:Pin>
         </Combinator>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:FrequencyFilter">
-          <dsp:SampleRate>52</dsp:SampleRate>
-          <dsp:Cutoff1>2</dsp:Cutoff1>
-          <dsp:Cutoff2>100</dsp:Cutoff2>
-          <dsp:KernelLength>20</dsp:KernelLength>
-          <dsp:FilterType>BandPass</dsp:FilterType>
-        </Combinator>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="dsp:FrequencyFilter">
+            <dsp:SampleRate>52</dsp:SampleRate>
+            <dsp:Cutoff1>2</dsp:Cutoff1>
+            <dsp:Cutoff2>100</dsp:Cutoff2>
+            <dsp:KernelLength>20</dsp:KernelLength>
+            <dsp:FilterType>BandPass</dsp:FilterType>
+          </Combinator>
+        </Builder>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:Abs" />
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="dsp:Abs" />
+        </Builder>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:Buffer">
-          <dsp:Count>10</dsp:Count>
-          <dsp:Skip xsi:nil="true" />
-        </Combinator>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="dsp:Buffer">
+            <dsp:Count>10</dsp:Count>
+            <dsp:Skip xsi:nil="true" />
+          </Combinator>
+        </Builder>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:Average" />
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="dsp:Average" />
+        </Builder>
       </Expression>
-      <Expression xsi:type="MemberSelector">
-        <Selector>Val0</Selector>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="MemberSelector">
+          <Selector>Val0</Selector>
+        </Builder>
       </Expression>
-      <Expression xsi:type="GreaterThan">
-        <Operand xsi:type="DoubleProperty">
-          <Value>10</Value>
-        </Operand>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="GreaterThan">
+          <Operand xsi:type="DoubleProperty">
+            <Value>10</Value>
+          </Operand>
+        </Builder>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="ard:DigitalOutput">
-          <ard:PortName>COM8</ard:PortName>
-          <ard:Pin>13</ard:Pin>
-        </Combinator>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="ard:DigitalOutput">
+            <ard:PortName>COM8</ard:PortName>
+            <ard:Pin>13</ard:Pin>
+          </Combinator>
+        </Builder>
       </Expression>
     </Nodes>
     <Edges>

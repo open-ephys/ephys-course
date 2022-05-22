@@ -121,7 +121,7 @@ Analog Inputs
     Exercise 5: Touch detector
     --------------------------------
 
-    • Upload this :ref:`Firmata` to your Teensy
+    • Make sure StandardFirmata is still running on your Teensy
     • In Bonsai, insert an AnalogInput node and configure it to Analog Pin 9.
     • Run the workflow and tap the pin on the Teensy.
 
@@ -185,7 +185,7 @@ We’re going to start streaming data to the PC, by using our Teensy microcontro
       :align: center
 
 
-    B. Upload ‘Firmata.ino’ to the Teensy (code here: :ref:`Firmata` ). This script tells the Teensy to read the analog input and can set the frequency of readout.
+    B. Upload StandardFirmata to your teensy in the Arduino software (File/Examples/Firmata/StandardFirmata). This will acquire at 52 samples per second.
 
     C. Open Bonsai and create an Analog Input node. Double-click this node to visualise your signal.
 

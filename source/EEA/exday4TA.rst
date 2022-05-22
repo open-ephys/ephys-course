@@ -121,7 +121,7 @@ Analog Inputs
     Exercise 5: Touch detector
     --------------------------------
 
-    • Upload this :ref:`Firmata` to your Teensy
+    • Make sure StandardFirmata is still running on your Teensy
     • In Bonsai, insert an AnalogInput node and configure it to Analog Pin 9.
     • Run the workflow and tap the pin on the Teensy.
 
@@ -163,11 +163,6 @@ This voltage divider is not going to mess with our signal, because the signal is
 Streaming data from the microcontroller
 ****************************************
 
-.. toctree::
-  :hidden:
-
-  Firmata.rst
-
 We’re going to start streaming data to the PC, by using our Teensy microcontroller to digitize the analog signals we collect.
 
 .. container:: exercise
@@ -185,8 +180,6 @@ We’re going to start streaming data to the PC, by using our Teensy microcontro
       :align: center
 
 
-    B. Upload ‘Firmata.ino’ to the Teensy (code here: :ref:`Firmata` ). This script tells the Teensy to read the analog input and can set the frequency of readout.
-
     C. Open Bonsai and create an Analog Input node. Double-click this node to visualise your signal.
 
     D. Connect this to a 'Csv Writer' node to save your signals.
@@ -202,10 +195,9 @@ We’re going to start streaming data to the PC, by using our Teensy microcontro
       For large amplitude values of our amplified signal, say +2.6V, the difference is 0.4V and thus it adds 0.2V to +2.6V, giving a voltage divider output of 2.8V.
 
       Our signal is thus transformed to the 0.2-2.6V range, ready for the digitizing pin of the Teensy.
-
       Simulator to show this in action: https://tinyurl.com/yyv98thr
 
-    B. They can also use the firmata in Arduino, under 'File/Examples/Firmata'. The frequency they acquire at will be important for filtering later on in Bonsai.
+    B. There are lots of different Firmata scripts they can use, as long as they know the acquisition frequency as this will be important for filtering later on in Bonsai.
 
     C-D. Example Bonsai workflows are here:
 
