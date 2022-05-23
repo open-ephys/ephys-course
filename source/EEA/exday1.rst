@@ -269,7 +269,7 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
   .. image:: ../_static/images/EEA/charging_cap_photo.png
     :align: center
 
-    6D.	You will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to GND; it is discharging. The photo shows it connected to +3V (left) and connected to GND (right). When you move it, you should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
+  6D.	You will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to GND; it is discharging. The photo shows it connected to +3V (left) and connected to GND (right). When you move it, you should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
 
   6E.	Increase the value of the resistor. What does this change in your trace? Can you explain why?
 
