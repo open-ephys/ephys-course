@@ -261,7 +261,7 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
   Setup:
 
-  Using the breadboard, build a circuit to charge and discharge one of the large capacitors in your kit.
+  Using the breadboard, build a circuit to charge and discharge one of the large capacitors in your kit. Use a 2.2KOhm resistor.
 
   .. image:: ../_static/images/EEA/charging_cap_schematic.png
     :align: center

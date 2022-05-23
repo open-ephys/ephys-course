@@ -375,15 +375,13 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
   Setup:
 
-  Using the breadboard, build a circuit to charge and discharge one of the large capacitors in your kit.
+  Using the breadboard, build a circuit to charge and discharge one of the large capacitors in your kit. Use a 2.2KOhm resistor.
 
   .. image:: ../_static/images/EEA/charging_cap_schematic.png
     :align: center
-    :width: 48%
 
   .. image:: ../_static/images/EEA/charging_cap_photo.png
     :align: center
-    :width: 48%
 
     6D.	You will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to +3V. The photo shows it connected to +3V (left) and connected to GND (right). When you move it, you should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
 
