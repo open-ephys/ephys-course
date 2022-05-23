@@ -354,6 +354,10 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
   Setup:
 
+  .. note::
+
+    When you have capacitors in the simulator, it is a good idea to click 'reset' whenever you make changes, as they will otherwise store charge and can create weird effects.
+
   The simulator shows a simplified 'cell membrane' represented as a capacitor and a resistor. Changing the intracellular voltage supply changes the voltage across the cell membrane. The extracellular fluid is always 0 V.
 
   6A. The initial voltage over the capacitor is -72mV. Click 'Reset' to see current move through the circuit until the capacitor is charged to 72mV. Which direction is the current flow? Why does current stop moving?
@@ -383,7 +387,7 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
   .. image:: ../_static/images/EEA/charging_cap_photo.png
     :align: center
 
-    6D.	You will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to +3V. The photo shows it connected to +3V (left) and connected to GND (right). When you move it, you should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
+    6D.	You will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to GND; it is discharging. The photo shows it connected to +3V (left) and connected to GND (right). When you move it, you should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
 
   6E.	Increase the value of the resistor. What does this change in your trace? Can you explain why?
 
@@ -402,10 +406,6 @@ Batteries provide 'direct current' in a single direction. In contrast, the actio
 Alternating currents have a frequency, which is the rate at which they alternate direction. Action potentials have a very high frequency, whereas synaptic inputs and their sums are much slower.
 
 Here is a demo where an alternating signal increases and decreases in frequency. At the bottom of the page, you can see the wave visualised.
-
-.. note::
-
-  When you have capacitors in the simulator, it is a good idea to click 'reset' whenever you make changes, as they will otherwise store charge and can create weird effects.
 
 .. container:: exercise
 

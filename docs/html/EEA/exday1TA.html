@@ -515,6 +515,10 @@ Bonus: The amplitude of a spike in extracellular space is around 100 uV. This sh
 <a class="reference external image-reference" href="https://tinyurl.com/y5nglnv7"><img alt="../_images/capacitor_membrane.png" class="align-center" src="../_images/capacitor_membrane.png" /></a>
 <div class="exercise docutils container">
 <p>Setup:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you have capacitors in the simulator, it is a good idea to click ‘reset’ whenever you make changes, as they will otherwise store charge and can create weird effects.</p>
+</div>
 <p>The simulator shows a simplified ‘cell membrane’ represented as a capacitor and a resistor. Changing the intracellular voltage supply changes the voltage across the cell membrane. The extracellular fluid is always 0 V.</p>
 <p>6A. The initial voltage over the capacitor is -72mV. Click ‘Reset’ to see current move through the circuit until the capacitor is charged to 72mV. Which direction is the current flow? Why does current stop moving?</p>
 <p>6B. Using the ‘Voltage’ slider, set the voltage supply to 0 mVolts, and then to 20mV. What happens to the current flow in the circuit?</p>
@@ -527,8 +531,8 @@ Bonus: The amplitude of a spike in extracellular space is around 100 uV. This sh
 </div>
 <div class="exercise docutils container">
 <p>Setup:</p>
-<p>Using the breadboard, build a circuit to charge and discharge one of the large capacitors in your kit.</p>
-<a class="reference internal image-reference" href="../_images/charging_cap_schematic.png"><img alt="../_images/charging_cap_schematic.png" class="align-center" src="../_images/charging_cap_schematic.png" style="width: 48%;" /></a>
+<p>Using the breadboard, build a circuit to charge and discharge one of the large capacitors in your kit. Use a 2.2KOhm resistor.</p>
+<img alt="../_images/charging_cap_schematic.png" class="align-center" src="../_images/charging_cap_schematic.png" />
 <p>6E.   Increase the value of the resistor. What does this change in your trace? Can you explain why?</p>
 </div>
 <div class="tabox docutils container">
@@ -541,10 +545,6 @@ Bonus: The amplitude of a spike in extracellular space is around 100 uV. This sh
 <p>Batteries provide ‘direct current’ in a single direction. In contrast, the action potentials and LFPs we measure from neurons can go in both directions; they are <strong>alternating currents</strong>. You produced an alternating current yourself in exercise 6C.</p>
 <p>Alternating currents have a frequency, which is the rate at which they alternate direction. Action potentials have a very high frequency, whereas synaptic inputs and their sums are much slower.</p>
 <p>Here is a demo where an alternating signal increases and decreases in frequency. At the bottom of the page, you can see the wave visualised.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When you have capacitors in the simulator, it is a good idea to click ‘reset’ whenever you make changes, as they will otherwise store charge and can create weird effects.</p>
-</div>
 <div class="exercise docutils container">
 <p>7A.   Press ‘Play Audio’ to hear how the sound is modulated as the frequency increases.</p>
 <a class="reference external image-reference" href="https://tinyurl.com/yyrvugha"><img alt="../_images/audio_sweep.png" class="align-center" src="../_images/audio_sweep.png" /></a>
