@@ -473,7 +473,7 @@ Because capacitors impede current flow, we can use them to build voltage divider
     :align: center
     :target: https://tinyurl.com/yxdwvulv
 
-  9A.	Changing the capacitance values C for the first capacitor to test whether the formula for the resistor voltage divider applies for capacitors.
+  9A.	Change the capacitance values C for the first capacitor to test whether the formula for the resistor voltage divider applies for capacitors.
 
 
 .. container:: tabox
