@@ -1,4 +1,4 @@
-.. _refEDay1TA_nokit:
+.. _refEDay1TA:
 
 ***********************************
 Exercises Day 1 TA

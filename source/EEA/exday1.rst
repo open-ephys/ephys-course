@@ -151,7 +151,7 @@ When looking at a whole circuit, we can use this to calculate how much current w
 
 .. image:: ../_static/images/EEA/resistors_series_sim.png
   :align: center
-  :target: https://tinyurl.com/y4r8nsnj
+  :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgosgCgA3cFPEbNJlsDQqXgFipIqw6AloB3DuG4hmnGXQBOsvPJ5zW7KmHi1lYZpqoa2w5HFpA
 
 .. container:: exercise
 
@@ -243,7 +243,7 @@ The amount of charge (Q) a capacitor can separate depends on is its capacitance 
 
 .. image:: ../_static/images/EEA/capacitor_membrane.png
   :align: center
-  :target: https://tinyurl.com/y5nglnv7
+  :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWEB2aBOALAZjQDhwggExEBsYWGIuESCkICApgLRhgBQATiEZLiCyQqRXAKFUGYeJA4BjXv0HDwYIsskg0sGbplhWyKLFJpS9NAhpY1WclmNxOAc15iNg4h4aywydezqEoJBKgxGLDCQyJDqUeqRsGhQxkgAagD2ADYALgCGzkwcAB4gLEQYtKQOLNiMpKQgIlSZuQVMADoAzgCSAHZdAJYAJp1dAMJMWVklbgwIyEYIfoy4DM0grfmF3RkAbkxc3XJ5AA55coM5GVwcAEbgolqNRGi0SrKl0o1YyBBCP2QVA2ADkmABXLgZPrdACyTAAtncuHk+kVSiwsA4iAstBAyOteFR+jkUXIpllwVk8rdSkJkmQHBhKrwGk0iSAAKLFUkXClUmkcDKCECkTTFfCQNSOIxRJwpOKwJAMBwOOVwDBoLXanW6xqyYUQMUpCVCaVRUy6tCiIiLXCLRzy-GOZXgEXq4RWr1a-UcIA
 
 .. container:: exercise
 
@@ -291,7 +291,7 @@ Here is a demo where an alternating signal increases and decreases in frequency.
 
   .. image:: ../_static/images/EEA/audio_sweep.png
     :align: center
-    :target: https://tinyurl.com/yyrvugha
+    :target: http://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l5YCsA2ATIkBmAHK6B2NRXMAFkwE4LJlSRkKQNyAoMfSLbO9ZEVUp179+nbPCZMWqMBBw8UTUgr6cKYGJEbi44FgHso9Op0FVJm+BUIp0R1Ecwsc4IxA26AIgFcATgEMAFwBLfQA7FiA
 
 
 8. Impedance
@@ -315,7 +315,7 @@ When you see a capacitor in a circuit, you know you need to think about the freq
 
     .. image:: ../_static/images/EEA/cap_freq_circuits.png
       :align: center
-      :target: https://tinyurl.com/y3sbgfl6
+      :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAQBYKLIAoANxBRWrEuper0inHCRJew6AjoAnZqxA8Q2PN2HM4dAMZyFM3vLYc+MeJBSkTps2TnRi7MpGIss2DIQxDYkMHQDuU3dR3gevRMXMyUvKFgznwQ4TRKMGKSkdEBUYR8aPQ+oazamnlQahpsqQVxIobG5jUWALQwhESUYAgoeGA8lAiQlChQ7p4A9nyE1LzhxHjxsEIg43LMmXJ0I9RjfJPTYCIQsfOL5Lzk2HRAA
 
     Setup:
 
@@ -335,6 +335,6 @@ Because capacitors impede current flow, we can use them to build voltage divider
 
   .. image:: ../_static/images/EEA/cap_voltage_div.png
     :align: center
-    :target: https://tinyurl.com/yxdwvulv
+    :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWEAWAnNAbADgOwCZlk4NUxUtIkFkQrJaBTAWjDACgA3EPA8VPbrzB4sUcOCpj6MBGwDGIAMxYaFJSvCEpseAlT6Dho0iYwsuRQmwZIqDHlKKaMeHHYB3QTQL1l3olDy6jRgOBjB3AHSOnAORvEGOCAs0Dg4yDhgGXhkYNQYSC6uHhFZNH7gYYGePP70tXwCkGyeFWUoau3NAE5eIGoVavRgzTW8ag3Cos0AHigIosJUisMiKJEgAPIArgAuAA57bAD2YhjOKLaihdAQ9WKKJyDh52JE5LRQt+IC4Y9AA
 
   9A.	Change the capacitance values C for the first capacitor to test whether the formula for the resistor voltage divider applies for capacitors.

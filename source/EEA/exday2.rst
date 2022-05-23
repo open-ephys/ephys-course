@@ -24,7 +24,7 @@ In the circuit below, you will see a capacitor and a resistor in parallel. The v
 
 .. image:: ../_static/images/EEA/cap_res_parallel_sim.png
   :align: center
-  :target: https://tinyurl.com/y27sbtmr
+  :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWEAmM0EE4DMGAcB2ZLMSANjABYxkQELaQKtaBTAWjDACgAnca-jSwIanGpHDxIXAMaCUCUiGE1kiqOFhTt2sO3xQt8CDF1cA7vLFX8S6Zetql1sLagXlI+SvBvulnydPUT8PH1clCgpcXzsPFz9nN2QuACVwJKU2aNiNCGQJEg0JGAQuAHNaKNzMELt3PiiYiKr6FsL4LgB7DVJ6CQpIDAMi0zUNfuVwPOUuIA
 
 .. container:: exercise
 
@@ -70,7 +70,7 @@ Here is the circuit of the electrode with a shunt impedance added of 100 pF:
 
 .. image:: ../_static/images/EEA/day2circuit.png
   :align: center
-  :target: https://tinyurl.com/y2jshzqc
+  :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWEAmA7NVbnIBwBYFkBmMIogThxFSqTyJAQFMBaMMAKAHcQ2A2SFF7tkQyN2FhRgtlJB4q4gMaTRC3kTWLw0ZrPnQikBGBp9UqSOQQ5CUWJE48Wm+VRfSoEj0NeDxAEq8yJDaLMgIfGLg4PCM0TAI3iJCsqIs6uIATqq86j4Z2mDwJeLOroUanuIAHrw4qLwWvAiNLKh48iidAUwcdSzkneQQLHzDnZ3InQDCfQN4oS3kwnidLJFd0yAAojUALlkAhkpMADZnAK5nR1kAOgDODwCWAOYAdkdnjwAUAGpMJQASg4OXCSxkYAE0WKoJAfnAcn8sVqwnIjTwoyhVDWWx6D36jAgRCoOBxECmPQAthxXojRGByAy5CFtMp6UIUozPGBWMV7HwEAgKHwiHxcEZihR7KUnBzBKYov5CVCGOEooy2sQ8SA-s93oS2JA2mBFhp1qQMeBRDszoDDgB7AAmTEeABVngAHABcHAARnk8CbIGqpArcF4A7IsZB0mRrStxFGQsJHPCTOA-IaiB1hMgsfhJDjursDsdThdrrdHgAxK7PJ0q015iDYdLsYvbW32rLO10EgZSUPbcItrpyAAiDsufrtjwAMkcAJ5Me4PACS732q4AZic+g74uNOdhKPEYPAIIJREgiBxD2AqMfw8gzzBBa0+DhyFZUFJTKQMpwBArbgFQd5AA
 
 .. container:: exercise
 
@@ -88,7 +88,7 @@ To actually perform a recording, we will have to attach the electrode to the res
 
 .. image:: ../_static/images/EEA/day2withac.png
   :align: center
-  :target: https://tinyurl.com/y6864vle
+  :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcA2aAOMB2ALGXyEw1sESRMBOEJbAZmoFMBaMMAKAHcQnTtuxk3bBUEtBkTkJH9RwwbQBMUNgGMp8pU3whFUcNATMq2dAlJZaaQsgoJI9GHHZctAnZu1jlLz26a0ETTcJACVuBAog0WRsSBk9CDB4aj04mARJLWkvLOi+CQAndW4YoT9SuKT4aszPUtdRYLYADyFMCCYKei1cbgo4vgU+EIYWtrRyJB6JzAnBvgBhUdamSk1MKcCJ1aV5kABRZoAXAoBDFQYAG0uAV0vTgoAdAGdngEsAcwA7U8uXgAoAGoMFQASjYRR4kXiPGwfC8lUK3ACUW4CkwqMREhWCAwIAUm0C+Lm+OGzzG-lo9AUmgU0gJID2IQAtmwPmiMeBMKJ0UowNC0qoOaimLyueJwMwktxHKx0ZA0MhaNgFFSFFgaVBYNVnMKYQoFfFsWj1UIgmhMMjjKSQIC3l8KcIOmAELIiPwEPQ+GAlPtLiCTgB7AAmDBeABU3gAHABcbAARtw0LRnfzwpBvT7lImslNWNtcJbWA4E1aqCwsB7BKxxBSNtswLRLTxkA3lYybYcTucrrd7k9ngAxW5vYMU+X8JsyILtvZ+gMFENh8k4yDNvBxfyKyeW71KAAigZu8f9LwAMqcAJ4MAcASS+RxvADMe2NYs6KHw4eX+RA9oCjyOTIDQbRo4SNTI0E3YIIMhPB4T8KCjXACQcx9UQcGJAYIGNAIQAIcB0XwkkhhAM8GFOABrU4PmWfCpl6ARy0sDtSLPQMvg+F4ODeApRnZOJpDiGl8mUIpoIlISULgSQJPxTkEVLRR10Iag3CoXCFAmOk1PoXQ9gAQX3BYXkeU4XgWQNmSjG5HwKJTWBkS1PTidsJC4MUvEsBDa1iPSiU6QRsCQ-wlAGSAAH0YgiyKfTpNAYtgbB2hAhUkiSGI6ES+AwBiiKFAi2IItoNg-O4WYfJKV1GQmOIECi7A8riigEvqxwnDygr6pKwMUhg5qJiQdrIBw-EUh68AJn6mkWq1DMNkiEbkCIA0NjXOanHAMb3RKoA
 
 .. container:: exercise
 
@@ -112,7 +112,7 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
 
 .. image:: ../_static/images/EEA/circuitday2.png
   :align: center
-  :target: https://tinyurl.com/yyeah3wd
+  :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcYAs0DMAmAnGBkEUUAOdPdEFANhCX1oFMBaMMAKAEMRttNKtwmMDRQDi4JCyRh48KNATZ8AdiqRhKBDnwUYi-MTDYqyoWVTiZstgHduvSsPt90WqLechXfMEJrf3O18nAOCRAUg2ACdBYkgQKhRY+LBVKBBMTEiAcxBiY1o1PIK1cXjImPyREmKaBCL4zPgPKsoanj4iMui8uDbxVq70q2aAJV74oeV0arKM+SR0DHTyhQ8w-h8ccL5I8eViJMSQU3jjxoWvZfKFnoOjpOI4hKSU2Ui7J7Ok7DTznq+Lzyz1SNEaWTgbFyMie4DSMPEmVegWQkAeySBHwxxzAM2+7mhflo8KJpRWPQ2oi2TgQaXBWN+NBxMnRWMBoPAkFhHKxCLhNF8ILpbAAHpz0MoMpZhIsIElMEkAHIAewAOgBnDgAWwADgAbACWADMDQwoqLOSgIFgkqx0EksJL5UkAIK6w0ms0W5S4LzxfIuCjOkAAUT1DAAxgAXKLKgAmDG9Psc-ueVqDGSSYcjMfjibFVBM4DECGkrkomZAAGUABYAVwAdlGNQBJXUMOMcBsR-MJYiSrR8ft0TBIYO1xvN9VtnUdrs9i24hWCSXCLnFyaVgAyDA4AGsNQb253uwwNVG1ersrHG3HF6OKAhUBIJbRUhXlzv94fj-Oz+qLw1a9lVvNhlW4TllxSTJsHEJZdFgOAIAubAvDAzlIORXwcDKBQlEgVR1ESLR8IQ+AIAgHx4nQdCnBkKDBBw+Q4GUVIFSUUsUEwdBiBwV5EPUeYfH8WjV0gBjsNg5iCLYlAOMIbjeOwfjyK8eZ3xooA
 
 4A. Recording circuit without an amplifier
 *******************************************

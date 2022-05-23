@@ -31,7 +31,7 @@ Step-by-step, we are going to build our 'goal' circuit has the following propert
 
 .. image:: ../_static/images/EEA/sim_reference_electrode.png
   :align: center
-  :target: https://tinyurl.com/yedcnfp4
+  :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcBmWBOA7AFjA5AmMSADjGIDYIFIQlraBTAWjDACgBDEJ5ZckfCW6DiAoaNzdJReHCjyZ8NgHkQyYlgFYaWAlpoRIbAErDiorGn49BIS-wMhyNJDTfQEbAG7D8m+2YWVvL44PBQsIbyMOwAHnZgoWRodlhIYGihmn4gAAoAwmwARmoa4Fj+GDT4xMhQbPE8CP54UsgQafzZmgBCHADGANYA5gBOAPYArgB2ACYAOgDO8wAOS4srAJaDDIsN3MiWavihLOQpBEjdIMYMAGYMowzT-Qzrm8PTHAA2JsIYoT4oh4kE0QIUThc0QinkaBCSWAwvhSuB0WhAAEEALYrb6bO6bR5sADu-0B5GBfho4KMjSw+DoGGsGUZKWuAElpitJgAXJZgJYACh6AHElqslgBlLY7RYASn2TE0CAw6W0tAwFnRnO5fMW+CFxgAogAxBXxen8BDkOjNWgUuzogpC5S83UK0lME7+YIsTJ2YJGcblJyaHSQNAo9yyTA28gMkIh5BsYNEUPybSR2gRGNM60JiBJakp8Dp8NZmCyJn4NDINBpdoJmICcBsIA
 
 
 .. container:: exercise
