@@ -119,7 +119,7 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
 
 .. container:: exercise
 
-  4A.	Upload the Blink example to your teensy (or just run it if still loaded).
+  4A.	Upload the Blink example to your teensy (File/Examples/Basics/Blink)(or just run it if still loaded).
 
   Build the circuit below:
 
