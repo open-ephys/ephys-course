@@ -131,6 +131,10 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
 
   *	The yellow wires are 'readout' wires to connect your oscilloscope to.
 
+
+  .. image:: ../_static/images/EEA/resistors_amplifier_breadboard.png
+    :align: center
+
   .. image:: ../_static/images/EEA/fritz_wire_only_blink.png
     :align: center
 
