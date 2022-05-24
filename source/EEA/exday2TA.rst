@@ -217,8 +217,8 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
      :align: left
 
      * - (+) Probe Location
-       - Long Wire
-       - Op-Amp
+       - Circuit 1, without amplifier
+       - Circuit 2, with amplifier
      * - 1. Teensy Pin 13
        -
        -
