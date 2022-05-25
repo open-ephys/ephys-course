@@ -163,11 +163,6 @@ This voltage divider is not going to mess with our signal, because the signal is
 Streaming data from the microcontroller
 ****************************************
 
-.. toctree::
-  :hidden:
-
-  Firmata.rst
-
 We’re going to start streaming data to the PC, by using our Teensy microcontroller to digitize the analog signals we collect.
 
 .. container:: exercise
