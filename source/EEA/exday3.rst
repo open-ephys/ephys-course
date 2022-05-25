@@ -69,6 +69,7 @@ Also, as we’ve just simulated, often op-amps do not have equal input impedance
 
   2G. How do we fix this issue? We want to:
 
+
   - Preserve the differential properties of the amplifier we just built
   - Not have voltage dividers sending part of our precious signal to ground
   - Not be sensitive to small differences in resistor impedance
