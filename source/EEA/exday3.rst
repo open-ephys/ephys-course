@@ -114,8 +114,8 @@ We now have all the steps of the acquisition in place to simulate a lab experime
 
   Each electrode corresponds to a different pin on the breadboard adaptor:
 
-  * Black cable = ground electrode = Ring 1
-  * Blue cable = '-' (reference) electrode  = Ring 2
+  * Black cable = ground electrode = Ring 2
+  * Blue cable = '-' (reference) electrode  = Ring 1
   *	Red cable = '+' electrode = Tip
 
   3C. Attach your oscilloscope as shown:

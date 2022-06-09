@@ -139,6 +139,9 @@ Also, as we’ve just simulated, often op-amps do not have equal input impedance
      :align: center
      :target: https://tinyurl.com/yz8d8e67
 
+   Here is a circuit to explain the gain resistor: https://tinyurl.com/2bwtenvz
+
+
 
 3. EMG circuit
 ###################################
@@ -175,9 +178,9 @@ We now have all the steps of the acquisition in place to simulate a lab experime
 
   Each electrode corresponds to a different pin on the breadboard adaptor:
 
-  * Black cable = ground electrode = Ring 1
-  * Blue cable = '-' (reference) electrode  = Ring 2
-  *	Red cable = '+' electrode = Tip
+    * Black cable = ground electrode = Ring 2
+    * Blue cable = '-' (reference) electrode  = Ring 1
+    *	Red cable = '+' electrode = Tip
 
   3C. Attach your oscilloscope as shown:
 

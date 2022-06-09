@@ -105,13 +105,17 @@ Digital Output
     .. image:: ../_static/images/EEA/ledon.png
        :align: center
 
+    .. image:: ../_static/images/EEA/teensy_LC.png
+       :align: center
+
+
     • Upload StandardFirmata to your teensy in the Arduino software (File/Examples/Firmata/StandardFirmata)
     • In Bonsai: Insert a Boolean source.
     • Insert a DigitalOutput sink.
     • Set the Pin property of the DigitalOutput operator to 13. This is the LED pin of the teensy- it turns on the LED that is already attached to the board.
     • Configure the PortName property to the COM of your Teensy.
     • Run the workflow and change the Value property of the Boolean operator to toggle the LED on the Teensy on and off.
-    • Optional: Change the output pin to a different digital output pin. Connect an LED and a resistor to this pin through the breadboard and turn the LED on with Bonsai. The LEDs in your kit have three pins, you can treat them as a normal LED by leaving one of the short pins unconnected.
+    • Optional: Change the output pin to pin 12. Connect an LED and a resistor in series to this pin through the breadboard and turn the LED on with Bonsai. The LEDs in your kit have three pins, you can treat them as a normal LED by leaving one of the short pins unconnected.
 
 Analog Inputs
 *************************************
