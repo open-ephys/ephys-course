@@ -18,3 +18,5 @@ Software Requirements
     - This is an add-on for Arduino, install it afterwards and point it to where your Arduino is installed
 
 4. Download Bonsai at `bonsai-rx.org <https://bonsai-rx.org/docs/installation/>`_
+
+5. Download Discord at `discord.com <https://discord.com/download>`_ following this `installation guide <https://support.discord.com/hc/en-us/articles/360034561191-Desktop-Installation-Guide>`_
