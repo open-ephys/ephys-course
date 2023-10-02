@@ -2,7 +2,18 @@
 Acknowledgements
 ###################################
 
-These materials were written by:
+Our wonderful TAs for the Oct 2023 edition of the course are:
+* Quendera (Champalimaud Foundation, Portugal)
+* Lucas Robalo Martins (Champalimaud Foundation, Portugal)
+* Gaia Bianchini (Francis Crick Institute, UK)
+* Marcelo Moglie (Francis Crick Institute, UK)
+
+This edition of the course is run by Cecilia Herbert (Open Ephys Production Site, Portugal)
+2023 Course Directors are: Cecilia Herbert, Jakob Voigts and Filipe Carvalho
+
+Course materials are currently mantained by Cecilia Herbert
+
+They were originally written by:
 
 * Alexandra Leighton
 * Joana Neto

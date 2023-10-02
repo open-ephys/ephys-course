@@ -7,7 +7,7 @@ Software Requirements
 1. Download & install the software for the oscilloscope `here: <https://www.picotech.com/downloads>`_
 
     - You have a 2204A Scope.
-    - Version 6.14.61 as of May 2022
+    - Version 7.1.2 as of May 2023
     - Do NOT download the automotive version, it will make your oscilloscope look dead and freak your TA out.
     - Before starting the course, try connecting your oscilloscope and make sure it works (you don't need to provide any signal, just make sure you see a line appear in the software that varies if you move the scope around).
 
@@ -20,3 +20,5 @@ Software Requirements
 4. Download Bonsai at `bonsai-rx.org <https://bonsai-rx.org/docs/installation/>`_
 
 5. Download Discord at `discord.com <https://discord.com/download>`_ following this `installation guide <https://support.discord.com/hc/en-us/articles/360034561191-Desktop-Installation-Guide>`_
+
+6. Download/Update Zoom at `zoom.com <https://zoom.us/download>`_ 
