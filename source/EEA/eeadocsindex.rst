@@ -13,6 +13,7 @@ Course schedule for October 2023
 **Individual sessions** in blue are activities you do by yourselves prior to each daily group session. The times are just for guidance: you might take more or less time going through the material. You might do it a day earlier due to timezone differences, but we will expect you to have that material covered by the time you get to the day’s group session.
 
 **Group sessions** are activities we do as a group. *You have to keep to this schedule regardless of your timezone*.
+
 - Green and purple are events in which everyone is together in one Zoom room. Green are mandatory course events, purple are optional opportunities to spend time together.
 - Orange and yellow are events in which you are divided into groups with your TA, each in their own group virtual space.
 
@@ -27,7 +28,7 @@ To Do before Day 1
 
 1. Check :ref:`Hardware requirements <refkitlist>`: install batteries in multimeter and check PC requirements and kit contents
 2. Install :ref:`Software <refeeasoftware>`
-3. Join the `Discord server <https://discord.gg/2F57u8jy44>`_, read the rules and introduce yourself
+3. Join the `Discord server <https://discord.gg/2F57u8jy44>`_, read the rules and introduce yourself. If you are new to Discord, you might find this `beginner's guide <https://support.discord.com/hc/en-us/articles/360045138571?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm#h_63eed59a-854f-482f-8a4d-08b37797c510>`_ useful.
 4. Check the schedule above in your timezone. You have to be available at group sessions
 5. Read :ref:`Safety & Good Practices <refeeasafety>` 
 6. Read :ref:`Theory Day 1 <refTDay1>` including the video lecture on Electrophysiology Acquisition
