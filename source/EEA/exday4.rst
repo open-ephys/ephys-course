@@ -183,7 +183,7 @@ We’re going to start streaming data to the PC, by using our Teensy microcontro
 
   A. Connect the output from the amplifier to an analog input pin on the Teensy. Make sure that output goes through a voltage divider that divides it in two.
 
-      Shown is a 220 Ohm resistor across the instrumentation amplifier, and a voltage divider made of two equal resistors (anything above 1KOhm, see the text on ‘shifting the signal' ).
+      Shown is a 220 Ohm resistor as a gain resistor across the Rgain pins of the instrumentation amplifier, and a voltage divider made of two equal resistors on the Voutput pin (anything above 1KOhm, see the text on ‘shifting the signal' ).
 
 
       .. image:: ../_static/images/EEA/board_emg_teensy.png

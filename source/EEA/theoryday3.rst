@@ -78,7 +78,7 @@ To make this circuit differential, we need voltage dividers. But these are conne
 
 Why? Because this resistor is *also your electrode*. If you work with electrodes, have you measured their impedances? How similar are they? If you made these resistors as different as your electrodes are variable, this circuit will not work to eliminate common mode noise and amplify our spikes.
 
-The solution is to use *three* op-amps:
+The solution implemented in instrumentation amps is to use *three* op-amps:
 
 .. image:: ../_static/images/EEA/three_op_amps.png
   :align: center
