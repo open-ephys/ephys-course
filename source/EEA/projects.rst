@@ -8,7 +8,7 @@ The idea of the project part of the course is for you to expand on a topic you f
 
 Either pick one of these projects or choose your own:
 
-- Turn on an LED when your muscle contracts
+- Turn on an LED when your muscle contracts. You can use software for signal processing, or just hardware.
 - Synchronize frames from webcam with your EMG signal
 - Model a silicon probe and acquisition in the circuit simulator
 - Research and model in the simulator an intracellular electrophysiology acquisition system, e.g. current clamp. (these are next-level complicated)
@@ -21,3 +21,11 @@ Either pick one of these projects or choose your own:
 You can work together or alone.
 
 You have only a short time, so try to break your project down into steps, creating a series of achievements. That way you can show what progress you have made instead of getting overwhelmed.
+
+Project deliverables
+###################################
+
+- 1 slide that helps you talk about your project, OR a 2-3 min videoclip
+- upload the source code
+- talk/show video about your project for 2-3 mins
+- answer questions about your project
