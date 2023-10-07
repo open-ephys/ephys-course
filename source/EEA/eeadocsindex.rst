@@ -12,7 +12,8 @@ Course schedule for October 2023
 
 **Individual sessions** in blue are activities you do by yourselves prior to each daily group session. The times are just for guidance: you might take more or less time going through the material. You might do it a day earlier due to timezone differences, but we will expect you to have that material covered by the time you get to the day’s group session.
 
-**Group sessions** are activities we do as a group. *You have to keep to this schedule regardless of your timezone*.
+**Group sessions** are activities we do online as a group. *You have to keep to this schedule regardless of your timezone*.
+Check the daily `start <https://arewemeetingyet.com/Lisbon/2023-10-09/14:00>`_ and `end <https://arewemeetingyet.com/Lisbon/2023-10-09/18:30>`_ times in your timezone by clicking the links.
 
 - Green and purple are events in which everyone is together in one Zoom room. Green are mandatory course events, purple are optional opportunities to spend time together.
 - Orange and yellow are events in which you are divided into groups with your TA, each in their own group virtual space.
