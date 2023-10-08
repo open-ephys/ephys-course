@@ -303,7 +303,7 @@ Add a 'headstage'
 
 We will replace our long wire with a 'headstage'. We will use only the most basic part of the headstage, an operational amplifier.
 
-This is the op-amp you have.  Make sure you’re looking at the op-amp (AS358P), not the instrumentation amp.
+This is the op-amp you have.  Make sure you’re looking at the op-amp (AS358P), not the instrumentation amp. `Here <https://www.mouser.com/datasheet/2/115/DIOD_S_A0005046231_1-2542568.pdf>`_ is its datasheet.
 
 .. image:: ../_static/images/EEA/op_amp_pinout.png
   :align: center

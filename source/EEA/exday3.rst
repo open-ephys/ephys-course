@@ -90,7 +90,7 @@ We now have all the steps of the acquisition in place to simulate a lab experime
 
 - The electrodes in your kit. The disposable electrodes in the kit are single-use, so do not attach them until you are sure your circuit is working and that you have the correct position (see below).
 - The electrodes clip onto the cable with three wires. We’ll be using an audio-to-breadboard jack to get the signal from the electrodes into the breadboard.
-- An instrumentation amplifier as our 'headstage'. `This <https://www.ti.com/lit/ds/symlink/ina129-ep.pdf?ts=1636717545454&ref_url=https%253A%252F%252Fwww.google.com%252F>`_ is the datasheet for the instrumentation amplifier in your kit.
+- An instrumentation amplifier as our 'headstage'. `This <https://www.analog.com/media/en/technical-documentation/data-sheets/AD622.pdf>`_ is the datasheet for the instrumentation amplifier in your kit.
 
 .. image:: ../_static/images/EEA/instr_amp_pinout.png
   :align: center
@@ -118,7 +118,7 @@ We now have all the steps of the acquisition in place to simulate a lab experime
   * Blue cable = '-' (reference) electrode  = Ring 1
   *	Red cable = '+' electrode = Tip
 
-  3C. Attach your oscilloscope as shown:
+  3C. Attach your oscilloscope as shown below. Note that we are not using the Teensy:
 
   .. image:: ../_static/images/EEA/board_emg_picoscope.png
     :align: center
@@ -135,3 +135,5 @@ We now have all the steps of the acquisition in place to simulate a lab experime
      :align: center
 
   The resistor across the instrumentation amplifier sets the gain of the amplifier. Change the gain of the amplifier by changing Rg. What happens when the value for Rg is very low?
+
+Tomorrow we will feed the EMG signal to our PC through the Teensy microcontroller instead of reading them using the PicoScope. Don't disassemble the circuit.
