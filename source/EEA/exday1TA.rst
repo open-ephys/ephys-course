@@ -81,6 +81,13 @@ The most important thing is to remember which holes are connected. Your long bre
 
 If you need to, refer back to the `reading material <https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all#anatomy-of-a-breadboard>`_ for the overview on how to use a breadboard, it also includes some basic troubleshooting which may prove useful if you run into problems.
 
+.. container:: exercise
+
+	You can also use your multimeter to check for continuity, i.e. to find out if two parts of a circuit are electrically connected.
+
+  1C.	Set the multimeter dial to the section that has a diode symbol (a triangle with a line on the right side) and a symbol that looks like a soundwave. Now the multimeter should beep when you touch the terminals together, indicating there is continuity. You can use this setting to probe around the breadboard and understand which rows are connected. If the probe tips don't fit in the holes, you might have to use readout wires to access the underlying circuit.
+  *Check that the rails are connected all the way along the breadboard by putting one probe in one end of the rail and the other probe in the other end of the same rail.*
+
 Teensy Microcontroller
 **********************************
 In your kit you will find a Teensy LC. This is a microcontroller, like an Arduino (just a different brand). It is basically a small computer, that can only run 1 program at a time. Using the USB cable provided, you can upload a new programme to the Teensy. Whenever the Teensy is provided with a power source it will try to run that programme.
@@ -181,7 +188,7 @@ Oscilloscopes let us measure time-varying voltages with much higher time resolut
 
   :ref:`sinewave`
 
-  - Make sure that under ‘Tools/ Board’ your Teensy 3.2 has been found, and check which USB (COM) port it’s in (‘Tools/Port:).
+  - Make sure that under ‘Tools/ Board’ your Teensy LC has been found, and check which USB (COM) port it’s in (‘Tools/Port:).
 
   - If you see ‘Done Uploading’, the Teensy will start giving a sine wave as output from one of the analog output pins.
 
@@ -229,6 +236,8 @@ When looking at a whole circuit, we can use this to calculate how much current w
 
   3A: The current should increase with decreased circuit resistance. The current change affects the entire circuit; current is the same everywhere.
 
+  Decreasing the resistance of any of the two resistors increases the current since they are in series and V = I * (R1+R2). Changing the ratio of the resistors changes the voltage drop over each resistor.
+
 4.	Resistors
 ###################################
 Here’s another simulation demonstrating Ohm’s law. This time, the current moves from a 5 Volt voltage source (bright green) into ground (grey, earth), across one of two resistors. The resistors are 'in parallel' as current can flow cross over one *or* the other resistor.
@@ -254,7 +263,6 @@ Here’s another simulation demonstrating Ohm’s law. This time, the current mo
 .. container:: tabox
 
     Students can get confused about using Ohm's law over a whole closed circuit (to get current) and over individual components (voltage drops). It helps to remind them at which points in the circuit current must be equal and where voltage must be highest and lowest. Check that they understand why the current across these two resistors can be different, but not in the closed circuit above.
-    Decreasing the resistance of any of the two resistors increases the current since they are in series and V = I * (R1+R2). Changes the ratio of the resistors changes the voltage drop over each resistor.
 
     4A: The voltage will not change; voltage over both resistors is the same as they are connected in parallel to a 5V source. The current will vary in proportion to resistance, so it will halve if the resistance doubles.
 
@@ -305,6 +313,9 @@ Therefore, in a circuit with multiple resistors in series, the ratio of their re
      :align: center
      :target: https://tinyurl.com/y3fshb8c
 
+   A way of thinking about this is 3 V must be spent. If R1 = R2, then it is spent equally amongst them and Vout = 1.5 V. Since we want to achieve a Vout larger than 1.5 V, less voltage has to be spent on the first part of the circuit. Current is the same so less V means less R. R2 has to be larger than R1 and we get more Vout than when R1=R2.
+   The resulting Vout will always depend on the ratio of the resistors.
+
    Sparkfun overview:
    https://learn.sparkfun.com/tutorials/voltage-dividers/all#extra-credit-proof
 
@@ -328,7 +339,10 @@ We’ll now build the circuit you just designed in real life, using a solderless
 .. container:: tabox
 
    5B: This should work with a 1k and 2.2k resistor as shown.
-   Bonus: The amplitude of a spike in extracellular space is around 100 uV. This should help them to realise how little that is.
+
+   Bonus: For the sake of time, you can just ask them which resistor would they change and how.
+   To get small Vout, R1 has to be larger than R2. Most voltage is spent in the first part of the circuit.
+   Multimeter minimum is in the 200 mV range. The amplitude of a spike in extracellular space is around 100 uV. This should help them to realise how little that is.
 
 
 6. Capacitors
@@ -452,7 +466,9 @@ When you see a capacitor in a circuit, you know you need to think about the freq
 
 .. container:: tabox
 
-   8A. The 40Hz circuit below has a max current of 20mA, the above circuit has a max of only 12mA.
+  `Link to solution: <https://tinyurl.com/y4cgeap9>`_
+ 
+   8A. The 40Hz bottom circuit has a max current of 20mA, the top circuit has a max of only 12mA.
 
    8B. This new circuit will have a max current of 24.4 mA.
 

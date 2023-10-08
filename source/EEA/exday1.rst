@@ -57,6 +57,13 @@ The most important thing is to remember which holes are connected. Your long bre
 
 If you need to, refer back to the `reading material <https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all#anatomy-of-a-breadboard>`_ for the overview on how to use a breadboard, it also includes some basic troubleshooting which may prove useful if you run into problems.
 
+.. container:: exercise
+
+	You can also use your multimeter to check for continuity, i.e. to find out if two parts of a circuit are electrically connected.
+
+  1C.	Set the multimeter dial to the section that has a diode symbol (a triangle with a line on the right side) and a symbol that looks like a soundwave. Now the multimeter should beep when you touch the terminals together, indicating there is continuity. You can use this setting to probe around the breadboard and understand which rows are connected. If the probe tips don't fit in the holes, you might have to use readout wires to access the underlying circuit.
+  *Check that the rails are connected all the way along the breadboard by putting one probe in one end of the rail and the other probe in the other end of the same rail.*
+
 Teensy Microcontroller
 **********************************
 In your kit you will find a Teensy LC. This is a microcontroller, like an Arduino (just a different brand). It is basically a small computer, that can only run 1 program at a time. Using the USB cable provided, you can upload a new programme to the Teensy. Whenever the Teensy is provided with a power source it will try to run that programme.
@@ -88,7 +95,7 @@ Some pins can perform multiple functions. For instance, the pin marked '20' on t
   - Use the USB to micro-USB cable in your kit to connect the Teensy to your computer.
   - The Teensy comes with a default programme already loaded onto the board, so you should see the LED on the board start to blink slowly as soon as it is powered on.
 
-  1C.	We can see that digital pin 13 has (LED) written beside it. Attach readout wires to the breadboard, and use your multimeter to find the voltage across the LED.
+  1D.	We can see that digital pin 13 has (LED) written beside it. Attach readout wires to the breadboard, and use your multimeter to find the voltage across the LED.
 
 .. image:: ../_static/images/EEA/readout_teensy_voltage_schematic.png
   :align: center
@@ -127,7 +134,7 @@ Oscilloscopes let us measure time-varying voltages with much higher time resolut
 
     - Open the Arduino Software Upload the following code to your teensy: :ref:`sinewave`
 
-    - Make sure that under ‘Tools/ Board’ your Teensy 3.2 has been found, and check which USB (COM) port it’s in (‘Tools/Port:).
+    - Make sure that under ‘Tools/ Board’ your Teensy LC has been found, and check which USB (COM) port it’s in (‘Tools/Port:).
 
     - If you see ‘Done Uploading’, the Teensy will start giving a sine wave as output from one of the analog output pins.
 
