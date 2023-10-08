@@ -172,7 +172,7 @@ To actually perform a recording, we will have to attach the electrode to the res
 ###################################
 We will now build the same circuit on the breadboard. The Teensy 'Blink' signal will act as our neuronal data, that will travel across electrode and shunt impedances before reaching the oscilloscope to be recorded. Our goal is to get as much of the Blink signal as possible to reach our oscilloscope recording system.
 
-In the theory handout, we discussed the importance of headstages. We'll test that now, by building the recording circuit without and with an amplifier acting as a headstage.
+In the theory handout, we discussed the importance of headstages. We'll test that now, by building the recording circuit without and with an op-amp acting as a headstage.
 
 * 'Neuron'  = Digital blink output from Teensy
 * 'Electrode' = 100 kOhm resistor
@@ -185,12 +185,12 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
   :align: center
   :target: https://tinyurl.com/yyeah3wd
 
-4A. Recording circuit without an amplifier
+4A. Recording circuit without a 'headstage'
 *******************************************
 
 .. container:: exercise
 
-  4A.	Upload the Blink example to your teensy (or just run it if still loaded).
+  4A.	Upload the Blink example to your Teensy (File/Examples/Basics/Blink)(or just run it if still loaded).
 
   Build the circuit below:
 
@@ -220,8 +220,8 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
      :align: left
 
      * - (+) Probe Location
-       - Circuit 1, without amplifier
-       - Circuit 2, with amplifier
+       - Circuit 1, without 'headstage'
+       - Circuit 2, with 'headstage'
      * - 1. Teensy Pin 13
        -
        -
@@ -256,7 +256,7 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
        - 600mV
 
 
-4B. Recording circuit with amplifier
+4B. Recording circuit with a 'headstage'
 *************************************
 
 Build voltage rails
@@ -289,6 +289,7 @@ Add bypass capacitors
 Bypass capacitors are small capacitors that act like little secondary batteries. The batteries we use have a high ESR - ‘equivalent series resistance’, and some capacitance. This means that are not great at quickly providing current. Because of this, when our op-amp starts working, it can run out of current for a very short time until the battery can drive the rails back to their original voltage. This is bad for the signal quality.
 
 So, we allow these small capacitors to charge. If the battery briefly can’t provide current, the bypass capacitors will discharge, providing quick back-up current. We’re exploiting the fact that these caps have very low ESR and can provide current pretty much instantaneously. The fact that they’re too small to power anything for more than a millisecond does not matter here, at that point the batteries have caught up.
+`More explanation: <https://www.protoexpress.com/blog/decoupling-capacitor-use/>`_
 
 .. container:: exercise
 
@@ -319,11 +320,11 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (AS358P),
 
   * Feed the output of the op-amp, back into the – input.
 
-  4G. Now measure the same three points as before and complete the table in question 4B.         -
+  4G. Now measure the same three points as before and complete the table in question 4B. How much signal is lost now? Is the signal being amplified?         
 
   4H. Optional: try changing the resistances you've used for electrode, shunt, and leakage. What happens to the signal?
 
-  4G. Optional: Measure the same points in the simulator as you did on the breadboard. How do they compare?
+  4I. Optional: Measure the same points in the simulator as you did on the breadboard. How do they compare?
 
   .. image:: ../_static/images/EEA/fritz_headstage_blink.png
     :align: center

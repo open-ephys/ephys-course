@@ -102,7 +102,7 @@ To actually perform a recording, we will have to attach the electrode to the res
 ###################################
 We will now build the same circuit on the breadboard. The Teensy 'Blink' signal will act as our neuronal data, that will travel across electrode and shunt impedances before reaching the oscilloscope to be recorded. Our goal is to get as much of the Blink signal as possible to reach our oscilloscope recording system.
 
-In the theory handout, we discussed the importance of headstages. We'll test that now, by building the recording circuit without and with an amplifier acting as a headstage.
+In the theory handout, we discussed the importance of headstages. We'll test that now, by building the recording circuit without and with an op-amp acting as a headstage.
 
 * 'Neuron'  = Digital blink output from Teensy
 * 'Electrode' = 100 kOhm resistor
@@ -114,12 +114,12 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
   :align: center
   :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcYAs0DMAmAnGBkEUUAOdPdEFANhCX1oFMBaMMAKAEMRttNKtwmMDRQDi4JCyRh48KNATZ8AdiqRhKBDnwUYi-MTDYqyoWVTiZstgHduvSsPt90WqLechXfMEJrf3O18nAOCRAUg2ACdBYkgQKhRY+LBVKBBMTEiAcxBiY1o1PIK1cXjImPyREmKaBCL4zPgPKsoanj4iMui8uDbxVq70q2aAJV74oeV0arKM+SR0DHTyhQ8w-h8ccL5I8eViJMSQU3jjxoWvZfKFnoOjpOI4hKSU2Ui7J7Ok7DTznq+Lzyz1SNEaWTgbFyMie4DSMPEmVegWQkAeySBHwxxzAM2+7mhflo8KJpRWPQ2oi2TgQaXBWN+NBxMnRWMBoPAkFhHKxCLhNF8ILpbAAHpz0MoMpZhIsIElMEkAHIAewAOgBnDgAWwADgAbACWADMDQwoqLOSgIFgkqx0EksJL5UkAIK6w0ms0W5S4LzxfIuCjOkAAUT1DAAxgAXKLKgAmDG9Psc-ueVqDGSSYcjMfjibFVBM4DECGkrkomZAAGUABYAVwAdlGNQBJXUMOMcBsR-MJYiSrR8ft0TBIYO1xvN9VtnUdrs9i24hWCSXCLnFyaVgAyDA4AGsNQb253uwwNVG1ersrHG3HF6OKAhUBIJbRUhXlzv94fj-Oz+qLw1a9lVvNhlW4TllxSTJsHEJZdFgOAIAubAvDAzlIORXwcDKBQlEgVR1ESLR8IQ+AIAgHx4nQdCnBkKDBBw+Q4GUVIFSUUsUEwdBiBwV5EPUeYfH8WjV0gBjsNg5iCLYlAOMIbjeOwfjyK8eZ3xooA
 
-4A. Recording circuit without an amplifier
+4A. Recording circuit without a 'headstage'
 *******************************************
 
 .. container:: exercise
 
-  4A.	Upload the Blink example to your teensy (File/Examples/Basics/Blink)(or just run it if still loaded).
+  4A.	Upload the Blink example to your Teensy (File/Examples/Basics/Blink)(or just run it if still loaded).
 
   Build the circuit below:
 
@@ -150,8 +150,8 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
      :align: left
 
      * - (+) Probe Location
-       - Circuit 1, without amplifier
-       - Circuit 2, with amplifier
+       - Circuit 1, without 'headstage'
+       - Circuit 2, with 'headstage'
      * - 1. Teensy Pin 13
        -
        -
@@ -164,7 +164,7 @@ In the theory handout, we discussed the importance of headstages. We'll test tha
 
   4C. How much signal is lost?
 
-4B. Recording circuit with amplifier
+4B. Recording circuit with a 'headstage'
 *************************************
 
 Build voltage rails
@@ -227,7 +227,7 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (AS358P),
 
   * Feed the output of the op-amp, back into the – input.
 
-  4G. Now measure the same three points as before and complete the table in question 4B.         -
+  4G. Now measure the same three points as before and complete the table in question 4B. How much signal is lost now? Is the signal being amplified?         
 
   4H. Optional: try changing the resistances you've used for electrode, shunt, and leakage. What happens to the signal?
 
