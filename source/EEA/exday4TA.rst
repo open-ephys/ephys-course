@@ -238,10 +238,8 @@ In Bonsai, you could use a ‘Timestamp’ node to figure out at what time the s
 
 For precise synchronisation at fast timescales, you would need to acquire all inputs on the same dedicated hardware clock such as that of an actual ephys acquisition device. This dedicated hardware runs multichannel acquisition in parallel and timestamps all signals at a fast sampling rate, rather than acquiring consecutively inside a loop and relying on software timestamping like our Teensy microcontroller.
 
-In ephys acquisition systems, besides multichannel headstage data acquisition, you typically have additional analog input channels for other sensors, and use digital inputs to record digital pulses that indicate when events such as camera frame acquisition or behavioural events occurred. We cannot do this in our Teensy EMG setup.
+In ephys acquisition systems, besides multichannel headstage data acquisition, you typically have additional analog input channels for other sensors, and use digital inputs to record digital pulses that indicate when events such as camera frame acquisition or behavioural events occurred.
 
 Finally, we might want our acquisition system to output signals based on the data being acquired, such as electrical or optical stimulation based on neural events, which can trigger other systems connected to digital output channels.
 
-Dedicated data acquisition software have online signal processing capabilities that are useful for signal visualisation, for alignment with stimuli/behavioural events and for closed-loop experimentation. 
-
-In our case, we can perform online signal processing in Bonsai, for example to smooth or filter the acquired signal, to threshold it and trigger an output. We are not going to go into detail about this, but you are welcome to explore it in your Projects.
+Dedicated ephys data acquisition software have online signal processing capabilities that are useful for signal visualisation, for alignment with stimuli/behavioural events and for closed-loop experimentation. In our case, we can perform online signal processing in Bonsai, for example to smooth or filter the acquired signal, to threshold it and trigger an output. We are not going to go into detail about this, but you are welcome to explore it in your Projects.
