@@ -193,10 +193,13 @@ We’re going to start streaming data to the PC, by using our Teensy microcontro
 
   B. Unless still uploaded, reupload :ref:`Firmata` to your teensy in the Arduino software. This will tell the Teensy to acquire from analog pins at 2000 samples per second.
 
-  C. Open Bonsai and create an Analog Input node. Double-click this node to visualise your signal.
+  C. Open Bonsai and create an 'Analog Input' node. Configure the pin and port name accordingly. Run the workflow and double-click this node to visualise your signal.
+  What important step in data acquisition are we missing?
 
-  D. Connect this to a 'Csv Writer' node to save your signals.
-
+  D. Connect the 'Analog Input' node to a 'Csv Writer' node to save your signal. This format will allow you to quickly inspect the saved file. If you want to be able to later load and playback the file, use the 'Buffer' and 'MatrixWriter' nodes instead.
+  Open the csv file. Does your data have timestamps? What do you need to know to figure out when each sample was acquired?
+  What would you need to consider to be able to synchronize with other inputs such as other analog signals or a camera or behavioral events?
+  What additional signal processing of is typically useful when dealing with ephys signals?
 
 
 
@@ -213,8 +216,32 @@ We’re going to start streaming data to the PC, by using our Teensy microcontro
 
     B. There are lots of different Firmata scripts they can use, as long as they know the acquisition frequency as this will be important for filtering later on in Bonsai.
 
-    C-D. Example Bonsai workflows are here:
+    C. If they use the same pin as the image, it is A0, Bonsai configuration has to say Pin 0 for the Analog Input node.
+        They need to record the data!
+    
+    D. For 'MatrixReader' to work, they need to match the Buffer length e.g. 60, Depth is S32, sample rate is 2000 Hz (from 500 us period Firmata).
+      The csv file does not have timestamps, they need to know the sample rate. They also cannot know if data packets were lost.
+      For sync, they need to acquire multiple inputs in the same clock. Digital inputs saving TTL pulses from events such as camera frames and behavioral events are used to sync.
+      Additional processing includes filtering frequencies of interest, smoothing the signal, common average reference, neural event detection: spikes, phase, ripples,etc., spike sorting.
+      We have not talked about ADC scaling necessary to figure out what are the units the signals we are recording.
 
-    https://github.com/ahleighton/eeamay2022/tree/main/source/_static/ex_code
+    Example Bonsai workflows for further signal processing are here:
 
-    Including one that will detect EMG crossing a threshold (parameters will need adjusting) and activate an LED. see: emg_led_standardfirmata
+    https://github.com/open-ephys/eeaoct2023/tree/main/source/_static/ex_code
+
+Synchronising additional input signals and system outputs
+********************************************************************************
+
+We might want to record additional input signals from other sensors, or add a behavioural camera to this EMG setup, or to find out when a behavioural event such as a nosepoke occurred in relation to the ephys signals. As we saw in the Theory handout, this requires signals to be synchronised.
+
+In Bonsai, you could use a ‘Timestamp’ node to figure out at what time the signals were acquired by the computer. This is an example of software synchronisation, and will include the jitter in USB latency from both datastreams arriving independently at the computer, and the processing time until the computer’s operating system can handle the timestamping request (since timestamping is not its only job).
+
+For precise synchronisation at fast timescales, you would need to acquire all inputs on the same dedicated hardware clock such as that of an actual ephys acquisition device. This dedicated hardware runs multichannel acquisition in parallel and timestamps all signals at a fast sampling rate, rather than acquiring consecutively inside a loop and relying on software timestamping like our Teensy microcontroller.
+
+In ephys acquisition systems, besides multichannel headstage data acquisition, you typically have additional analog input channels for other sensors, and use digital inputs to record digital pulses that indicate when events such as camera frame acquisition or behavioural events occurred. We cannot do this in our Teensy EMG setup.
+
+Finally, we might want our acquisition system to output signals based on the data being acquired, such as electrical or optical stimulation based on neural events, which can trigger other systems connected to digital output channels.
+
+Dedicated data acquisition software have online signal processing capabilities that are useful for signal visualisation, for alignment with stimuli/behavioural events and for closed-loop experimentation. 
+
+In our case, we can perform online signal processing in Bonsai, for example to smooth or filter the acquired signal, to threshold it and trigger an output. We are not going to go into detail about this, but you are welcome to explore it in your Projects.
