@@ -1,56 +1,69 @@
 .. title:: Home
 
-.. image:: _static/images/main-image.png
-  :alt: A placeholder image
+.. raw:: html
 
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex">
+        <div class="card border-light h-100">
+          <img class="card-img-top" src="_static/images/oe-logo-with-text.png" alt="Open Ephys Logo" href="https://open-ephys.org/" style="margin: auto">
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-0 col-xs-0 d-flex">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex" style="margin-top: 0em!important">
+        <div class="card border-light">
+          <img class="card-img-top" src="_static/images/cajallogo.png" alt="Cajal Advanced Neuroscience Training Logo" href="https://cajal-training.org/" style="margin: auto; padding: 15px">
+        </div>
+      </div>
+    </div>
 |
 
-The **<device>** is <add description here>.
+These are the course materials for the Open Ephys course on Extracellular Electrophysiology Acquisition. This course consists of recorded lectures and hands-on electronics exercises, for which you will need some specific equipment.
+
+To follow this course, you can either:
+
+- Apply to the course, taught by the Open Ephys team to receive a NeuroKit and teaching through the Cajal Advanced Neuroscience Training Programme here: http://cajal-training.org/neurokit/
+- Buy the tools yourself and work through the materials using this site.
+
 
 
 
 .. raw:: html
 
-    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
+                <div class="card text-center intro-card shadow">
 
-    <div class="card-columns">
-        <a class="reference internal" href="About/example1.html"><span class="std std-ref custom-card">
-        <div class="card text-center intro-card">
-            <img src="_static/images/noun_screwdriver.svg" class="card-img-top hover-zoom" alt="hardware user guide" height="100">
-            <div class="card-body flex-fill">
-                <h5 class="card-title">Topic 1</h5>
-                <p class="card-text">Description of topic.</p>
-            </div>
-        </div>
-        <a class="reference internal" href="About/example2.html"><span class="std std-ref custom-card">
-        <div class="card text-center intro-card">
-            <img src="_static/images/noun_books.svg" class="card-img-top hover-zoom" alt="hardware user guide" height="100">
-            <div class="card-body flex-fill">
-                <h5 class="card-title">Topic 2</h5>
-                <p class="card-text">Description of topic.</p>
-            </div>
-        </div>
-        <a class="reference internal" href="About/index.html"><span class="std std-ref custom-card">
-        <div class="card text-center intro-card ">
-            <img src="_static/images/paper.svg" class="card-img-top" alt="onix api references" height="100">
-            <div class="card-body flex-fill">
-                <h5 class="card-title">Topic 3</h5>
-                <p class="card-text">Description of topic.</p>
-            </div>
-        </div>
-        <a class="reference external" href="https://github.com/open-ephys" target="_blank" rel="noopener noreferrer"><span class="std std-ref custom-card">
-        <div class="card text-center intro-card">
-            <img src="_static/images/noun_macbook.svg" class="card-img-top" alt="onix software guide" height="100">
-            <div class="card-body flex-fill">
-                <h5 class="card-title">Topic 4</h5>
-                <p class="card-text">This is an external link.</p>
-            </div>
-        </div>
-    </div>
+.. figure:: _static/images/EEA/box_logo.png
+  :target: EEA/kitlist.html
 
+.. container:: custom-button
+
+    :ref:`NeuroKit Equipment List <refkitlist>`
+
+.. raw:: html
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
+                <div class="card text-center intro-card shadow">
+
+.. figure:: _static/images/EEA/book_logo.png
+  :target: EEA/eeadocsindex.html
+
+.. container:: custom-button
+
+    :ref:`Reading and Exercises <refeeadocsindex>`
+
+.. raw:: html
+
+      </div>
+  </div>
 .. toctree::
-    :hidden:
     :maxdepth: 2
+    :hidden:
     :titlesonly:
 
-    About/index
+    /EEA/kitlist.rst
+    /EEA/index.rst
