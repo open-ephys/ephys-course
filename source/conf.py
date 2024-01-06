@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "Open Ephys Doc Template"
+project = "Extracellular Electrophysiology Course"
 copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys & Contributors"
 
@@ -90,7 +90,7 @@ html_static_path = ["_static"]
 html_style = "_static/theme_overrides.css"
 
 html_sidebars = {
-    'index': ['search-field.html'],
+    'index': ['search-field.html', 'localtoc.html'],
     "**": ["sidebar-nav-bs.html"]
 }
 
@@ -189,7 +189,7 @@ html_theme_options = {
      "external_links": [{"name": "Open Ephys", "url": "https://open-ephys.org"},],
     'icon_links': [
         dict(name='GitHub',
-             url='https://github.com/open-ephys/doc-template',
+             url='https://github.com/open-ephys/ephys-course',
              icon='fab fa-github'),
         dict(name='Twitter',
              url='https://twitter.com/openephys',

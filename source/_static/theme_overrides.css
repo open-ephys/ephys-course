@@ -55,7 +55,7 @@
 
 /* overhead navigation bar*/
 .navbar {
-  background: #ade0dc !important; /* MODIFY THIS! */
+  background: #d1a31f !important; /* MODIFY THIS! */
   font-size: 1rem;
 }
 
@@ -135,7 +135,7 @@ a.headerlink:hover {
 
 /* paragraph indent */
 p {
-  text-indent: 1em;
+  text-indent: 0em;
 }
 
 /* text fonts and colors */
