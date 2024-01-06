@@ -23,6 +23,7 @@ These are the course materials for the Open Ephys course on Extracellular Electr
 To follow this course, you can either:
 
 - Apply to the course, taught by the Open Ephys team to receive a NeuroKit and teaching through the Cajal Advanced Neuroscience Training Programme here: http://cajal-training.org/neurokit/
+
 - Buy the tools yourself and work through the materials using this site.
 
 

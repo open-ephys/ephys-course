@@ -83,7 +83,7 @@ No Hardware kit? Use these links!
   exday2_nokit.rst
 
 Links for teachers
-*********************************************
+############################
 
 .. toctree::
   :maxdepth: 1
@@ -94,7 +94,7 @@ Links for teachers
   exday4TA.rst
 
 Addition information
-*********************************************
+############################
 
 .. toctree::
   :maxdepth: 1
