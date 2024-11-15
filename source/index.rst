@@ -10,11 +10,6 @@
       </div>
       <div class="col-lg-6 col-md-6 col-sm-0 col-xs-0 d-flex">
       </div>
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex" style="margin-top: 0em!important">
-        <div class="card border-light">
-          <img class="card-img-top" src="_static/images/cajallogo.png" alt="Cajal Advanced Neuroscience Training Logo" href="https://cajal-training.org/" style="margin: auto; padding: 15px">
-        </div>
-      </div>
     </div>
 |
 
@@ -22,9 +17,11 @@ These are the course materials for the Open Ephys course on Extracellular Electr
 
 To follow this course, you can either:
 
-- Apply to the course, taught by the Open Ephys team to receive a NeuroKit and teaching through the Cajal Advanced Neuroscience Training Programme here: http://cajal-training.org/neurokit/
+- Apply to the course, taught by the Open Ephys team to receive a NeuroKit and teaching through the `No Black Boxes Programme <https://www.noblackboxes.org/neurokits>`_.
 
-- Buy the tools yourself and work through the materials using this site.
+- Buy the `NeuroKit from the Open Ephys Store <https://open-ephys.org/store-training/electrophysiology-course-kit>`_ and enroll in the self-paced course to get offline assistance and a completion certificate.
+  
+- Get the tools yourself and work through the materials using this site.
 
 
 
