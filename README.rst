@@ -1,8 +1,13 @@
-*************************************************************
-Extracellular Electrophysiology Acquisition Course Materials
-*************************************************************
+*************************************************************************
+Extracellular Electrophysiology Acquisition NeuroKit Course Materials
+*************************************************************************
 
-This repository contains the materials for learning about ephys data acquisition, developed as part of the Cajal Advanced Neuroscience Training Neurokit.
+This repository contains the materials for learning about ephys data acquisition.
+The EEA Course is fully online and relies on you to go through the materials yourself.
+
+You can follow the self-paced version or apply for the synchronous course if you’d like to participate in the 5-day course taught by our team as part of the No Black Boxes NeuroKit programme.
+
+This course was originally developed as part of the Cajal Advanced Neuroscience Training Programme.
 
 Building the docs remotely
 ########################
