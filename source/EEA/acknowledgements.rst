@@ -2,7 +2,16 @@
 Acknowledgements
 ###################################
 
-These materials were written by:
+This course was brought to life in 2021 thanks to the remarkable work of Alexandra Leighton as course director, with the vision of course co-directors Jakob Voigts and Filipe Carvalho.
+
+Online lectures were provided by:
+
+* Alexandra Leighton
+* Filipe Carvalho
+* Jakob Voigts
+* Joana Neto
+  
+The original text was written by:
 
 * Alexandra Leighton
 * Joana Neto
@@ -23,3 +32,6 @@ With thoughtful feedback from:
 * Filipe Carvalho
 * Jon Newman
 * Cecilia Herbert
+
+Alexandra Leighton was course director for the first three editions (Mar2021, Dec2021, May2022).
+Cecilia Herbert replaced Alex as course director in the Oct2023 edition and maintains these materials.
