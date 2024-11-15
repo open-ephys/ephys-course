@@ -48,7 +48,7 @@ To follow this course, you can either:
                 <div class="card text-center intro-card shadow">
 
 .. figure:: _static/images/EEA/book_logo.png
-  :target: EEA/eeadocsindex.html
+  :target: EEA/index.html
 
 .. container:: custom-button
 
